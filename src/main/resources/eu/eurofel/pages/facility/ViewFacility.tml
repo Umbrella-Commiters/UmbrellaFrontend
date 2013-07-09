@@ -1,0 +1,34 @@
+<html t:type="layout" title="Facility Editor" t:sidebarTitle="Help!"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	<a t:type="eventLink" t:event="toCreate" t:zone="editorZone" href="#">
+		<img src="${createFacilityIcon}" />
+	</a>
+	<br />
+
+	<table id="frame">
+		<tbody>
+			<tr>
+
+				<!-- This is the left side of the table: a list of Persons -->
+
+				<td id="listCell">
+					<t:zone t:id="listZone" t:update="prop:zoneUpdateFunction">
+						<t:FacilityList t:id="list" highlightFacilityId="highlightFacilityId"
+							zone="listZone" />
+					</t:zone>
+				</td>
+
+				<!-- This is the right side of the table: where a Person will be created, 
+					reviewed, or updated. -->
+
+				<td id="editorCell">
+					<t:zone t:id="editorZone" t:update="prop:zoneUpdateFunction">
+						<t:FacilityEditor t:id="editor" mode="mode"
+							facilityId="facilityId" zone="editorZone" />
+					</t:zone>
+				</td>
+
+			</tr>
+		</tbody>
+	</table>
+</html>

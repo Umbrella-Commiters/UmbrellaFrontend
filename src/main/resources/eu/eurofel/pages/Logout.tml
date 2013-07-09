@@ -1,0 +1,6 @@
+<html t:type="layout" title="Logout" t:sidebarTitle="Things to do next"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	<!-- Most of the page content, including <head>, <body>, etc. tags, comes 
+		from Layout.tml -->
+<p>To completely logout of the Umbrella system you must close all your browsers now!</p>
+</html>

@@ -1,0 +1,237 @@
+#wrap {
+	text-align: left; /* because of IE fix in line 18 */
+	margin: 0 auto;
+	padding: 0;
+	width: 950px;
+}
+
+.navigation {
+	margin: 0;
+	width: 200px;
+}
+
+.navbox {
+	width: 190px;
+}
+
+.maincontent {
+	width: 730px;
+	padding: 0px 9px 10px 9px;
+	border-left: 1px solid #7fc8da;
+	border-right: 1px solid #7fc8da;
+}
+
+.supportcontent {
+	margin: 0;
+	width: 200px;
+	border: 0;
+}
+
+.navbox h5 {
+	margin: 0 0 10px 0;
+	padding: 0;
+	line-height: 26px;
+	color: #000;
+	font-weight: normal;
+	border-bottom: 1px solid #7FC8DA;
+}
+
+.navbox h5.doubleline {
+	color: #f33;
+	border-bottom: 1px solid #f33;
+	border-top: 1px solid #f33;
+	margin-top: 10px;
+}
+
+/* upcoming events */
+.eventboxsmall {
+	padding-top: 90px;
+	background: url(../img/eurofel/Calendar_Icon.jpg) no-repeat;
+}
+
+.eventboxsmall ul {
+	margin: 0;
+	padding: 0;
+}
+
+.eventboxsmall li {
+	list-style: none;
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+
+.eventboxsmall a {
+	display: block;
+	text-decoration: none;
+	color: #036;
+	padding: 5px;
+}
+
+.eventboxsmall a:hover {
+	background: #eaeef5;
+}
+
+.eventboxsmall .date {
+	display: block;
+	float: left;
+	width: 33%;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.eventboxsmall .description {
+	display: block;
+	margin: 0 0 0 33%;
+	font-size: 12px;
+}
+
+.more {
+	color: #f33;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.more:hover {
+	text-decoration: underline;
+}
+
+/* overwriting content.css */
+h1,h2 {
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 26px;
+	font-weight: bold;
+	padding: 0;
+	margin: 0 0 13px 0;
+	text-transform: uppercase;
+	border-bottom: 1px solid #7FC8DA;
+}
+
+.thumblist {
+	padding: 10px 0 10px 235px;
+}
+
+.landing .thumblist h1,.landing .thumblist h2 {
+	margin: 10px 0 20px -235px;
+}
+
+.thumblist h2 { /* only in thumblists on subpages */
+	margin: 0px 0 20px -235px;
+}
+
+.thumblist img {
+	margin: 0 0 20px -235px;
+}
+
+.thumblist .imageFloat_left,.thumblist .lightbox {
+	margin: 0 0 20px -235px;
+}
+
+.thumblist hr {
+	margin-left: -235px;
+}
+
+.thumblist h2 {
+	font-size: 15px;
+	line-height: 18px;
+}
+
+.thumblist h3 {
+	color: #036;
+	/*
+   font-size: 14px;
+   font-weight: bold;
+   line-height: 12px;
+   margin: 0 0 6px 0;
+   text-transform: uppercase;
+*/
+}
+
+.thumblist h3 a {
+	color: #036;
+	font-size: 14px;
+	line-height: 12px;
+}
+
+.maincontent h1:first-line {
+	font-size: 16px;
+	line-height: 26px;
+}
+
+h3,h4,h5 {
+	font-family: arial, verdana, helvetica, sans-serif;
+}
+
+/* overwriting supportcontent.css */
+.supportcontent {
+	
+}
+
+.supportcontent .TeaserBox { /*  margin: 0 0 40px 20px; */
+	/*  padding: 0 0 10px 0; */ /*  border-bottom: 1px solid #f33; */
+	
+}
+
+.TeaserBox a {
+	font-weight: bold;
+	color: #036;
+}
+
+.TeaserBox li {
+	list-style: none;
+	margin: 0;
+	padding: 2px 0;
+}
+
+.TeaserBox li a {
+	color: #036;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.supportcontent .NoDeco {
+	border-bottom: 0;
+}
+
+.supportcontent .TeaserBox h5 {
+	margin: 0 0 10px 0;
+	padding: 0;
+	line-height: 26px;
+	color: #f33;
+	font-weight: normal;
+	border-bottom: 1px solid #f33;
+}
+
+/* Tapestry overrides */
+.visibleDiv {
+	position: fixed;
+	width: 300px;
+	left: 0px;
+	bottom: 0px;
+	background-color: #ffffff;
+	padding: 2px;
+	border: 1px;
+	border-style: solid;
+	border-color: #e79340;
+	font-family: "Arial", sans-serif;
+}
+
+div.t-beaneditor {
+	display: block;
+	background: #FFF;
+	border: 0px;
+	padding: 2px;
+	font-family: Arial, sans-serif;
+}
+
+input.t-beaneditor-submit {
+	position: relative;
+	top: 5px;
+	left: 70%;
+}
+
+HTML>BODY DIV.t-error LI {
+	margin-left: 20px;
+}

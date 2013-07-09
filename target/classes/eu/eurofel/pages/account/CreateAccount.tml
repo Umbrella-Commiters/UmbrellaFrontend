@@ -1,0 +1,120 @@
+<html t:type="layout" title="Create Account" t:sidebarTitle="Help!" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<t:beaneditform t:id="create" submitlabel="message:submit-label" object="eAAAccount">
+		<p:uid>
+			<t:label for="uid" />
+			<t:textfield t:mixins="ajaxValidator" t:id="uid" value="eAAAccount.uid" />
+			<img src="https://umbrellaid.org/images/info.png" title="Please choose your username" />
+
+		</p:uid>
+
+		<p:birthdate>
+
+			<t:label for="birthdate" />
+			<t:SimpleDateField t:mixins="zoneUpdater" t:clientEvent="blur" t:event="birthdateChanged" t:zone="dateZone" t:id="birthdate"
+				value="eAAAccount.birthdate" />
+			<img src="https://umbrellaid.org/images/info.png" title="Your birthdate will be hashed and not stored as clear text" />
+			MM/DD/YYYY, DD.MM.YYYY, YYYY-MM-DD
+
+
+			<br />
+			<br />
+			<label>Verified Birthdate</label>
+			<t:zone t:id="dateZone" t:update="show">
+				<t:textfield value="dateFormatted" disabled="true" class="hiddenText" />
+				<img src="https://umbrellaid.org/images/info.png" title="If date is shown your entry was recognized" />
+			</t:zone>
+			<!-- <t:datefield t:mixins="ajaxValidator" t:id="birthdate" -->
+			<!-- value="eAAAccount.birthdate" /> -->
+		</p:birthdate>
+
+		<p:email>
+			<t:label for="email" />
+			<t:textfield t:id="email" value="eAAAccount.email" />
+			<img src="https://umbrellaid.org/images/info.png" title="Your email will be hashed and not stored as clear text" />
+		</p:email>
+
+		<p:password>
+			<t:label for="password" />
+			<t:passwordfield t:id="password" t:mixins="exanpe/PasswordStrengthChecker" value="eAAAccount.password" />
+		</p:password>
+
+		<p:password1>
+			<t:label for="password1" />
+			<t:passwordfield t:id="password1" value="eAAAccount.password1" />
+		</p:password1>
+
+		<p:verificationCode>
+
+			<label>Verification Image</label>
+			<t:kaptchaimage t:id="kaptcha"/>
+  			<br/>
+  			<label>Verification Code</label>
+  			<t:kaptchafield visible="true" image="kaptcha"/>
+  			
+			<!-- 
+			<img xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd" src="${imageURL}" align="absmiddle" alt="Dynamic Verification Code" />
+			<br />
+			<t:label for="verificationCode" />
+			<t:textfield t:id="verificationCode" value="eAAAccount.verificationCode" />
+ 			-->
+		</p:verificationCode>
+
+		<p:eaahash>
+			<t:hidden value="eAAAccount.eaahash" />
+		</p:eaahash>
+		<p:eaakey>
+			<t:hidden value="eAAAccount.eaakey" />
+		</p:eaakey>
+
+		<p:target>
+			<t:hidden value="eAAAccount.target" />
+		</p:target>
+		<p:eaaresetpwuuid>
+			<t:hidden value="eAAAccount.eaaresetpwuuid" />
+		</p:eaaresetpwuuid>
+		<p:eaaresetpwdate>
+			<t:hidden value="eAAAccount.eaaresetpwdate" />
+		</p:eaaresetpwdate>
+		
+	</t:beaneditform>
+	
+	<script type="text/javascript">
+	      <!--
+	      Tapestry.onDOMLoaded(function() {
+	        dummyChecker = function(password) {
+	          var strength = "";
+	          if (password.length < 6)
+	          {
+	            strength = Exanpe.PasswordStrengthChecker.Complexity.VERY_WEAK;
+	          }	
+	          if (password.length == 6)
+	          {
+	            strength = Exanpe.PasswordStrengthChecker.Complexity.WEAK;
+	          }
+	          if (password.length == 7)
+	          {
+	            strength = Exanpe.PasswordStrengthChecker.Complexity.STRONG;
+	          }
+	          if (password.length > 7)
+	          {
+	            strength = Exanpe.PasswordStrengthChecker.Complexity.STRONGEST;
+	          }
+	          return strength;
+	        };
+	      });
+	      // -->
+	</script>
+	<p:sidebar>
+
+		<ul>
+			<li>
+				<t:pagelink page="account/create">The username already exists!</t:pagelink>
+			</li>
+			<li>
+				<t:pagelink page="account/create">My email address already exists!</t:pagelink>
+			</li>
+		</ul>
+	</p:sidebar>
+</html>

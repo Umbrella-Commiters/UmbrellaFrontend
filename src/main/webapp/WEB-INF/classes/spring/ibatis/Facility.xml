@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+"http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap>
+
+	<typeAlias type="eu.eurofel.entities.Facility" alias="facility" />
+
+	<resultMap class="facility" id="result">
+		<result property="id" column="ID" />
+		<result property="name" column="NAME" />
+		<result property="attributeUpdaterURL" column="URL" />
+		<result property="contactPerson" column="CONTACT_PERSON" />
+		<result property="contactPersonEmail" column="CONTACT_PERSON_EMAIL" />
+		<result property="enabled" column="ENABLED" />
+		<result property="lastPing" column="LAST_PING" />
+	</resultMap>
+
+	<select id="selectAllFacilities" resultMap="result">
+		select * from FACILITY
+    </select>
+
+	<select id="selectFacilityById" resultMap="result"
+		parameterClass="long">
+		select * from FACILITY where ID = #value#
+    </select>
+
+	<select id="selectFacilitiesByName" resultMap="result"
+		parameterClass="string">
+		select * from FACILITY where NAME like '%$value$%'
+    </select>
+
+	<insert id="insertFacility" parameterClass="facility">
+		insert into FACILITY (NAME, URL, CONTACT_PERSON, CONTACT_PERSON_EMAIL, ENABLED) values (#name#,
+		#attributeUpdaterURL#, #contactPerson#, #contactPersonEmail#, #enabled#)
+		<selectKey keyProperty="id" resultClass="long">
+			SELECT LAST_INSERT_ID()
+      </selectKey>
+	</insert>
+
+	<delete id="deleteFacility" parameterClass="string">
+		delete from FACILITY where ID = #value#
+    </delete>
+
+	<update id="updateFacility" parameterClass="facility">
+		update FACILITY set NAME = #name#, URL = #attributeUpdaterURL#, CONTACT_PERSON = #contactPerson#, CONTACT_PERSON_EMAIL = #contactPersonEmail#, ENABLED = #enabled#
+		where ID = #id#
+    </update>
+
+</sqlMap>

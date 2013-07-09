@@ -1,0 +1,27 @@
+<html t:type="layout" title="Proposal Overview" t:sidebarTitle="Help!"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	<p>
+		${proposal.title}
+		<br />
+		<table>
+			<t:loop source="proposal.sections" value="sec">
+				<tr>
+					<td>
+						${sec.section}
+					</td>
+					<td>
+						${sec.text}
+					</td>
+				</tr>
+			</t:loop>
+		</table>
+		<table>
+			<tr>
+				<td id="listCell">
+					<t:FacilityList t:id="list" />
+				</td>
+			</tr>
+
+		</table>
+	</p>
+</html>

@@ -1,0 +1,5 @@
+package eu.eurofel.entities;
+
+public enum Section {
+	BACKGROUND, EXPECTED_RESULTS, GENERAL, GOAL, INTEREST, JUSTIFICATION, METHOD, REFERENCE
+}

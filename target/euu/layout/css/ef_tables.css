@@ -1,0 +1,152 @@
+.wikitable, .foswikiTable {
+   min-width: 23%;
+}
+
+th, td {
+   padding: 8px;
+}
+
+td.noLine, tr.noLine td {
+   border: 0 !important;/* !important needs to overwrite all possible rules with more weight (tr.highlight3 td, etc)  */
+}
+
+td.alignright, tr.alignright td {
+   text-align: right;
+}
+
+.nosupportcontent table.FluidTable, .nosupportcontent .fluidbox {
+   width: 100%;
+   min-width: 680px;
+   max-width: 875px;
+}
+
+.dataTables_wrapper {
+    clear: both;
+    padding: 10px 0;
+    width: 95%;
+}
+
+.dataTables_processing {
+   padding: 10px 0;
+}
+
+.dataTables_length {
+   width: 40%;
+   padding: 5px 0 10px 0;
+   float: left;
+}
+
+.dataTables_filter {
+   padding: 5px 0 10px 0;
+   float: right;
+}
+
+.dataTables_info {
+   width: 40%;
+   padding: 20px 0;
+   float: left;
+}
+
+.dataTables_paginate {
+   width: 60%;
+   padding: 10px 0;
+   float: right;
+   text-align: right;
+}
+
+
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+   height: 25px;
+   width: 25px;
+   margin-right: 5px;
+   float: left;
+}
+
+table.display {
+   clear: both;
+}
+
+table.display, .nomargin {
+   margin: 0
+}
+
+table.display thead th {
+   cursor: pointer !important;
+}
+
+table.display td.center {
+   text-align: center;
+}
+
+.top .dataTables_info {
+   float: none;
+}
+
+td.date, th.date {
+   width: 105px;
+}
+
+td.date {
+   font-size: 12px;
+   text-align: right;
+}
+
+td.type, td.department {
+   font-size: 12px;
+   font-style: italic;
+}
+
+td.details {
+   text-align: center;
+}
+
+td.date strong {
+   font-size: 12px;
+}
+
+td h5 {
+   margin: 0;
+   padding: 0;
+}
+
+td .w50 {
+   padding: 0;
+}
+
+.dataTables_empty {
+   text-align: center;
+}
+
+tfoot input {
+   margin: 0.5em 0;
+   width: 100%;
+}
+
+.submitTable p {
+   width: 550px;
+}
+
+.example_alt_pagination div.dataTables_info {
+   width: 40%;
+}
+
+.paging_full_numbers {
+   width: 400px;
+   padding: 15px 15px 15px 0;
+}
+
+.paging_full_numbers u {
+   text-decoration: none;
+}
+
+.paging_full_numbers span.paginate_button, .paging_full_numbers span.paginate_active {
+   display: inline-block;
+   padding: 6px 10px 4px 10px;
+   margin: 0 15px 0 0;
+   text-decoration: none;
+   font-weight: normal;
+   font-size: 13px;
+   line-height: 18px;
+   position: relative;
+   cursor: pointer !important;
+}

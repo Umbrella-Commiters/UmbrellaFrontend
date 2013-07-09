@@ -1,0 +1,36 @@
+/*
+PSI Base CSS
+=========================
+
+
+
+------------------------------------------------------------------------------
+Author: Stefan Sicher
+Version: 1.0.0x | Dez '09
+------------------------------------------------------------------------------
+$HeadURL: https://svn.psi.ch/psiweb/psiweb/webbase/css/ccem_subheader.css $
+$Date: 2010-06-29 08:11:56 +0200 (Di, 29 Jun 2010) $
+$Rev: 1778 $
+$Author: westfeld@PSI.CH $ (has last changed this file)
+------------------------------------------------------------------------------ */
+/* second headers tyling starts here */
+.shinner {
+    position: relative;
+    height: 35px;
+    padding: 0 15px 0 10px;
+}
+.labtitle {
+    display: none;
+}
+#breadcrumb {
+    font-size: 12px;
+    line-height: 14px;
+    margin: 17px 25% 0 0;
+}
+#breadcrumb a {
+    text-decoration: none;
+}
+#breadcrumb a:hover {
+    text-decoration: underline;
+}
+/* second header styling ends here */

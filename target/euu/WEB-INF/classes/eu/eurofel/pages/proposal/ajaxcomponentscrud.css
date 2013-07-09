@@ -1,0 +1,181 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: smaller;
+}
+
+#frame {
+	width: 800px;
+	height: 325px;
+	border: none;
+	margin: 10px 0 10px 0;
+}
+
+#listCell {
+	width: 25%;
+	height: 100%;
+	border: 1px solid white;
+	background-color: #eee;
+	vertical-align: top;
+}
+
+#sectionFilter {
+	width: 100%;
+	padding: 5px 0 5px 0;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #D0C7A6;
+	color: white;
+	font-weight: bold;
+	border: 1px solid white;
+}
+
+#sectionFilter div {
+	padding: 0 0 5px 0;
+}
+
+.sectionlist {
+	border-collapse: collapse;
+}
+
+.sectionlist th {
+	display: none;
+}
+
+.sectionlist td {
+	width: 25%;
+	border: thin solid white;
+	background-color: #eee;
+	vertical-align: top;
+}
+
+.sectionlist a {
+	width: 100%;
+	line-height: 50px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+
+.sectionlist a:visited {
+	color: inherit;
+}
+
+.sectionlist a:hover {
+	background: #ccc;
+	color: #fff;
+}
+
+.sectionlist a.active {
+	background: #999;
+	color: #fff;
+}
+
+.sectionlist span.current {
+	background-color: #3d69b6;
+}
+
+#noSections {
+	text-align: center;
+	padding-top: 10px;
+}
+
+#facilityFilter {
+	width: 100%;
+	padding: 5px 0 5px 0;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #D0C7A6;
+	color: white;
+	font-weight: bold;
+	border: 1px solid white;
+}
+
+#facilityFilter div {
+	padding: 0 0 5px 0;
+}
+
+/* Add some padding around the list so that we can see the yellow flash when "Highlight zone updates" is on. */
+#listZone {
+	padding: 4px;
+}
+
+.facilitylist {
+	border-collapse: collapse;
+}
+
+.facilitylist th {
+	display: none;
+}
+
+.facilitylist td {
+	width: 25%;
+	border: thin solid white;
+	background-color: #eee;
+	vertical-align: top;
+}
+
+.facilitylist a {
+	width: 100%;
+	line-height: 50px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: black;
+}
+
+.facilitylist a:visited {
+	color: inherit;
+}
+
+.facilitylist a:hover {
+	background: #ccc;
+	color: #fff;
+}
+
+.facilitylist a.active {
+	background: #999;
+	color: #fff;
+}
+
+.facilitylist span.current {
+	background-color: #3d69b6;
+}
+
+#noFacilities {
+	text-align: center;
+	padding-top: 10px;
+}
+
+#editorCell {
+	width: 75%;
+	height: 100%;
+	vertical-align: top;
+	border: 1px solid white;
+	background-color: #eee;
+	padding: 20px;
+}
+
+#editorCell table {
+	margin: auto;
+}
+
+#editorCell h1 {
+	font-size: large;
+	text-align: center;
+}
+
+#editorCell th {
+	text-align: right;
+}
+
+#editorCell .buttons {
+	text-align: center;
+	padding-top: 20px;
+}
+
+.error {
+	color: red;
+	text-align: center;
+	padding-bottom: 1em;
+}

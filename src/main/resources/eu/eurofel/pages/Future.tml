@@ -1,0 +1,15 @@
+<html t:type="layout" title="What will be the future? What is the roadmap?" t:sidebarTitle="Things to do next" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+	<!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+	<div align="justify">
+
+		<p>An important component of the Umbrella is the affiliation database, which is an essential element for allowing for a user- and facility-friendly management of user accounts. Development of this component is ongoing (ESRF) and will be concluded within the coming months.</p>
+		<br/>
+		<p>As for every trans-facility system, there are legal issues to be solved as e.g. access rights, responsibilities. By design, Umbrella has been set up, that these resulting legal requirements are minimal and it is expected that they are resolved within a few months. There is no need for a time-zero for setting Umbrella into operation and facilities are free to decide when to switch to the Umbrella. Thus, facilities will be able to start the system till end of 2012.</p>
+		<br/>
+		<p>As soon as Umbrella is deployed, many novel user services will be possible like ICAT/TopCat (remote data access), Moonshot (remote experiment access), software catalog, conference services, publication service and many more. As resources are limited in close contact with the users a priority list will be established.</p>
+		<br/>
+		<p>As soon as Umbrella is installed, one of the first options available will be to log in from the Umbrella to the local WUO. Remote experimental data access (ICAT/TopCat) is an ongoing topic of the CRISP and PaNdata EU projects and will be available within the next years. There are also concrete plans (Moonshot) for non-web remote access to experiments (passive: spectra and active: control).</p>
+
+	</div>
+</html>

@@ -1,0 +1,40 @@
+body {
+	overflow-y: scroll;
+}
+
+#header {
+	height: 124px;
+	width: 100%;
+	position: relative;
+}
+
+.navigation {
+	float: left;
+	margin: -8px 2% 40px 13px;
+	width: 20%;
+}
+
+.maincontent {
+	float: left;
+	width: 60%;
+	overflow: hidden; /* for too large images */
+}
+
+.supportcontent {
+	float: right;
+	width: 20%;
+	overflow: hidden; /* for too large images */
+}
+
+.gridbox3 {
+	/* extra box for the landing page and its section descriptions, the "information for"-part */
+	width: auto; /* clear fix */
+	overflow: hidden; /* clear fix */
+	padding: 0 0 30px 3%;
+}
+
+.qssidebar {
+	float: right;
+	width: 23.8%;
+	margin: 25px 0 0 0;
+}

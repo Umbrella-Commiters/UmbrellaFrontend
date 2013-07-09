@@ -1,0 +1,135 @@
+/* sidebar box */
+.TeaserBox, .sidebarbox {
+    padding: 0px 5% 15px 5%;
+}
+.TeaserBox .ImageDescription {
+    display: block;
+    margin: 3px 0 3px 0;
+    padding: 0 0 0 7%;
+    font-size: 11px;
+}
+.TeaserBox h1, .sidebarbox h1, .TeaserBox h2, .sidebarbox h2 {
+    font-family: georgia, times, serif;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: bold;
+    text-transform: none;
+    margin: 0 0 10px 0;
+	padding: 0;
+}
+.TeaserBox h3, .sidebarbox h3 {
+    font-family: georgia, times, serif;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+	padding: 0;
+}
+.TeaserBox h4, .sidebarbox h4 {
+    font-family: arial, verdana, helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    margin: 0 0 10px 0;
+	padding: 0;
+}
+.TeaserBox h5, .sidebarbox h5 {
+    font-family: arial, verdana, helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0.5px;
+    margin: 0 0 10px 0;
+	padding: 0;
+}
+.TeaserBox li {
+    list-style: circle;
+    margin: 0 0 0 15px;
+	padding: 0;
+}
+.thePSIis {
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 11px;
+}
+.sidebarbox a:hover {
+    text-decoration: underline;
+}
+
+/* LinkTopBox */
+.LinkBoxTop {
+   margin: 0 0 0 0;
+   padding: 0 0 40px 0;
+}
+.LinkBoxTop h1, 
+.LinkBoxTop h2, 
+.LinkBoxTop h3, 
+.LinkBoxTop h4, 
+.LinkBoxTop h5 {
+    font-family: arial, verdana, helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+    padding: 8px 10px;
+    font-size: 11px;
+}
+.supportcontent ul {
+    margin: 0;
+}
+.supportcontent .LinkBoxTop li {
+    padding: 8px 10px;
+    font-size: 13px;
+    list-style: none;
+    margin: 0;
+}
+.LinkBoxTop li .ImageLink {
+    display: block;
+    text-align: center;
+}
+.LinkBoxTop li .ImageLink img {
+    margin: 0 -10px;
+}
+.foswikiToc li, .LinkBoxTop li {
+    list-style: none;
+	padding: 0;
+}
+
+/* language switcher, print & pdf buttons */
+.langprint {
+    font-size: 11px;
+    width: auto;
+    overflow: hidden;/* clearfix */
+}
+.langprint .lang {
+    float: left;
+}
+.langprint .lang a, span.activelang {
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+}
+span.activelang {
+    font-weight: bold;
+}
+.langprint .print {
+    float: right;
+}
+.langprint .print a {
+    float: right;
+    display: block;
+    width: 41px;
+    height: 26px;
+    text-indent: -9999.9em;
+    overflow: hidden;/* Firefox Win fix */
+}
+a.typepdf {
+    padding: 0 20px 0 0;
+}
+

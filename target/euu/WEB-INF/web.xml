@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+        PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd">
+<web-app>
+	<display-name>euu Tapestry 5 Application</display-name>
+	<context-param>
+		<!-- The only significant configuration for Tapestry 5, this informs Tapestry 
+			of where to look for pages, components and mixins. -->
+		<param-name>tapestry.app-package</param-name>
+		<param-value>eu.eurofel</param-value>
+	</context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext.xml</param-value>
+	</context-param>
+	<context-param>
+		<param-name>tapestry.page-pool.hard-limit</param-name>
+		<param-value>150</param-value>
+	</context-param>
+	<filter>
+		<filter-name>validate</filter-name>
+		<filter-class>eu.eurofel.filter.EmailValidateFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>urlmap</filter-name>
+		<filter-class>eu.eurofel.filter.BreadCrumbURLFilter</filter-class>
+	</filter>
+	<filter>
+		<filter-name>download</filter-name>
+		<filter-class>eu.eurofel.filter.CMISDownloadFilter</filter-class>
+	</filter>
+	<!-- <filter> <filter-name>app</filter-name> <filter-class>org.apache.tapestry5.TapestryFilter</filter-class> 
+		</filter> -->
+	<filter>
+		<filter-name>app</filter-name>
+		<!-- Special filter that adds in a T5 IoC module derived from the Spring 
+			WebApplicationContext. -->
+		<filter-class>org.apache.tapestry5.spring.TapestrySpringFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>validate</filter-name>
+		<url-pattern>/validate</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>urlmap</filter-name>
+		<url-pattern>/urlmap</url-pattern>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>download</filter-name>
+		<url-pattern>/download</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>app</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error404</location>
+	</error-page>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error500</location>
+	</error-page>
+</web-app>
+      

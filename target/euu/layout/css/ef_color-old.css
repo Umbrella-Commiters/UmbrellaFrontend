@@ -1,0 +1,573 @@
+#psimetanav {
+	background: none;;
+}
+
+input.searchinput {
+	color: #999;
+	background: #f4f4f4;
+	border-top: 1px solid #aaa;
+	border-right: 1px solid #c3c3c3;
+	border-bottom: 1px solid #e4e4e4;
+	border-left: 1px solid #c3c3c3;
+}
+
+input.searchinput:focus {
+	color: #444;
+	background: #f7f7f7;
+	border-top: 1px solid #888;
+	border-right: 1px solid #aaa;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #aaa;
+}
+
+#psimetanav a,#psimetanav li.current,a.tophomelink {
+	color: #2c963a;
+}
+
+#psimetanav li.current {
+	background: #f4f4f4;
+}
+
+#psimetanav a:hover,.tophomelink:hover {
+	color: #000;
+}
+
+#psimetanav a#quicklinkslink:hover {
+	background: url(../img/quicklinks-arrow.png) no-repeat 50% 100%;
+}
+
+#quickstart li a,#quickstart li.current {
+	border-top: 2px solid #eee;
+	color: #444;
+}
+
+#quickstart li a:hover,#quickstart li.current {
+	border-top: 2px solid #e4e4e4;
+	background: #f4f4f4;
+}
+
+#quickstart li span {
+	color: #888;
+}
+
+hr {
+	color: #ccc;
+	background-color: #ccc;
+}
+
+blockquote {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background: #f4f4f4;
+}
+
+a.toplink {
+	color: #888;
+}
+
+a.toplink:hover {
+	color: #444;
+}
+
+h1,h2,h3,h4,h5 {
+	color: #2c963a;
+}
+
+a {
+	color: #2c963a;
+}
+
+.imageFrame {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background: #f4f4f4;
+	color: #666;
+}
+
+.imageCaption {
+	color: #666;
+}
+
+.lightbox {
+	color: #2c963a;
+	background: #f4f4f4;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.lightboximg a.zoom {
+	background: rgb(255, 255, 255) url(../img/zoom.png) no-repeat 6px 5px;
+	border-left: 1px solid #fff;
+}
+
+.lightboximg a.zoom:hover {
+	background: rgb(255, 255, 255) url(../img/zoom.png) no-repeat 6px 5px;
+}
+
+.lightboximg a.download {
+	background: rgb(255, 255, 255) url(../img/download.png) no-repeat 6px
+		5px;
+	border-left: 1px solid #fff;
+}
+
+.lightboximg a.download:hover {
+	background: rgb(255, 255, 255) url(../img/download.png) no-repeat 6px
+		5px;
+}
+
+.foswikiToc h5 {
+	color: #888;
+}
+
+.foswikiToc ul {
+	background: #f4f4f4;
+	border-left: 3px solid #ddd;
+}
+
+.BinderHorizontalSmall div.lightbox {
+	color: #666;
+	background: #f4f4f4;
+	border-top: 1px solid #ddd;
+}
+
+.BoilerplateBottom {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background: #f4f4f4;
+}
+
+.BoilerplateBottom h1,.BoilerplateBottom  h2,.BoilerplateBottom  h3,.BoilerplateBottom  h4,.BoilerplateBottom  h5
+	{ /* do we need all of them h1-h5 ? */
+	color: #888;
+}
+
+/* news and lists with thumbnail and teaser text */
+.separator {
+	background: url(../img/ccem/line-b.png) repeat-x 0 0;
+}
+
+.headnote {
+	color: #666;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+
+.footnote {
+	color: #666;
+}
+
+.footnotetitle {
+	border-top: 1px solid #ddd;
+}
+
+.FootNote {
+	color: #666;
+}
+
+.thumblist h1,.thumblist h2 {
+	color: #2c963a;
+}
+
+/* flowchart / timeline */
+.flowChart {
+	background: url(../img/flowchart.png) no-repeat 50% bottom;
+}
+
+.Container100 {
+	/* a very light grey box, a 100% width container with some margin and padding */
+	background: #f4f4f4;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.Container50 {
+	/* a very light grey box, a 50% width container with some margin and padding */
+	background: #f4f4f4;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+q:before {
+	content: open-quote;
+	color: #333333;
+}
+
+q:after {
+	content: close-quote;
+	color: #333333;
+}
+
+/* supportcontent */ /* LinkTopBox */
+.TeaserBox,.sidebarbox { /* border-bottom: 1px solid #ddd; */
+	color: #2c963a;
+}
+
+.TeaserBox .ImageDescription {
+	background: url(../img/arrow-left-ddd.png) no-repeat 0 50%;
+}
+
+.highlight1,.Highlight1 {
+	background: #f2e8e8;
+	color: #111;
+	border-bottom: 1px solid #d3dae4;
+}
+
+.highlight2,.Highlight2 {
+	background: #f4f4f4;
+	color: #2c963a;
+	border-bottom: 1px solid #ddd;
+}
+
+.TeaserBox h1,.sidebarbox h1,.TeaserBox h2,.sidebarbox h2,.TeaserBox h3,.sidebarbox h3
+	{
+	color: #2c963a;
+}
+
+.TeaserBox h4,.sidebarbox h4,.TeaserBox h5,.sidebarbox h5 {
+	color: #666;
+}
+
+.TeaserBox a,.sidebarbox a {
+	color: #444;
+}
+
+.banner {
+	color: #eee;
+}
+
+.banner h1,.banner h2,.banner h3,.banner h4,.banner h5 {
+	color: #eee;
+}
+
+.banner h1 a,.banner h2 a,.banner h3 a,.banner h4 a,.banner h5 a {
+	color: #2c963a;
+	text-decoration: none;
+}
+
+.banner h1 a:hover,.banner h2 a:hover,.banner h3 a:hover,.banner h4 a:hover,.banner h5 a:hover
+	{
+	color: #dee3eb;
+	text-decoration: underline;
+}
+
+.LinkBoxTop h1,.LinkBoxTop h2,.LinkBoxTop h3,.LinkBoxTop h4,.LinkBoxTop h5
+	{ /* do we need them all h1-h5 ? */
+	color: #666;
+	border-bottom: 1px solid #ddd;
+}
+
+.LinkBoxTop li {
+	color: #444;
+	border-bottom: 1px solid #ddd;
+	padding: 0;
+	list-style: none;
+}
+
+.thePSIis {
+	color: #111;
+}
+
+.langprint a:hover {
+	background-color: #f4f4f4;
+}
+
+.langprint .lang a,span.activelang {
+	color: #888;
+}
+
+span.activelang {
+	color: #666;
+	background-color: #f4f4f4;
+}
+
+/* basic forms */
+input,textarea {
+	color: #000;
+	background: #f4f4f4;
+	border-top: 1px solid #aaa;
+	border-right: 1px solid #c3c3c3;
+	border-bottom: 1px solid #e4e4e4;
+	border-left: 1px solid #c3c3c3;
+}
+
+input:hover,textarea:hover {
+	color: #777;
+	background: #f5f5f5;
+}
+
+input:focus,textarea:focus {
+	color: #111;
+	background: #f2e8e8;
+	border-top: 1px solid #888;
+	border-right: 1px solid #aaa;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #aaa;
+}
+
+input.Button {
+	background: #1B4486 url(../img/bttn-overlay.png) repeat-x;
+	color: #fff;
+	border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+/* tables */
+th {
+	background: #2C963A;
+	color: #111;
+	border-top: 1px solid #0054a6;
+}
+
+.wikitable td,.foswikiTable td,td {
+	border-bottom: 1px solid #eee;
+}
+
+.Borderall {
+	border-left: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+
+.Borderall td {
+	border-top: 1px solid #bbb;
+	border-right: 1px solid #bbb;
+}
+
+.Borderall th {
+	border-right: 1px solid #bbb;
+}
+
+table.highlight,tr.highlight td,td.highlight {
+	background: #f2e8e8;
+	color: #111;
+	border-top: 1px solid #0054a6;
+	border-bottom: 1px solid #0054a6;
+}
+
+table.highlight2,tr.highlight2 td,td.highlight2,.display tr.heading2 td
+	{
+	background: #eee;
+	color: #111;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+
+table.highlight3,tr.highlight3 td,td.highlight3 {
+	background: #0054a6;
+	color: #fff;
+	border-top: 1px solid #0054a6;
+	border-bottom: 1px solid #0054a6;
+}
+
+td.highlightcol1 {
+	background: #f2e8e8;
+	color: #111;
+}
+
+tr.Borderall td {
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+
+td.Borderall {
+	border: 1px solid #bbb !important;
+	/* !important needs to overwrite all possible rules with more weight (tr.Borderall td, tr.highlight2, .display tr.heading2 td) */
+}
+
+td.highlight {
+	background: #f2e8e8;
+	border: 1px solid #0054a6 !important;
+	/* !important needs to overwrite all possible rules with more weight (tr.highlight td, tr.Borderall td, etc)  */
+}
+
+table .foswikiTableOdd td {
+	background: #f4f4f4;
+	color: #111 !important;
+}
+
+table.display .even td {
+	background: #f4f4f4;
+}
+
+table.display thead th {
+	background-color: #f2e8e8;
+}
+
+table.display thead th {
+	border-bottom: 1px solid #ddd;
+}
+
+table.display tfoot th {
+	background-color: #f2e8e8;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #0054a6;
+}
+
+/* DataTables sorting */
+.sorting_asc {
+	background: url('../img/sort_asc.png') no-repeat center right;
+}
+
+.sorting_desc {
+	background: url('../img/sort_desc.png') no-repeat center right;
+}
+
+.sorting {
+	background: url('../img/sort_both.png') no-repeat center right;
+}
+
+td.date {
+	color: #888;
+}
+
+td.type,td.department {
+	color: #333;
+}
+
+td.date strong {
+	color: #333;
+}
+
+tfoot input {
+	color: #444;
+}
+
+tfoot input.search_init {
+	color: #999;
+}
+
+.paginate_button {
+	background-color: #f2e8e8;
+	border: 1px solid #dee3eb;
+	color: #111;
+}
+
+.paginate_button:hover {
+	background-color: #dee3eb;
+	border: 1px solid #c9cfd9;
+	color: #111;
+}
+
+.paginate_active {
+	background-color: #0054a6;
+	border: 1px solid #0054a6;
+	color: #eee;
+}
+
+/* qs is short for quickstart pages */
+.qsimg {
+	background: url(../img/qshome.jpg) no-repeat 50% 0;
+}
+
+.qsimg p {
+	background: #fff;
+	background: rgb(255, 255, 255);
+	color: #888;
+}
+
+span.InfoDescription {
+	color: #888;
+}
+
+.qssidebar .langprint {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.qssidebar #applinks {
+	border-bottom: 1px solid #ddd;
+	margin: 0;
+	padding: 0;
+}
+
+.qssidebar .aapplink {
+	color: #888;
+}
+
+/* Sitemap */
+.sitemap h2 {
+	color: #888;
+}
+
+.sitemap ul ul li {
+	border-left: 1px solid #ddd;
+	padding: 0;
+	list-style: none;
+}
+
+.sitemap a {
+	color: #0054a6;
+}
+
+.sitemap a:visited {
+	color: #444;
+}
+
+/* footer */ /* The Colors */
+h1.logo a {
+	background: url(../img/logo.png) no-repeat 0 5px;
+}
+
+.seperator {
+	background: url(../img/ccem/line-b.png) repeat-x 0 0;
+}
+
+a { /*   color: #f33; */
+	
+}
+
+a q {
+	color: #2c963a;
+}
+
+.LinkBoxTop {
+	border-top: 2px solid #0054a6;
+	border-bottom: 1px solid #ddd;
+}
+
+.banner {
+	background: #0054a6;
+	color: #eee;
+}
+
+.TeaserBox a:hover,.sidebarbox a:hover {
+	color: #0054a6;
+}
+
+.TeaserBox h1 a,.sidebarbox h1 a,.TeaserBox h2 a,.sidebarbox h2 a,.TeaserBox h3 a,.sidebarbox h3 a,.TeaserBox h4 a,.sidebarbox h4 a,.TeaserBox h5 a,.sidebarbox h5 a
+	{
+	color: #0054a6;
+	text-decoration: none;
+}
+
+.TeaserBox h1 a:hover,.sidebarbox h1 a:hover,.TeaserBox h2 a:hover,.sidebarbox h2 a:hover,.TeaserBox h3 a:hover,.sidebarbox h3 a:hover,.TeaserBox h4 a:hover,.sidebarbox h4 a:hover,.TeaserBox h5 a:hover,.sidebarbox h5 a:hover
+	{
+	color: #0054a6;
+	text-decoration: underline;
+}
+
+a.typepdf {
+	background: url(../img/icon_pdf.png) no-repeat right top;
+}
+
+.hiddenText:hover {
+	color: #000;
+	background: #fff;
+	border-top: 0px solid #fff;
+	border-right: 0px solid #fff;
+	border-bottom: 0px solid #fff;
+	border-left: 0px solid #fff;
+}
+
+.hiddenText {
+	color: #000;
+	background: #fff;
+	border-top: 0px solid #fff;
+	border-right: 0px solid #fff;
+	border-bottom: 0px solid #fff;
+	border-left: 0px solid #fff;
+}
+
+.helpField {
+	border: 1px dotted #2C963A;
+	color: #2C963A;
+	padding: 2px;
+}

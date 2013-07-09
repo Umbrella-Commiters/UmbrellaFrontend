@@ -1,0 +1,30 @@
+<html t:type="layout" title="Lost Username" t:sidebarTitle="Help!" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+	<p>Please enter your email address to retrieve your username</p>
+	<t:beaneditform t:id="lostusername" submitlabel="message:submit-label" object="retriever">
+		<p:email>
+			<t:label for="email" />
+			<t:textfield t:id="email" value="retriever.email" />
+		</p:email>
+		<p:username>
+			<t:hidden value="retriever.username" />
+		</p:username>
+
+		<p:verificationCode>
+
+			<label>Verification Image</label>
+			<t:kaptchaimage t:id="kaptcha"/>
+  			<br/>
+  			<label>Verification Code</label>
+  			<t:kaptchafield visible="true" image="kaptcha"/>
+  			
+<!-- 
+			<label>Verification Image</label>
+			<img xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd" src="${imageURL}" align="absmiddle" alt="Dynamic Verification Code" />
+			<br />
+			<t:label for="verificationCode" />
+			<t:textfield t:id="verificationCode" value="retriever.verificationCode" />
+ -->
+		</p:verificationCode>
+	</t:beaneditform>
+</html>

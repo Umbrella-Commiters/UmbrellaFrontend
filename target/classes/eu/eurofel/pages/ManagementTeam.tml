@@ -1,0 +1,81 @@
+<html t:type="layout" title="Management Team" t:sidebarTitle="Things to do next" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+	<!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<p>Following people are member of the Umbrella Management Team</p>
+	<p>
+		<table>
+			<tr>
+				<td>Name</td>
+				<td>Affiliation</td>
+				<td>Function</td>
+			</tr>
+			<tr>
+				<td>Heinz-Josef Weyer</td>
+				<td>PSI</td>
+				<td>Team Leader</td>
+			</tr>
+			<tr>
+				<td>Daniel Salvat</td>
+				<td>ALBA</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Frank Schluenzen</td>
+				<td>DESY</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Bill Pulford</td>
+				<td>DIAMOND</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Johannes Schmidt</td>
+				<td>EMBL</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Dominique Porte</td>
+				<td>ESRF</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Dean Flanders</td>
+				<td>FMI</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Thomas Gutberlet</td>
+				<td>HZB</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Jean-François Perrin</td>
+				<td>ILL</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Tom Griffin</td>
+				<td>ISIS / STFC</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Björn Abt</td>
+				<td>PSI</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Mirjam van Daalen</td>
+				<td>PSI</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Stefan Janssen</td>
+				<td>PSI</td>
+				<td></td>
+			</tr>
+		</table>
+	</p>
+
+</html>

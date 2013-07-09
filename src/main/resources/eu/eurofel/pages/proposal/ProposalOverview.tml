@@ -1,0 +1,113 @@
+<html t:type="layout" title="Proposal Overview" t:sidebarTitle="Help!"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	<p>
+		<t:zone t:id="createZone" t:update="prop:zoneUpdateFunction">
+			<t:if test="proposal" negate="true">
+				<a t:type="eventLink" t:event="toCreate" t:zone="createZone" href="#">
+					Create New Proposal
+				</a>
+			</t:if>
+			<t:if test="proposal">
+				<a t:type="eventLink" t:event="toEditProposal" t:zone="editorZone"
+					href="#">
+					Edit Proposal
+				</a>
+				<t:if test="proposalFull" negate="true">
+					|
+					<a t:type="eventLink" t:event="toCreateSection" t:zone="editorZone"
+						href="#">
+						Create Section
+					</a>
+					<br />
+				</t:if>
+			</t:if>
+		</t:zone>
+		<table id="frame">
+			<tbody>
+
+				<tr>
+					<td colspan="2">
+						<t:zone t:id="titleZone" t:update="prop:zoneUpdateFunction">
+							<t:if test="proposal">
+								<div id="proposaltitle" class="proposaltitle">
+									<div>
+										TITLE: ${proposal.title}
+									</div>
+								</div>
+							</t:if>
+						</t:zone>
+					</td>
+				</tr>
+
+				<tr>
+					<!-- This is the left side of the table: a list of Persons -->
+
+					<td id="listCell">
+						<t:zone t:id="listZone" t:update="prop:zoneUpdateFunction">
+
+							<t:if test="proposal">
+								<t:ProposalList t:id="list" highlightSectionId="highlightSectionId"
+									proposal="proposal" zone="listZone" />
+							</t:if>
+						</t:zone>
+					</td>
+
+					<!-- This is the right side of the table: where a Person will be created, 
+						reviewed, or updated. -->
+
+					<td id="editorCell">
+						<t:zone t:id="editorZone" t:update="prop:zoneUpdateFunction">
+
+							<t:if test="proposal">
+								<t:ProposalEditor t:id="editor" mode="mode"
+									sectionId="sectionId" proposal="proposal" zone="editorZone" />
+							</t:if>
+						</t:zone>
+					</td>
+
+				</tr>
+			</tbody>
+		</table>
+		<t:zone t:id="deleteZone" t:update="prop:zoneUpdateFunction">
+			<t:if test="proposal">
+				<a t:type="eventLink" t:event="toDelete" t:zone="editorZone" href="#">
+					<span t:type="any" t:mixins="Confirm" t:message="Delete Proposal ?">
+						Delete
+						Proposal
+				</span>
+				</a>
+				|
+				<a t:type="actionlink" target="_blank" t:id="download">
+					Download
+					Proposal
+				</a>
+				<br />
+			</t:if>
+		</t:zone>
+		<br />
+		<t:zone t:id="uploadZone" t:update="prop:zoneUpdateFunction">
+			<form t:type="form" enctype="multipart/form-data" t:id="uploadFile">
+				<t:errors />
+				Upload Proposal
+				<br />
+				<input t:type="upload" t:id="file" validate="required"
+					onChange="submit()" />
+
+			</form>
+		</t:zone>
+
+	</p>
+	<p:sidebar>
+		<t:zone t:id="helpZone" t:update="prop:zoneUpdateFunction">
+
+			<ul>
+				<t:loop source="helpEntries" value="helpEntry">
+
+					<li>
+						<t:pagelink page="account/create">${helpEntry}</t:pagelink>
+					</li>
+				</t:loop>
+			</ul>
+		</t:zone>
+	</p:sidebar>
+</html>

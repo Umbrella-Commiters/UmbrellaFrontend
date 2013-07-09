@@ -1,0 +1,4 @@
+<html t:type="layout" title="Create Account" t:sidebarTitle="Help!"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	<p>Your account has been created. You should receive an email with an activation code.</p>
+</html>

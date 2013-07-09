@@ -1,0 +1,28 @@
+<html t:type="layout" title="Documents" t:sidebarTitle="Things to do next" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<p>
+
+		<div style="margin: 20px;">
+			<table width="100%" t:type="grid" t:source="links" t:row="link" t:exclude="link" t:rowsPerPage="25" t:pagerPosition="top">
+				[Grid here]
+				<p:descriptionCell>
+					${link.description}
+				</p:descriptionCell>
+				<p:titleCell>
+					<a target="_blank" href="/euu/download?url=${link.link}&amp;name=${link.title}">
+						<img src="/euu/layout/images/download-icon.png" width="16 px" height="16 px" />
+						${link.title}
+					</a>
+				</p:titleCell>
+				<p:authorCell>
+					${link.author}
+				</p:authorCell>
+				<p:dateCell>
+					${link.date}
+				</p:dateCell>
+			</table>
+		</div>
+
+	</p>
+</html>

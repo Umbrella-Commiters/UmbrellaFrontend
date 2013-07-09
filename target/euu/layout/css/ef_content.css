@@ -1,0 +1,531 @@
+strong,b {
+	font-weight: bold;
+}
+
+em,i {
+	font-style: italic;
+}
+
+#content {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+/* headings maincontent */
+h1 {
+	font-size: 20px;
+	line-height: 24px;
+	padding: 7px 0 10px 0;
+	margin: 0 0 8px 0;
+}
+
+.maincontent h1:first-line {
+	font-size: 26px;
+	line-height: 30px;
+}
+
+.maincontent h1 span {
+	font-size: 26px;
+	line-height: 30px;
+}
+
+h2 {
+	font-size: 18px;
+	line-height: 24px;
+	padding: 10px 0 10px 0;
+	margin: 40px 0 5px 0;
+}
+
+.maincontent h2:first-line {
+	font-size: 22px;
+	line-height: 28px;
+}
+
+.maincontent h2 span {
+	font-size: 22px;
+	line-height: 28px;
+}
+
+h3 {
+	font-size: 14px;
+	line-height: 20px;
+	padding: 10px 0 13px 0;
+}
+
+.maincontent h3:first-line {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.maincontent h3 span {
+	font-size: 18px;
+	line-height: 24px;
+}
+
+.gridbox h3,.w33 h3 {
+	font-size: 16px;
+	line-height: 24px;
+	padding: 0 0 0 0;
+	text-transform: uppercase;
+}
+
+.w33 h3,.gridbox3 h3 {
+	text-transform: uppercase;
+	line-height: 20px;
+}
+
+h4 {
+	font-family: georgia, times, serif;
+	font-size: 11px;
+	line-height: 15px;
+	padding: 30px 0 10px 0;
+	font-weight: bold;
+}
+
+.maincontent h4:first-line {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+.maincontent h4 span {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+h5 {
+	font-size: 11px;
+	line-height: 14px;
+	padding: 25px 0 10px 0;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+h1 a,h2 a,h3 a,h4 a,h5 a {
+	text-decoration: none;
+}
+
+h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover {
+	text-decoration: underline;
+}
+
+span.nocaps {
+	text-transform: none !important;
+}
+
+h1+h2,h2+h3,h3+h4,h4+h5,.lightbox+h2,.lightbox+h3,.lightbox+h4,.lightbox+h5,.imageFloat+h2,.imageFloat+h3,.imageFloat+h4,.imageFloat+h5,hr.clear+h2,.rubriken+h5
+	{
+	margin: 0;
+	padding: 7px 0 10px;
+}
+
+/* end headings */ /* main content */
+hr {
+	height: 1px;
+	margin: 20px 0;
+	border: 0;
+}
+
+hr.clear {
+	margin-bottom: 20px;
+}
+
+.clear {
+	clear: both;
+}
+
+sup,sub {
+	height: 0;
+	line-height: 1;
+	vertical-align: baseline;
+	position: relative;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+blockquote {
+	margin: 16px;
+	padding: 12px 15px 15px 15px;
+	font-size: 13px;
+	line-height: 18px;
+}
+
+a.toplink {
+	display: block;
+	width: 60px;
+	height: 40px;
+	font-size: 14px;
+	line-height: 40px;
+	text-decoration: none;
+	text-align: center;
+	float: right;
+}
+
+a.toplink:hover {
+	text-decoration: underline;
+}
+
+ul,ol {
+	margin: 8px 20px 16px 20px;
+}
+
+li {
+	padding: 0 0 8px 0;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+ol ol li {
+	padding: 0 0 8px 0;
+	list-style: lower-alpha;
+}
+
+pre {
+	font-family: "Courier New", Courier, monospace;
+	clear: both;
+	margin: 20px 0;
+	padding: 15px 10px;
+	width: auto;
+	overflow: auto;
+}
+
+code {
+	font-family: "Courier New", Courier, monospace;
+}
+
+img {
+	margin: 0px 0;
+}
+
+.imageFrame {
+	margin: 5px 0 10px 3%;
+	padding: 0 5px 5px 5px;
+	font-size: 11px;
+	line-height: 14px;
+}
+
+.imageFrame_right {
+	clear: right;
+	float: right;
+	margin: 5px 0 10px 3%;
+}
+
+.imageFrame_left {
+	clear: left;
+	float: left;
+	margin: 5px 3% 10px 0;
+}
+
+.imageCaption {
+	clear: both;
+	display: block;
+	font-size: 11px;
+	line-height: 14px;
+	padding: 0 4px;
+}
+
+.imageFloat_right,.imagePlain_right {
+	float: right;
+	margin: 5px 0 10px 3%;
+}
+
+.imageFloat_left,.imagePlain_left {
+	float: left;
+	margin: 5px 3% 10px 0;
+}
+
+.lightbox {
+	clear: right;
+	float: right;
+	margin: 5px 0 10px 3%;
+	padding: 0 0 5px 0;
+}
+
+.imageFloat_right a img,.imagePlain_right a img,.imageFloat_left a img,.imagePlain_left a img
+	{
+	margin: 0;
+}
+
+.lightboximg {
+	position: relative;
+	padding: 0;
+	overflow: hidden;
+}
+
+.lightboximg,.lightboximg a,.lightboximg a img {
+	margin: 0;
+	padding: 0;
+	display: inline;
+}
+
+.lightboximg .zoom {
+	position: absolute;
+	bottom: 3px;
+	right: 0;
+	display: block;
+	width: 27px;
+	height: 26px;
+	text-indent: -9999.9em;
+	overflow: hidden; /* Firefox Win fix */
+}
+
+.lightboximg .download {
+	position: absolute;
+	bottom: 3px;
+	right: 28px;
+	display: block;
+	width: 27px;
+	height: 26px;
+	margin: -4px 0 0 0;
+	text-indent: -9999.9em;
+	overflow: hidden; /* Firefox Win fix */
+}
+
+.lightbox img {
+	margin: 0 !important;
+}
+
+.imageFrame_right img,.imageFrame_left img {
+	margin: 5px 0;
+}
+
+/* table of contents */
+.foswikiToc {
+	width: auto;
+	overflow: hidden; /*clearfix */
+}
+
+.foswikiToc h5 {
+	margin: 0;
+	padding: 0 0 0 16px;
+	font-size: 11px;
+	position: relative;
+	top: 6px;
+}
+
+.foswikiToc ul {
+	padding: 10px 15px;
+	margin: 0;
+}
+
+.foswikiTocTitle {
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 14px;
+	padding: 0 0 10px;
+	text-transform: uppercase;
+	color: #444444;
+	display: block;
+}
+
+.foswikiToc li {
+	margin: 3px 0;
+}
+
+.foswikiToc ul ul {
+	float: none;
+}
+
+.foswikiToc a {
+	text-decoration: none;
+	line-height: 1.5em;
+}
+
+.foswikiToc a:hover {
+	text-decoration: underline;
+}
+
+/* news and lists with thumbnail and teaser text */
+.thumblist {
+	clear: both;
+	/*  margin: 30px 0 0 0; */
+	padding: 10px 0 10px 260px;
+}
+
+.thumblist .item {
+	clear: both;
+	padding: 0 0 20px 0;
+}
+
+.headnote {
+	float: right;
+	font-size: 11px;
+	padding: 3px 6px 1px 6px;
+	margin: 1px 0 0 10px;
+	font-weight: bold;
+}
+
+.footnote {
+	font-style: italic;
+	font-size: 11px;
+	display: block;
+	margin: 8px 0 0 0;
+}
+
+.footnotetitle {
+	display: block;
+	padding: 20px 0 0 0;
+	margin: 20px 0 0 0;
+}
+
+.FootNoteTextLink {
+	vertical-align: super;
+	font-size: 75%;
+}
+
+.FootNoteLabel a {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.FootNoteLabel a:hover {
+	text-decoration: underline;
+}
+
+.FootNote {
+	font-style: italic;
+	font-size: 12px;
+}
+
+.newsitem img {
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+.rubriken {
+	float: right;
+	margin: 0 0 0 3%;
+}
+
+.rubriken h5 {
+	padding: 0;
+}
+
+.landing .thumblist h1,.landing .thumblist h2 {
+	margin: 10px 0 20px -260px;
+	text-transform: uppercase;
+}
+
+.thumblist h2 { /* only in thumblists on subpages */
+	margin: 10px 0 20px -260px;
+	text-transform: uppercase;
+	font-size: 22px;
+	line-height: 28px;
+}
+
+.thumblist img {
+	float: left;
+	margin: 0 0 20px -260px;
+}
+
+.thumblist .headnote {
+	margin: -3px 0 0 10px;
+}
+
+.thumblist .imageFloat_left,.thumblist .lightbox {
+	float: left;
+	clear: none;
+	margin: 0 0 20px -260px;
+	border: 0;
+	background: none;
+}
+
+.thumblist .BinderVertical .lightbox {
+	border: 0;
+	background: none;
+	padding: 0;
+}
+
+.thumblist .imageFloat_left img,.thumblist .lightbox img {
+	float: none;
+	margin: 0 !important;
+}
+
+.thumblist hr {
+	margin-left: -260px;
+}
+
+.thumblist h3 {
+	font-size: 18px;
+	line-height: 22px;
+	margin: -3px 0 0 0;
+	padding: 0 30px 5px 0;
+}
+
+.thumblist br.clear {
+	display: block;
+	margin-bottom: 20px;
+}
+
+.thumblist .item br.clear {
+	display: block;
+	margin-bottom: 0px;
+}
+
+/* publication list */
+.publications li {
+	margin: 0 0 20px 0;
+}
+
+/* flowchart / timeline */
+.flowChart {
+	padding: 0 0 70px 0;
+}
+
+.flowchartlast {
+	margin: 0;
+	background-image: none;
+}
+
+.Container100 {
+	clear: both;
+	margin: 20px 0;
+	padding: 15px 3%;
+	width: auto;
+	overflow: auto;
+}
+
+.Container50 {
+	float: left;
+	width: 47%;
+	margin: 20px 3% 20px 0;
+	padding: 15px 3%;
+}
+
+.floatleft {
+	float: left;
+	margin: 0 3% 0 0;
+}
+
+.floatright {
+	float: right;
+	margin: 0 0 0 3%;
+}
+
+q {
+	font-style: normal;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	padding: 3px 0;
+	margin-left: 20px;
+}
+
+small {
+	font-size: 80%;
+}

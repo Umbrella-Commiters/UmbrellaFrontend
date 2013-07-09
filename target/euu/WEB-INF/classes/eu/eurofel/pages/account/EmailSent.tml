@@ -1,0 +1,4 @@
+<html t:type="layout" title="Email Sent" t:sidebarTitle="Help!"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	<p>An email was sent!</p>
+</html>

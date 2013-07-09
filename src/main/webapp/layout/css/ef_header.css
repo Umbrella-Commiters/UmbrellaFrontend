@@ -1,0 +1,201 @@
+/*
+PSI Header CSS
+=========================
+
+Styling for the header on all pages within the psi.ch domain.
+
+------------------------------------------------------------------------------
+Author: Stefan Sicher
+Version: 1.0.0x | Dez '09
+------------------------------------------------------------------------------
+$HeadURL: https://svn.psi.ch/psiweb/psiweb/webbase/css/ccem_header.css $
+$Date: 2010-06-09 17:49:08 +0200 (Mi, 09 Jun 2010) $
+$Rev: 1753 $
+$Author: lichtsteiner@PSI.CH $ (has last changed this file)
+------------------------------------------------------------------------------ */
+/* EuroFEL header styling starts here */
+#header {
+    height: 132px;
+    background: url(../img/header-gradient.jpg) no-repeat bottom left;
+}
+h1.logo {
+    float: left;
+    margin: 42px 0 0 0;
+    width: 25%;
+    border-bottom: 0;
+}
+h1.logo a {
+    display: block;
+    width: 183px;
+    height: 71px;
+    text-indent: -9999.9em;
+    overflow: hidden;/* Firefox Win :focus fix */
+}
+.logoimg {
+    display: none;
+    margin: 0;
+}
+#psimetanav {
+    float: right;
+    width: 620px;
+}
+#psimetanav .searchinput {
+    margin: 0 5px 0 0;
+    width: 130px;
+    padding: 2px;
+}
+#psimetanav .searchsubmit {
+    position: relative;/* submit button was misplaced */
+    top: 7px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#psimetanav ul {
+    margin: 0;
+}
+#psimetanav .pdfprint {
+    float: right;
+}
+#psimetanav ul, #psimetanav li, #psimetanav form, #quickstart li {
+    display: inline;
+}
+#psimetanav li {
+    margin: 0 10px 0 0;
+    padding: 0;
+    list-style: none;
+}
+#quickstart li {
+    padding: 0;
+    list-style: none;
+}
+#psimetanav a, #psimetanav li.current, a.tophomelink {
+    text-decoration: none;
+    font-size: 12px;
+}
+#psimetanav span.activelang {
+    display: none;
+}
+#header .partners {
+    clear: right;
+    float: right;
+    width: 620px;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+.partners .partnertitle {
+    display: block;
+    font-size: 11px;
+    margin: 0 0 8px 0;
+    color: #036;
+}
+#header .partners ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#header .partners li {
+    list-style: none;
+    float: left;
+}
+#header .partners a {
+    display: block;
+    height: 38px;
+    text-indent: -9999.9em;
+}
+.p1 {
+    width: 40px;
+    background: url(../img/partners.jpg) no-repeat 0 0;
+}
+.p2 {
+    width: 50px;
+    background: url(../img/partners.jpg) no-repeat -40px 0;
+}
+.p3 {
+    width: 85px;
+    background: url(../img/partners.jpg) no-repeat -90px 0;
+}
+.p4 {
+    width: 70px;
+    background: url(../img/partners.jpg) no-repeat -175px 0;
+}
+.p5 {
+    width: 46px;
+    background: url(../img/partners.jpg) no-repeat -245px 0;
+}
+.p6 {
+    width: 75px;
+    background: url(../img/partners.jpg) no-repeat -291px 0;
+}
+.p7 {
+    width: 75px;
+    background: url(../img/partners.jpg) no-repeat -366px 0;
+}
+.p8 {
+    width: 97px;
+    background: url(../img/partners.jpg) no-repeat -441px 0;
+}
+.p9 {
+    width: 53px;
+    background: url(../img/partners.jpg) no-repeat -538px 0;
+}
+.p1:hover {
+    background: url(../img/partners.jpg) no-repeat 0 -38px;
+}
+.p2:hover {
+    background: url(../img/partners.jpg) no-repeat -40px -37px;
+}
+.p3:hover {
+    background: url(../img/partners.jpg) no-repeat -90px -38px;
+}
+.p4:hover {
+    background: url(../img/partners.jpg) no-repeat -175px -38px;
+}
+.p5:hover {
+    background: url(../img/partners.jpg) no-repeat -245px -38px;
+}
+.p6:hover {
+    background: url(../img/partners.jpg) no-repeat -291px -38px;
+}
+.p7:hover {
+    background: url(../img/partners.jpg) no-repeat -366px -38px;
+}
+.p8:hover {
+    background: url(../img/partners.jpg) no-repeat -441px -38px;
+}
+.p9:hover {
+    background: url(../img/partners.jpg) no-repeat -538px -38px;
+}
+/*span.activelang {
+    font-weight: bold;
+}
+.langprint .print {
+    float: right;
+}
+.langprint .print a {
+    float: right;
+    display: block;
+    width: 41px;
+    height: 26px;
+    text-indent: -9999.9em;
+    overflow: hidden;
+}*/
+#topnavi {
+    position: relative;
+    height: 50px;
+}
+#topnavi .lang {
+    float: right;
+}
+.intranote {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: arial, verdana, helvetica, sans-serif;
+    text-transform: uppercase;
+    position: absolute;
+    letter-spacing: 0.5px;
+    top: 32px;
+    right: 25px;
+}
+/* PSI header styling ends here */

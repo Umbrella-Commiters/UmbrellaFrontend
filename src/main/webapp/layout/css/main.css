@@ -1,0 +1,719 @@
+@charset "UTF-8";
+
+@import url(ef_reset.css);
+
+@import url(ef_layout.css);
+@import url(ef_header.css);
+@import url(ef_subheader.css);
+@import url(ef_content.css);
+
+@import url(ef_supportcontent.css);
+@import url(ef_forms.css);
+@import url(ef_tables.css);
+@import url(ef_home.css);
+@import url(ef_sitemap.css);
+
+@import url(ef_footer.css);
+@import url(ef_misc.css);
+
+@import url(ef_color.css);
+@import url(ef_superfish.css);
+
+/* calmonth */
+.calmonth {
+   background-color: #FFFFFF;
+   border: 1px solid #003366;
+   border-collapse: collapse;
+   float: left;
+   text-align: center;
+}
+.calmonth thead th {
+   padding-top: 2px;
+   padding-bottom: 2px;
+}
+.calmonth thead button {
+   font-weight: bold;
+}
+.calmonth th {
+   background-color: #E1E7F2;
+   border-top: 0px none;
+   border-right: 0px none;
+   border-bottom: 1px solid #003366;
+   border-left: 0px none;
+   color: #000000;
+   font-size: 90%;
+   font-weight: normal;
+   padding: 0px;
+}
+.calmonth td {
+   border: 0px none;
+   height: 20px;
+   padding: 0px;
+   width: 27px;
+}
+.calmonth tfoot th {
+   border-top: 1px solid #003366;
+   border-right: 0px none;
+   border-bottom: 0px none;
+   border-left: 0px none;
+   padding-top: 2px;
+   padding-bottom: 2px;
+}
+.prevnextButton {
+   cursor: pointer;
+   font-size: 90%;
+   padding: 1px;
+}
+.prevnextButton[disabled] {
+   cursor: auto;
+}
+.SelectDateButton {
+   background-color: #FFFFFF;
+   border: 0px none;
+   cursor: pointer;
+   font-size: 80%;
+   height: 100%;
+   margin: 0px;
+   padding: 0px;
+   width: 100%;
+}
+.SelectDateButton:hover, .SelectDateButton:focus {
+   background-color: #80FFA0;
+}
+.NotSelectable {
+  background-color: #C0C0C0
+}
+.NotSelectable:hover {
+  background-color: #C0C0C0
+}
+.NotCurrentMonth {
+   background-color: #F2F2F2
+}
+.SelectedDate {
+   background-color: #80FFA0;
+}
+.SelectDateButton[disabled] {
+   color: #000000;
+   cursor: auto;
+}
+.TodayButton {
+   font-weight: bold;
+}
+
+/*
+Print
+=====
+
+------------------------------------------------------------------------------
+Author: Stefan Sicher
+Version: Dez '09
+------------------------------------------------------------------------------
+$HeadURL: https://svn.psi.ch/psiweb/psiweb/webbase/css/print.css $
+$Date: 2010-06-09 17:49:08 +0200 (Mi, 09 Jun 2010) $
+$Rev: 1753 $
+$Author: lichtsteiner@PSI.CH $ (has last changed this file)
+------------------------------------------------------------------------------ */
+
+body {
+  width: auto;
+  font-size: .8em;
+  padding: 0 .1cm 0 .8cm;
+}
+
+#wrap {
+  background: none;
+	min-width: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+.w75, 
+.maincontent {
+	width: inherit;
+	float:none;
+	overflow:visible;
+	padding: 0;
+	margin: 0;
+}
+
+.printheader {
+
+}
+
+.printheader img {
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+.printheader p {
+  float:right;
+  margin:10px;
+  padding-left:0;
+}
+
+.printheaderbelowline {
+	width: 100%;
+  color: #508FCB;
+  text-align: right;
+}
+
+.printheaderaboveline {
+  border-bottom:4px solid #508FCB;
+  height:60px;
+  padding:5px 0 10px;
+}
+
+.qsimg img {
+	display: inline;
+	width: 100%;
+}
+
+.qsimg {
+	height: auto;
+}
+
+.logoimg {
+	display: block;
+	position: absolute;
+}
+
+#psimetanav,
+#quickstart,
+.qssidebar,
+#footer,
+#langprintapp,
+.navigation,
+.tophomelink,
+.supportcontent
+{
+	display: none;
+}
+
+#secondheader .inner {
+  padding: 0;
+}/* top-navigation */
+.TopNav {
+   background-color: #FFFFFF;
+   background: url(../img/eurofel/UnderConstruction_klein.jpg) no-repeat top right;
+   padding-top: 5px;
+   padding-right: 2px;
+   padding-bottom: 30px;
+   padding-left: 2px;
+}
+
+.BreadCrumb {
+   clear: left;
+   list-style: none;
+   margin: 0px;
+   padding: 0px;
+}
+
+.BreadCrumb > li {
+   float: left;
+   padding-top: 0px;
+   padding-bottom: 0px;
+}
+
+.BreadCrumbButton {
+   background-color: #FFFFFF;
+   border-top: 0px none;
+   border-right: 0px none;
+   border-bottom: 1px solid #FFFFFF;
+   border-left: 0px none;
+   cursor: pointer;
+   padding: 1px;
+}
+
+.BreadCrumbButton:hover, .BreadCrumbButton:focus {
+   background-color: #E0E0E0;
+}
+
+.BreadCrumbButton[disabled] {
+   background-color: #F0F0F0;
+   border-bottom: 1px solid #0000FF;
+   color: #000000;
+   cursor: auto;
+}
+
+.BreadCrumbButton[disabled]:hover {
+   background-color: #F0F0F0;
+}
+
+.BreadCrumbSeparator {
+   background-color: #FFFFFF;
+   padding-right: 4px;
+   padding-left: 4px;
+}
+
+.BreadCrumbArrow {
+  padding-bottom: 2px;
+}
+
+.BreadCrumbChildren {
+   clear: left;
+   list-style: none;
+   margin: 0px;
+   min-height: 19px;
+   padding: 2px 0px 2px 0px;
+}
+
+.BreadCrumbChildren > li {
+   float: left;
+   padding-top: 0px;
+   padding-bottom: 0px;
+}
+
+.BreadCrumbChildren li:hover ul {
+   border: 1px solid #A0A0A0;
+   display: block;
+   margin: 0px;
+   position: absolute;
+   z-index: 99;
+}
+
+.BreadCrumbGrandChildren {
+   background-color: #F0F0F0;
+   display: none;
+   list-style: none;
+   padding: 0px;
+   position: absolute;
+}
+
+.BreadCrumbGrandChildren > li {
+   border-bottom: 1px solid #D1D1D1;
+   padding: 0px;
+}
+
+.BreadCrumbGrandChildren > li:hover {
+   background-color: #E0E0E0;
+}
+
+.BreadCrumbGrandChildrenButton {
+   background-color: inherit;
+   border: 0px none;
+   cursor: pointer;
+   font-family: Arial, sans-serif;
+   padding: 5px;
+   text-align: left;
+   width: 100%;
+}
+
+#wrap {
+	text-align: left; /* because of IE fix in line 18 */
+	margin: 0 auto;
+	padding: 0;
+	width: 950px;
+}
+
+.navigation {
+	margin: 0;
+	width: 200px;
+}
+
+.navbox {
+	width: 190px;
+}
+
+.maincontent {
+	width: 730px;
+	padding: 0px 9px 10px 9px;
+	border-left: 1px solid #7fc8da;
+	border-right: 1px solid #7fc8da;
+}
+
+.supportcontent {
+	margin: 0;
+	width: 200px;
+	border: 0;
+}
+
+.navbox h5 {
+	margin: 0 0 10px 0;
+	padding: 0;
+	line-height: 26px;
+	color: #000;
+	font-weight: normal;
+	border-bottom: 1px solid #7FC8DA;
+}
+
+.navbox h5.doubleline {
+	color: #f33;
+	border-bottom: 1px solid #f33;
+	border-top: 1px solid #f33;
+	margin-top: 10px;
+}
+
+/* upcoming events */
+.eventboxsmall {
+	padding-top: 90px;
+	background: url(../img/eurofel/Calendar_Icon.jpg) no-repeat;
+}
+
+.eventboxsmall ul {
+	margin: 0;
+	padding: 0;
+}
+
+.eventboxsmall li {
+	list-style: none;
+	margin: 10px 0 0 0;
+	padding: 0;
+}
+
+.eventboxsmall a {
+	display: block;
+	text-decoration: none;
+	color: #036;
+	padding: 5px;
+}
+
+.eventboxsmall a:hover {
+	background: #eaeef5;
+}
+
+.eventboxsmall .date {
+	display: block;
+	float: left;
+	width: 33%;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+.eventboxsmall .description {
+	display: block;
+	margin: 0 0 0 33%;
+	font-size: 12px;
+}
+
+.more {
+	color: #f33;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.more:hover {
+	text-decoration: underline;
+}
+
+/* overwriting content.css */
+h1,h2 {
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 15px;
+	line-height: 26px;
+	font-weight: bold;
+	padding: 0;
+	margin: 0 0 13px 0;
+	text-transform: uppercase;
+	border-bottom: 1px solid #7FC8DA;
+}
+
+.thumblist {
+	padding: 10px 0 10px 235px;
+}
+
+.landing .thumblist h1,.landing .thumblist h2 {
+	margin: 10px 0 20px -235px;
+}
+
+.thumblist h2 { /* only in thumblists on subpages */
+	margin: 0px 0 20px -235px;
+}
+
+.thumblist img {
+	margin: 0 0 20px -235px;
+}
+
+.thumblist .imageFloat_left,.thumblist .lightbox {
+	margin: 0 0 20px -235px;
+}
+
+.thumblist hr {
+	margin-left: -235px;
+}
+
+.thumblist h2 {
+	font-size: 15px;
+	line-height: 18px;
+}
+
+.thumblist h3 {
+	color: #036;
+	/*
+   font-size: 14px;
+   font-weight: bold;
+   line-height: 12px;
+   margin: 0 0 6px 0;
+   text-transform: uppercase;
+*/
+}
+
+.thumblist h3 a {
+	color: #036;
+	font-size: 14px;
+	line-height: 12px;
+}
+
+.maincontent h1:first-line {
+	font-size: 16px;
+	line-height: 26px;
+}
+
+h3,h4,h5 {
+	font-family: arial, verdana, helvetica, sans-serif;
+}
+
+/* overwriting supportcontent.css */
+.supportcontent {
+	
+}
+
+.supportcontent .TeaserBox { /*  margin: 0 0 40px 20px; */
+	/*  padding: 0 0 10px 0; */ /*  border-bottom: 1px solid #f33; */
+	
+}
+
+.TeaserBox a {
+	font-weight: bold;
+	color: #036;
+}
+
+.TeaserBox li {
+	list-style: none;
+	margin: 0;
+	padding: 2px 0;
+}
+
+.TeaserBox li a {
+	color: #036;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.supportcontent .NoDeco {
+	border-bottom: 0;
+}
+
+.supportcontent .TeaserBox h5 {
+	margin: 0 0 10px 0;
+	padding: 0;
+	line-height: 26px;
+	color: #f33;
+	font-weight: normal;
+	border-bottom: 1px solid #f33;
+}
+
+/* Tapestry overrides */
+.visibleDiv {
+	position: fixed;
+	width: 300px;
+	left: 0px;
+	bottom: 0px;
+	background-color: #ffffff;
+	padding: 2px;
+	border: 1px;
+	border-style: solid;
+	border-color: #e79340;
+	font-family: "Arial", sans-serif;
+}
+
+div.t-beaneditor {
+	display: block;
+	background: #FFF;
+	border: 0px;
+	padding: 2px;
+	font-family: Arial, sans-serif;
+}
+
+input.t-beaneditor-submit {
+	position: relative;
+	top: 5px;
+	left: 70%;
+}
+
+HTML>BODY DIV.t-error LI {
+	margin-left: 20px;
+}
+/* line 6, ../sass/lightbox.sass */
+#lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=85);
+  opacity: 0.85;
+  display: none;
+}
+
+/* line 15, ../sass/lightbox.sass */
+#lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-weight: normal;
+}
+/* line 24, ../sass/lightbox.sass */
+#lightbox img {
+  width: auto;
+  height: auto;
+}
+/* line 27, ../sass/lightbox.sass */
+#lightbox a img {
+  border: none;
+}
+
+/* line 30, ../sass/lightbox.sass */
+.lb-outerContainer {
+  position: relative;
+  background-color: white;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 38, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 39, ../sass/lightbox.sass */
+.lb-container {
+  padding: 10px;
+}
+
+/* line 42, ../sass/lightbox.sass */
+.lb-loader {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+/* line 51, ../sass/lightbox.sass */
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+/* line 59, ../sass/lightbox.sass */
+.lb-container > .nav {
+  left: 0;
+}
+
+/* line 62, ../sass/lightbox.sass */
+.lb-nav a {
+  outline: none;
+}
+
+/* line 65, ../sass/lightbox.sass */
+.lb-prev, .lb-next {
+  width: 49%;
+  height: 100%;
+  background-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+  /* Trick IE into showing hover */
+  display: block;
+}
+
+/* line 72, ../sass/lightbox.sass */
+.lb-prev {
+  left: 0;
+  float: left;
+}
+
+/* line 76, ../sass/lightbox.sass */
+.lb-next {
+  right: 0;
+  float: right;
+}
+
+/* line 81, ../sass/lightbox.sass */
+.lb-prev:hover {
+  background: url(/images/prev.png) left 48% no-repeat;
+}
+
+/* line 85, ../sass/lightbox.sass */
+.lb-next:hover {
+  background: url(/images/next.png) right 48% no-repeat;
+}
+
+/* line 88, ../sass/lightbox.sass */
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -ms-border-bottom-left-radius: 4px;
+  -o-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -ms-border-bottom-right-radius: 4px;
+  -o-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 38, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 95, ../sass/lightbox.sass */
+.lb-data {
+  padding: 0 10px;
+  color: #bbbbbb;
+}
+/* line 98, ../sass/lightbox.sass */
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+/* line 103, ../sass/lightbox.sass */
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
+/* line 107, ../sass/lightbox.sass */
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 11px;
+}
+/* line 112, ../sass/lightbox.sass */
+.lb-data .lb-close {
+  width: 35px;
+  float: right;
+  padding-bottom: 0.7em;
+  outline: none;
+}
+/* line 117, ../sass/lightbox.sass */
+.lb-data .lb-close:hover {
+  cursor: pointer;
+}
+

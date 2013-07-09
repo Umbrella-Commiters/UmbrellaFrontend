@@ -1,0 +1,87 @@
+<html t:type="layout" title="Update Address" t:sidebarTitle="Help!" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<style type="text/css">
+		fieldset {
+		border:1px dotted #555555;
+		margin:15px 5px 15px 5px;
+		}
+		fieldset legend {
+		font-weight:bold;
+		border:1px dotted
+		#555555;
+		background-color: #FFFFFF;
+		padding:7px;
+		}
+		.links {
+		border:0;
+		border-collapse:collapse;
+		width:99%;
+		}
+		.links td {
+		border:0;
+		padding:5px;
+		}
+	</style>
+	<fieldset>
+		<legend> Important information! </legend>
+		<table class="links">
+			<tr>
+				<td>
+					<ul>
+						<li>Use this service to update your address</li>
+						<li>The information entered will only be sent to facilities where you
+							are member of</li>
+						<li>Your information will not be stored at the Umbrella</li>
+						<li>Following facilities have implemented this functionality:
+							<ul>
+								<li>none</li>
+							</ul>
+						</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</fieldset>
+	<t:beaneditform t:id="update" submitlabel="message:submit-label" object="address">
+		
+		<p:email>
+			<t:label for="email" />
+			<t:textfield t:mixins="ajaxValidator" t:id="email" value="address.email" />
+		</p:email>
+		
+		<p:nationality>
+			<t:label for="nationality" />
+			<t:textfield t:mixins="autocomplete" t:id="nationality" value="address.nationality" />
+		</p:nationality>
+
+		<p:affiliation>
+			<t:label for="affiliation" />
+			<t:textarea t:mixins="autocomplete" cols="35" rows="6" t:id="affiliation" value="address.affiliation" />
+		</p:affiliation>
+		<p:eaahash>
+			<t:hidden value="address.eaahash" />
+		</p:eaahash>
+		<p:eaakey>
+			<t:hidden value="address.eaakey" />
+		</p:eaakey>
+	</t:beaneditform>
+	<iframe width="0" height="0"
+		src="https://umbrelladuo01.psi.ch/Shibboleth.sso/Login?target=https://umbrelladuo01.psi.ch/duo/&amp;isPassive=false"></iframe>
+	<script src="/jquery-latest.js"></script>
+	<script type="text/javascript">
+		setTimeout(function() {
+			$.getJSON("https://umbrelladuo01.psi.ch/duo/UserInfoStub.php?jsonp=?",
+			{
+			},
+			function(data) {
+				$('input[id="firstName"]').val(data.Firstname);
+				$('input[id="middleInitial"]').val(data.Middlename);
+				$('input[id="lastName"]').val(data.Lastname);
+				$('input[id="email"]').val(data.Email);
+				$('input[id="phone"]').val(data.Phone);
+			});
+		},500);
+		
+	</script>
+</html>

@@ -1,0 +1,4 @@
+<html t:type="layout" title="Account activated" t:sidebarTitle="Help!"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	<p>Your account has been activated. Please <a href="/euu/login">login</a> to use this system.</p>
+</html>

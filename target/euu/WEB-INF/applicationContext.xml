@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+   "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<bean id="affiliationService" class="eu.eurofel.services.impl.AffiliationDummyServiceImpl">
+	</bean>
+
+	<bean id="eAAService" class="eu.eurofel.services.impl.EAAServiceImpl">
+		<property name="disseminationService">
+			<ref bean="disseminationService" />
+		</property>
+		<property name="notificationService">
+			<ref bean="notificationService" />
+		</property>
+	</bean>
+
+	<bean id="daoService" class="eu.eurofel.services.impl.DaoServiceImpl">
+	</bean>
+
+	<bean id="disseminationService" class="eu.eurofel.services.impl.DisseminationServiceImpl">
+		<property name="daoService">
+			<ref bean="daoService" />
+		</property>
+	</bean>
+
+	<bean id="facilityService" class="eu.eurofel.services.impl.FacilityServiceImpl">
+		<property name="daoService">
+			<ref bean="daoService" />
+		</property>
+	</bean>
+
+	<bean id="notificationService" class="eu.eurofel.services.impl.EmailNotificationService">
+	</bean>
+	
+	<bean id="proposalService" class="eu.eurofel.services.impl.ProposalServiceImpl">
+	</bean>
+</beans>

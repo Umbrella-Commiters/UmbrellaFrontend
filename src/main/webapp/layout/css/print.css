@@ -1,0 +1,92 @@
+/*
+Print
+=====
+
+------------------------------------------------------------------------------
+Author: Stefan Sicher
+Version: Dez '09
+------------------------------------------------------------------------------
+$HeadURL: https://svn.psi.ch/psiweb/psiweb/webbase/css/print.css $
+$Date: 2010-06-09 17:49:08 +0200 (Mi, 09 Jun 2010) $
+$Rev: 1753 $
+$Author: lichtsteiner@PSI.CH $ (has last changed this file)
+------------------------------------------------------------------------------ */
+
+body {
+  width: auto;
+  font-size: .8em;
+  padding: 0 .1cm 0 .8cm;
+}
+
+#wrap {
+  background: none;
+	min-width: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+.w75, 
+.maincontent {
+	width: inherit;
+	float:none;
+	overflow:visible;
+	padding: 0;
+	margin: 0;
+}
+
+.printheader {
+
+}
+
+.printheader img {
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+.printheader p {
+  float:right;
+  margin:10px;
+  padding-left:0;
+}
+
+.printheaderbelowline {
+	width: 100%;
+  color: #508FCB;
+  text-align: right;
+}
+
+.printheaderaboveline {
+  border-bottom:4px solid #508FCB;
+  height:60px;
+  padding:5px 0 10px;
+}
+
+.qsimg img {
+	display: inline;
+	width: 100%;
+}
+
+.qsimg {
+	height: auto;
+}
+
+.logoimg {
+	display: block;
+	position: absolute;
+}
+
+#psimetanav,
+#quickstart,
+.qssidebar,
+#footer,
+#langprintapp,
+.navigation,
+.tophomelink,
+.supportcontent
+{
+	display: none;
+}
+
+#secondheader .inner {
+  padding: 0;
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+	<head>
+		<title>Paul Scherrer Institut (PSI) :: Paul Scherrer Institute </title>
+
+			<link rel="Stylesheet" href="http://webbase.psi.ch/webbase/css/psi.css?"
+				type="text/css">
+				<link rel="Stylesheet" href="http://webbase.psi.ch/webbase/css/psi_print.css?"
+					type="text/css" media="print">
+
+
+					<!--[if IE 8]> <link rel="Stylesheet" href="http://webbase.psi.ch/webbase/css/ie8.css" 
+						type="text/css"> <![endif] -->
+
+					<!--[if IE 7]> <link rel="Stylesheet" href="http://webbase.psi.ch/webbase/css/ie7.css" 
+						type="text/css"> <![endif] -->
+					<!--[if IE 6]> <link rel="Stylesheet" href="http://webbase.psi.ch/webbase/css/ie6.css" 
+						type="text/css"> <![endif] -->
+
+
+					<script src="http://webbase.psi.ch/webbase/script/jquery-1.3.2.min.js"
+						type="text/javascript"></script>
+
+					<script type="text/javascript"
+						src="http://webbase.psi.ch/webbase/script/jquery.foswiki.js"></script>
+					<script type="text/javascript"
+						src="http://webbase.psi.ch/webbase/script/jquery.easing.js"></script>
+					<script type="text/javascript"
+						src="http://webbase.psi.ch/webbase/script/jquery.metadata.js"></script>
+
+					<script type="text/javascript"
+						src="http://webbase.psi.ch/webbase/script/psiweb.js"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+
+
+			<div id="header">
+
+
+				<div class="logodiv">
+					<a class="logoa" href="/">
+						<img class="logoimg" src="/webbase/img/logo.png" title="Paul Scherrer Institut"
+							alt="Paul Scherrer Institut">
+					</a>
+				</div>
+				<div id="psimetanav">
+					<div class="outer">
+
+						<div class="inner">
+							<ul>
+								<li>
+									<a href="/about-psi" title="The Paul Scherrer Institut in brief">About PSI</a>
+								</li>
+								<li>
+									<a href="/contact" title="Contact">Contact</a>
+								</li>
+								<li>
+									<a href="/sitemap" title="Explore the Sitemap">Sitemap</a>
+								</li>
+								<li>
+									<a href="#quicklinks" title="Jump to the Quicklinks" id="quicklinkslink">Quicklinks</a>
+								</li>
+								<li id="searchbox">
+									<div style="display: inline;">
+										<form action="http://www.google.ch/cse">
+											<input type="hidden" value="/search" name="searchaction"
+												id="searchaction">
+
+												<input type="text" name="q" size="31" id="se" class="searchinput"
+													value="" onfocus="this.value = ''">
+													<input type="hidden" value="Search..." name="searchtext"
+														id="searchtext">
+														<input type="hidden" value="EN" name="sprachvar">
+															<input type="hidden" name="cx"
+																value="006264299542828176624:he4fsx7frli">
+																<input type="hidden" name="cof" value="FORID:10">
+																	<input type="hidden" name="ie" value="UTF-8">
+																		<input type="image" src="/webbase/img/search.png"
+																			name="sa" value="Search..." alt="Search" class="searchsubmit">
+										</form>
+									</div>
+
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+
+				<div id="quickstart">
+					<ul class="ulquickstart">
+						<li class="liquickstart">
+							<a class="aquickstart" href="/media/" title="Explore the world of PSI">Public
+								&amp; Media
+								<span class="spanquickstart">Explore the world of PSI</span>
+							</a>
+						</li>
+						<li class="liquickstart">
+							<a class="aquickstart" href="/science/scientists-and-users"
+								title="For the scientific community">Scientists
+								&amp; Users
+								<span class="spanquickstart">For the scientific community</span>
+							</a>
+						</li>
+						<li class="liquickstart">
+							<a class="aquickstart" href="/industry/"
+								title="Transfer and collaboration opportunities">Industry
+								&amp; the Economy
+								<span class="spanquickstart">Transfer and collaboration opportunities</span>
+							</a>
+						</li>
+						<li class="liquickstart">
+							<a class="aquickstart" href="https://intranet.psi.ch/" title="Intranet">
+								Intranet
+								<span class="spanquickstart">Nur PSI intern</span>
+							</a>
+						</li>
+
+					</ul>
+				</div>
+			</div>
+			<!-- end: header -->
+			<div id="content">
+				<div class="w75 landing">
+					&nbsp;
+				</div>
+
+				<div class="qssidebar">
+					<div class="langprint">
+
+						<div class="lang">
+
+							<a href="/de/">DE</a>
+							<span class="activelang">EN</span>
+							<a href="/fr/">FR</a>
+						</div>
+						<div class="print">
+							<a href="/pdf/" title="Download this page as a PDF" class="pdfpage">PDF</a>
+							<a href="/print/" title="Print version of this page" class="printpage">print</a>
+						</div>
+					</div>
+
+
+					<ul id="applinks">
+						<li class='liapplink'>
+							<a class="aapplink" href="/pa/" title="">Education &amp; Jobs</a>
+						</li>
+						<li class='liapplink'>
+							<a class="aapplink" href="/events/" title="">Events</a>
+						</li>
+						<li class='liapplink'>
+							<a class="aapplink" href="/info/" title="">Information Material</a>
+						</li>
+					</ul>
+					<div class="TeaserBox">
+						<span class="ImageDescription">
+							<b>Photo on the left:</b>
+							Aerial view of the PSI premises, May 2009.
+						</span>
+
+					</div>
+					<div class="TeaserBox highlight2">
+						<h3>
+							<a name="Proton_Therapy"></a>
+							<a href="/protontherapy/protontherapy">Proton Therapy</a>
+						</h3>
+						Treatment for specific cancers at PSI
+					</div>
+					<div class="TeaserBox">
+						<h3>
+							<a name="User_Office"></a>
+							<a href="/useroffice/useroffice">User Office</a>
+						</h3>
+						The PSI User Office is a central PSI installation to serve the
+						users from all the four user laboratories.
+					</div>
+					<div class="TeaserBox">
+						<h3>
+							<a name="SwissFEL"></a>
+							<a href="/media/swissfel-the-future-project">SwissFEL</a>
+						</h3>
+
+						The PSI future project
+					</div>
+					<div class="TeaserBox">
+						<h3>
+							<a name="psi_forum"></a>
+							<a href="http://www.psiforum.ch/" target="_top">psi forum</a>
+						</h3>
+						The visitors' centre of the Paul Scherrer Institute
+					</div>
+					<div class="TeaserBox">
+						<h3>
+							<a name="School_Lab_iLab"></a>
+							<a href="http://www.psi.ch/ilab" target="_top">School Lab "iLab"</a>
+						</h3>
+						The laboratory for the iPod generation
+					</div>
+					<div class="TeaserBox">
+
+						<h3>
+							<a name="Energie_Spiegel"></a>
+							<a href="/info/energie-spiegel">Energie Spiegel</a>
+						</h3>
+						The newsletter regularly published by PSI on the subject of energy
+						systems and their analysis.
+					</div>
+					<div class="TeaserBox">
+						<h3>
+							<a name="Current_news"></a>
+							<a href="/media/current-news">Current news</a>
+						</h3>
+						Press Releases and highlights from the Paul Scherrer Institute
+					</div>
+				</div>
+			</div><!-- end #content -->
+
+
+
+			<div id="footer">
+				<div class="outer">
+					<div class="inner">
+						<!-- <a name="quicklinks"></a> -->
+						<div class="address">
+							<p class="w2o12">
+								<a href="#" class="logo">Paul Scherrer Institut</a>
+								Paul Scherrer Institut
+								<br>
+									5232 Villigen PSI
+									<br>
+
+										Switzerland
+							</p>
+							<p class="w2o12 last">
+								Phone: +41 (0)56 310 21 11
+								<br>
+									Fax: +41 (0)56 310 21 99
+									<br>
+										E-mail:
+										<a href="mailto:info@psi.ch">info@psi.ch</a>
+							</p>
+
+						</div>
+						<div class="quicklinks">
+							<span id="quicklinks">Quicklinks</span>
+							<ul class="w2o12">
+								<li>
+									<a href="/contact">Contact/The way to us</a>
+								</li>
+								<li>
+									<a href="/imprint">Imprint</a>
+								</li>
+								<li>
+									<a href="/sitemap">Sitemap</a>
+								</li>
+								<li>
+									<span>&nbsp;
+									</span>
+								</li>
+
+								<li>
+									<a href="/about-psi">About PSI</a>
+								</li>
+								<li>
+									<a href="/info/psi-film">The PSI film</a>
+								</li>
+								<li>
+									<a href="/info/">Current publications</a>
+								</li>
+								<li>
+									<a href="/media/current-news">Current News from PSI</a>
+								</li>
+							</ul>
+							<ul class="w2o12">
+								<li>
+									<a href="/pa/training-and-further-education">Training and further education</a>
+								</li>
+
+								<li>
+									<a href="http://rs.web.psi.ch/">Reactor School (in German)</a>
+								</li>
+								<li>
+									<a href="http://srp.web.psi.ch/">Radiation Protection School (in German)</a>
+								</li>
+								<li>
+									<span>&nbsp;
+									</span>
+								</li>
+								<li>
+									<a href="http://www.psiforum.ch">psi forum (in German)</a>
+								</li>
+								<li>
+									<a href="http://ilab.web.psi.ch/">School Lab iLab (in German)</a>
+								</li>
+							</ul>
+							<ul class="w2o12">
+
+								<li>
+									<a href="/science/psi-user-laboratories">User Laboratories</a>
+								</li>
+								<li>
+									<a href="https://duo.psi.ch/duo/login/">DUO Login</a>
+								</li>
+								<li>
+									<a
+										href="/science/methods-and-scopes-of-the-large-research-facilities">Beamlines</a>
+								</li>
+								<li>
+									<span>&nbsp;
+									</span>
+								</li>
+								<li>
+									<a href="http://www.psi.ch/library">PSI Library (in German)</a>
+								</li>
+								<li>
+									<a href="http://log.web.psi.ch/guest_house/guest_house.shtml">Guest house</a>
+								</li>
+
+								<li>
+									<a
+										href="http://log.web.psi.ch/verpflegungsbetriebe/verpflegungsbetriebe.shtml">PSI gastronomy (in German)</a>
+								</li>
+							</ul>
+							<ul class="w2o12">
+								<li>
+									<a href="/industry/">Technology transfer</a>
+								</li>
+								<li>
+									<a href="/industry/technology-offers">Technology offers </a>
+								</li>
+								<li>
+									<a href="/industry/randd-services">R&amp;D Services</a>
+								</li>
+
+								<li>
+									<span>&nbsp;
+									</span>
+								</li>
+								<li>
+									<a href="http://p-therapie.web.psi.ch/e/index.html">Center for Proton Therapy</a>
+								</li>
+								<li>
+									<a href="http://www.ccem.ch/">CCEM</a>
+								</li>
+								<li>
+									<a href="http://fel.web.psi.ch/">SwissFEL</a>
+								</li>
+								<li>
+									<a href="http://www.psi.ch/library">PSI Library</a>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- Piwik -->
+			<script type="text/javascript" src="http://webbase.psi.ch/webbase/piwik/piwik.js"></script>
+			<script type="text/javascript">
+				try {
+				var piwikTracker = Piwik.getTracker("/webbase/piwik/piwik.php", 6);
+				piwikTracker.trackPageView();
+				piwikTracker.enableLinkTracking();
+				} catch( err ) {}
+</script>
+			<noscript>
+				<p>
+					<img src="/webbase/piwik/piwik.php?idsite=6" style="border:0"
+						alt="">
+				</p>
+			</noscript>
+			<!-- End Piwik Tag -->
+
+		</div>
+	</body>
+</html>

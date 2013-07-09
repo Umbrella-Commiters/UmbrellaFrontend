@@ -1,0 +1,37 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<t:content>
+
+		<t:if test="proposal">
+
+			<div id="facilityFilter">
+				<div>Sections</div>
+			</div>
+
+			<table t:type="grid" t:id="list" t:source="sections" t:row="sec"
+				t:exclude="text,id" t:rowsPerPage="8" t:pagerPosition="none"
+				t:class="sectionlist" t:empty="block:emptySections" t:inplace="true">
+				[Grid here]
+				<p:sectionCell>
+					<a t:type="eventlink" t:event="selected" t:context="sec.id"
+						class="prop:linkCSSClass" t:zone="prop:zone" href="#">
+						${sec.section}
+				</a>
+				</p:sectionCell>
+			</table>
+			<t:gridPager t:source="sections" currentPage="list.currentPage"
+				rowsPerPage="8" range="1" />
+
+			<t:block t:id="emptySections">
+				<div id="noSections">
+					(No sections found)
+			</div>
+			</t:block>
+			<p:else>
+				(No proposal specified)
+		</p:else>
+		</t:if>
+
+	</t:content>
+</html>

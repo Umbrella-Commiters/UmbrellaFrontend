@@ -1,0 +1,22 @@
+<html t:type="layout" title="Partners" t:sidebarTitle="Things to do next"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	<!-- Most of the page content, including <head>, <body>, etc. tags, comes 
+		from Layout.tml -->
+
+	<p>Umbrella is supported by and part of the following EU FP7 projects:</p>
+	<p>
+		<ul>
+			<li><a href="http://www.pan-data.eu/" target="_blank">PaN-data Open Data Infrastructure</a></li>
+			<li><a href="http://www.crisp-fp7.eu/" target="_blank">CRISP</a></li>
+		</ul>
+	</p>
+	<p>Umbrella development is in close cooperation with:</p>
+	<p>
+		<ul>
+			<li><a href="http://www.biostruct-x.eu/" target="_blank">Biostruct-X</a></li>
+			<li>CALIPSO</li>
+			<li><a href="http://www.nmi3.eu/" target="_blank">NMI3</a></li>
+			<li><a href="http://www.fmi.ch/" target="_blank">FMI Basel</a></li>
+		</ul>
+	</p>
+</html>

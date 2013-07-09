@@ -1,0 +1,15 @@
+input,textarea {
+	margin: 0px 5px 0px 0px;
+	padding: 2px;
+}
+
+input.Button {
+	display: inline-block;
+	padding: 5px 10px 6px 10px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 1;
+	position: relative;
+	cursor: pointer;
+}

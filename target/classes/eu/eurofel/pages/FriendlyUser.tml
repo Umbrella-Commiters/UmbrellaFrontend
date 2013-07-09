@@ -1,0 +1,16 @@
+<html t:type="layout" title="What is Umbrella (for IT experts)" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	<div align="justify">
+		<img src="https://umbrellaid.org/images/topology_map.png" alt="Topology Map" />
+		<p>Characteristic properties of Umbrella:</p>
+		<ol>
+			<li>Umbrella is not yet another identification system, but it is built on top (= umbrella) of the already existing Web-based User Office (WUO) systems of the participating large scale facilities with the additional functionality to enable a unique user identification.</li> 
+			<li>In order to guarantee uniqueness, Umbrella has only one (1) identity provider (IdP).</li>
+			<li>User information is stored in a hybrid database system, where the central part contains the information (e.g. username + password) for user identification. All other authentication information and all authorization information remains at the local WUO systems.</li>
+			<li>Umbrella is a bottom-up system. Authentication information is provided and updated via self-service by the user with optional confirmation loops with authorities. Supervision is provided by the user office staff. This avoids complex trust structures and procedures.</li>
+			<li>Umbrella communication is based on SAML, which is state of the art, and is designed by industry experts like EMC, Hewlett Packard, IBM, Microsoft, Nokia, Oracle, SAP, Boeing et. al. It is also used by national federations in the (higher) education sector.</li>
+			<li>The Umbrella user identity is persistent. It is not fixed to the home affiliation of the user which permits a permanent link of a user to a team or a dataset or document, also in case of an affiliation change.</li>
+			<li>Umbrella is web-based and supports single sign on (SSO) functionality.</li>
+			<li>Physically this one IdP is not be realized via only one central Umbrella server; there will be a geoDNS replication system in order to increase the uptime of the system and also to reflect the federal character of the system.</li>
+		</ol>
+	</div>
+</html>

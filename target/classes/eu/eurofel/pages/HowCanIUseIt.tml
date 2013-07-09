@@ -1,0 +1,14 @@
+<html t:type="layout" title="How can I use it?" t:sidebarTitle="Things to do next" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+	<!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+	<div align="justify">
+
+	<p>Umbrella is built on top of the existing local IT infrastructures and it links its identity in a once-only action directly to the local identity at the respective facility. As this action is user-driven it avoids complex trust issues, which is a major complication for most other federated-identity systems.</p>
+ 	<p>This linking concept, however, implies that a user will get the new Umbrella identity but for the time being will still have the ‘old’ local identity at the local WUO, where, however, the remaining local account is seen only as backup. As a consequence of this structure, there are two ways of using Umbrella (for transparency, once-only registration and normal use are discussed separately):</p>
+	<ol>
+		<li>Explicit registration (once-only): The user visits directly the Umbrella site (http:www.UmbrellaID.org) and registers for an Umbrella account. After that, goes to the respective WUO of choice, tells that he/she has an Umbrella account and logs in with the local WUO credentials. In this way, the user confirms to be the owner of this local account and from this moment on he/she has the right to access all related information (proposals, data etc.) also through Umbrella. This spares any complex trust procedures.</li>
+		<li>Implicit registration (once-only): The user logs in to a WUO of choice. Then on the website of a partner-WUO he/she will find the offer to umbrellify the account. If the user decides to do so, there is an implicit transfer to the Umbrella registration. There will be a minimum need for entering information; username is kept if possible (e.g. no duplication conflict, but because of security issues a password has to be entered).</li>
+		<li>Normal use: The user goes to the WUO of choice and logs in with the Umbrella credentials. If there is a transfer to another WUO, no further login is needed (SSO functionality).</li>
+	</ol>
+	</div>
+</html>

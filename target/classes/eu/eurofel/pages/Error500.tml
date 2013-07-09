@@ -1,0 +1,13 @@
+<html t:type="layout" title="An unexpected application exception has occurred."
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+
+	<body>
+
+		<p>An unexpected application exception has occurred.</p>
+
+		<t:if test="! productionMode">
+			<t:renderobject object="request" />
+		</t:if>
+
+	</body>
+</html>

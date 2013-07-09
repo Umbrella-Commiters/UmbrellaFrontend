@@ -1,0 +1,44 @@
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+
+	<t:content>
+
+		<form t:type="form" t:id="ajaxfilterForm" t:context="highlightFacilityId"
+			t:zone="prop:zone">
+			<!-- We can't use the form's id in the css because the Zone messes with 
+				it, so we add a div with its own id. -->
+			<div id="facilityFilter">
+				<div>
+					Facility
+				</div>
+				<div>
+					<input t:id="partialName" t:type="TextField" size="15"
+						t:validate="maxLength=15" />
+					<input type="submit" value="Filter" title="Filter" />
+				</div>
+			</div>
+		</form>
+
+		<table t:type="grid" t:id="list" t:source="facilities" t:row="facility"
+			t:exclude="id,attributeUpdaterURL,contactPerson,contactPersonEmail,enabled,lastPing"
+			t:rowsPerPage="8" t:pagerPosition="none" t:class="facilitylist"
+			t:empty="block:emptyFacilities" t:inplace="true">
+			[Grid here]
+			<p:nameCell>
+				<a t:type="eventLink" t:event="selected" t:context="facility.id"
+					class="prop:linkCSSClass" t:zone="prop:zone" href="#">
+					${facility.name}
+			</a>
+			</p:nameCell>
+		</table>
+		<t:gridPager t:source="facilities" currentPage="list.currentPage"
+			rowsPerPage="8" range="1" />
+
+		<t:block t:id="emptyFacilities">
+			<div id="noFacilities">
+				(No facilities found)
+		</div>
+		</t:block>
+
+	</t:content>
+</html>
