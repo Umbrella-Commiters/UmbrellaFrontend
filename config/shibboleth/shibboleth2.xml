@@ -1,0 +1,82 @@
+<SPConfig xmlns="urn:mace:shibboleth:2.0:native:sp:config"
+	xmlns:conf="urn:mace:shibboleth:2.0:native:sp:config" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+	xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol" xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	clockSkew="180">
+	<ApplicationDefaults entityID="https://umbrellaid.org/shibboleth"
+		REMOTE_USER="uid">
+		<Sessions lifetime="28800" timeout="3600" checkAddress="false"
+			relayState="ss:mem" handlerSSL="false">
+
+
+			<SSO entityID="https://umbrellaid.org/idp/shibboleth">
+				SAML2 SAML1
+			</SSO>
+
+			<!-- SAML and local-only logout. -->
+			<Logout>SAML2 Local</Logout>
+
+			<!-- Extension service that generates "approximate" metadata based on 
+				SP configuration. -->
+			<Handler type="MetadataGenerator" Location="/Metadata"
+				signing="false" />
+
+			<!-- Status reporting service. -->
+			<Handler type="Status" Location="/Status" acl="127.0.0.1" />
+
+			<!-- Session diagnostic service. -->
+			<Handler type="Session" Location="/Session"
+				showAttributeValues="false" />
+
+			<!-- JSON feed of discovery information. -->
+			<Handler type="DiscoveryFeed" Location="/DiscoFeed" />
+		</Sessions>
+
+		<!-- Allows overriding of error template information/filenames. You can 
+			also add attributes with values that can be plugged into the templates. -->
+		<Errors supportContact="root@localhost" logoLocation="/shibboleth-sp/logo.jpg"
+			styleSheet="/shibboleth-sp/main.css" />
+
+		<!-- Example of remotely supplied batch of signed metadata. -->
+		<MetadataProvider type="XML"
+			uri="http://umbrellaid.org/metadata/idp-metadata.xml"
+			backingFilePath="federation-metadata.xml" reloadInterval="7200">
+		</MetadataProvider>
+
+		<!-- Example of locally maintained metadata. -->
+		<!-- <MetadataProvider type="XML" file="partner-metadata.xml"/> -->
+
+		<!-- Map to extract attributes from SAML assertions. -->
+		<AttributeExtractor type="XML" validate="true"
+			path="attribute-map.xml" />
+
+		<!-- Use a SAML query if no attributes are supplied during SSO. -->
+		<AttributeResolver type="Query" subjectMatch="true" />
+
+		<!-- Default filtering policy for recognized attributes, lets other data 
+			pass. -->
+		<AttributeFilter type="XML" validate="true"
+			path="attribute-policy.xml" />
+
+		<!-- Simple file-based resolver for using a single keypair. -->
+		<CredentialResolver type="File" key="sp-key.pem"
+			certificate="sp-cert.pem" />
+
+		<!-- The default settings can be overridden by creating ApplicationOverride 
+			elements (see the https://spaces.internet2.edu/display/SHIB2/NativeSPApplicationOverride 
+			topic). Resource requests are mapped by web server commands, or the RequestMapper, 
+			to an applicationId setting. Example of a second application (for a second 
+			vhost) that has a different entityID. Resources on the vhost would map to 
+			an applicationId of "admin": -->
+		<!-- <ApplicationOverride id="admin" entityID="https://admin.example.org/shibboleth"/> -->
+	</ApplicationDefaults>
+
+	<!-- Policies that determine how to process and authenticate runtime messages. -->
+	<SecurityPolicyProvider type="XML" validate="true"
+		path="security-policy.xml" />
+
+	<!-- Low-level configuration about protocols and bindings available for 
+		use. -->
+	<ProtocolProvider type="XML" validate="true"
+		reloadChanges="false" path="protocols.xml" />
+
+</SPConfig>
