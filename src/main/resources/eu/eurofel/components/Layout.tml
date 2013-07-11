@@ -901,18 +901,29 @@
 								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 							</button>
 							<ul class="BreadCrumbGrandChildren">
-								<li>
+								<!--<li>
 									<button name="Child" type="submit" value="32" class="BreadCrumbGrandChildrenButton">Wiki</button>
 								</li>
 								<li>
 									<button name="Child" type="submit" value="36" class="BreadCrumbGrandChildrenButton">Issue Tracker</button>
-								</li>
+								</li>-->
 							</ul>
 						</li>
+
 						<li class="BreadCrumbSeparator">|</li>
 						<li>
 							<button name="Child" type="submit" value="40" class="BreadCrumbButton">
 								User Offices
+								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
+							</button>
+							<ul class="BreadCrumbGrandChildren">
+
+							</ul>
+						</li>
+						<li class="BreadCrumbSeparator">|</li>
+						<li>
+							<button name="Child" type="submit" value="50" class="BreadCrumbButton">
+								Help
 								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 							</button>
 							<ul class="BreadCrumbGrandChildren">
