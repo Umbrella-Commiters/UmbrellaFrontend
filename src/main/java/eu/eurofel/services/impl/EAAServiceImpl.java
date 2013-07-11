@@ -21,6 +21,7 @@ import eu.eurofel.entities.Notification;
 import eu.eurofel.services.DisseminationService;
 import eu.eurofel.services.EAAService;
 import eu.eurofel.services.NotificationService;
+import eu.eurofel.util.Constants;
 import eu.eurofel.util.EAAHash;
 
 public class EAAServiceImpl implements EAAService {
@@ -61,7 +62,7 @@ public class EAAServiceImpl implements EAAService {
 	public void createAccount(EAAAccount eAAAccount) throws Exception {
 
 		// bind the account to the newpeople ou
-		ctx.bind("uid=" + eAAAccount.getUid() + ",ou=newpeople,dc=eurofel,dc=eu", eAAAccount);
+		ctx.bind("uid=" + eAAAccount.getUid() + "," + Constants.NEW_PEOPLE_DN, eAAAccount);
 
 		// create a notification to inform the user
 		//
@@ -89,7 +90,7 @@ public class EAAServiceImpl implements EAAService {
 
 	public void activateAccount(EAAAccount eAAAccount) throws NamingException {
 
-		ctx.rename("uid=" + eAAAccount.getUid() + ",ou=newpeople,dc=eurofel,dc=eu", "uid=" + eAAAccount.getUid() + ",ou=people,dc=eurofel,dc=eu");
+		ctx.rename("uid=" + eAAAccount.getUid() + "," + Constants.NEW_PEOPLE_DN, "uid=" + eAAAccount.getUid() + "," + Constants.NEW_PEOPLE_DN);
 	}
 
 	/*

@@ -25,6 +25,7 @@ import javax.naming.directory.SearchResult;
 
 import org.apache.tapestry5.beaneditor.Validate;
 
+import eu.eurofel.util.Constants;
 import eu.eurofel.util.EAAHash;
 
 public class EAAAccount implements Serializable, DirContext {
@@ -70,7 +71,7 @@ public class EAAAccount implements Serializable, DirContext {
 		oc.add("EAAUser");
 		oc.add("top");
 		ouSet.add("people");
-		ouSet.add("ou=people,dc=eurofel,dc=ch");
+		ouSet.add(Constants.PEOPLE_DN);
 		myAttrs.put(oc);
 		myAttrs.put(ouSet);
 
@@ -101,7 +102,7 @@ public class EAAAccount implements Serializable, DirContext {
 		oc.add("person");
 		oc.add("top");
 		ouSet.add("people");
-		ouSet.add("ou=people,dc=eurofel,dc=ch");
+		ouSet.add(Constants.NEW_PEOPLE_DN);
 		myAttrs.put(oc);
 		myAttrs.put(ouSet);
 

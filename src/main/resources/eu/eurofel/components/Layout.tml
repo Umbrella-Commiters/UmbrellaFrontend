@@ -748,7 +748,7 @@
 		<head>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-			<link rel="shortcut icon" href="https://umbrella.psi.ch/favicon.ico" />
+			<link rel="shortcut icon" href="https://umbrellaid.org/euu/favicon.ico" />
 
 			<title>Umbrella: ${title}</title>
 			<link type="text/css" rel="Stylesheet" href="/euu/layout/css/ef.css" />
@@ -757,9 +757,9 @@
 			<link type="text/css" rel="Stylesheet" href="/euu/layout/css/ef_topnav.css" />
 			<link type="text/css" rel="Stylesheet" href="/euu/layout/css/ef_misc.css" />
 			<style type="text/css" media="all">.foswikiMakeVisible{display:inline;}.foswikiMakeVisibleInline{display:inline;}.foswikiMakeVisibleBlock{display:block;}.foswikiMakeHidden{display:none;}</style>
-			<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
-			<script type="text/javascript" src="/js/lightbox.js"></script>
-			<link href="/css/lightbox.css" rel="stylesheet" />
+			<script type="text/javascript" src="/euu/layout/js/jquery-1.7.2.min.js"></script>
+			<script type="text/javascript" src="/euu/layout/js/lightbox.js"></script>
+			<link href="/euu/layout/css/lightbox.css" rel="stylesheet" />
 			<script type="text/javascript">
 				$.noConflict();
 				// Code that uses other library's $ can follow here.
@@ -817,37 +817,37 @@
 						<li>
 							<button name="Child" type="submit" value="1" class="BreadCrumbButton">
 								About us
-								<span class="BreadCrumbArrow">&nbsp;↴</span>
+								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 							</button>
 							<ul class="BreadCrumbGrandChildren">
 								<li>
 									<button name="Child" type="submit" value="5" class="BreadCrumbGrandChildrenButton">
 										Core Team
-										<span class="BreadCrumbArrow">&nbsp;↴</span>
+										<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 									</button>
 								</li>
 								<li>
 									<button name="Child" type="submit" value="3" class="BreadCrumbGrandChildrenButton">
 										Management Team
-										<span class="BreadCrumbArrow">&nbsp;↴</span>
+										<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 									</button>
 								</li>
 								<li>
 									<button name="Child" type="submit" value="4" class="BreadCrumbGrandChildrenButton">
 										Technical Team
-										<span class="BreadCrumbArrow">&nbsp;↴</span>
+										<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 									</button>
 								</li>
 								<li>
 									<button name="Child" type="submit" value="2" class="BreadCrumbGrandChildrenButton">
 										Partners
-										<span class="BreadCrumbArrow">&nbsp;↴</span>
+										<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 									</button>
 								</li>
 								<li>
 									<button name="Child" type="submit" value="12" class="BreadCrumbGrandChildrenButton">
 										Facilities
-										<span class="BreadCrumbArrow">&nbsp;↴</span>
+										<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 									</button>
 								</li>
 							</ul>
@@ -856,7 +856,7 @@
 						<li>
 							<button name="Child" type="submit" value="22" class="BreadCrumbButton">
 								About the Umbrella
-								<span class="BreadCrumbArrow">&nbsp;↴</span>
+								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 							</button>
 							<ul class="BreadCrumbGrandChildren">
 								<li>
@@ -898,7 +898,7 @@
 						<li>
 							<button name="Child" type="submit" value="30" class="BreadCrumbButton">
 								Services
-								<span class="BreadCrumbArrow">&nbsp;↴</span>
+								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 							</button>
 							<ul class="BreadCrumbGrandChildren">
 								<li>
@@ -913,7 +913,7 @@
 						<li>
 							<button name="Child" type="submit" value="40" class="BreadCrumbButton">
 								User Offices
-								<span class="BreadCrumbArrow">&nbsp;↴</span>
+								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 							</button>
 							<ul class="BreadCrumbGrandChildren">
 
@@ -977,7 +977,6 @@
 				</div>
 				<br class="clear" />
 			</div>
-			<!-- <script src="https://umbrella.psi.ch/umbrellafoot/foot.js" type="text/javascript"></script> <div id="umbrellaFoot"></div> -->
 		</body>
 	</t:block>
 </html>

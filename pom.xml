@@ -275,15 +275,7 @@
 			<type>jar</type>
 			<scope>compile</scope>
 		</dependency>
-<!--
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>integration</artifactId>
-			<version>1.7.5</version>
-			<type>jar</type>
-			<scope>compile</scope>
-		</dependency>
--->
+
 		<dependency>
 			<groupId>org.apache.abdera</groupId>
 			<artifactId>abdera</artifactId>
@@ -368,8 +360,7 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
-		<!-- <repository> <id>chenillekit</id> <url>http://www.chenillekit.org/mvnrepo/release</url> <snapshots> <enabled>true</enabled> </snapshots> 
-			</repository> -->
+		
 		<!-- This repository is only needed if the Tapestry released artifacts haven't made it to the central Maven repository yet. -->
 		<repository>
 			<id>tapestry</id>
