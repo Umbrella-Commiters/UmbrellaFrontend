@@ -90,7 +90,7 @@ public class EAAServiceImpl implements EAAService {
 
 	public void activateAccount(EAAAccount eAAAccount) throws NamingException {
 
-		ctx.rename("uid=" + eAAAccount.getUid() + "," + Constants.NEW_PEOPLE_DN, "uid=" + eAAAccount.getUid() + "," + Constants.NEW_PEOPLE_DN);
+		ctx.rename("uid=" + eAAAccount.getUid() + "," + Constants.NEW_PEOPLE_DN, "uid=" + eAAAccount.getUid() + "," + Constants.PEOPLE_DN);
 	}
 
 	/*
