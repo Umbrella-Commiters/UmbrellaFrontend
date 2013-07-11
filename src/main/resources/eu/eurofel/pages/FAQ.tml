@@ -17,8 +17,8 @@
 				</tr>
 				<tr>
 					<td style="vertical-align: top;">
-						<a href="https://umbrellaid.org/images/umbrella1.png" rel="lightbox[how]" title="Status Quo">
-							<img src="https://umbrellaid.org/images/umbrella1.png" width="300px" />
+						<a href="/euu/layout/images/umbrella1.png" rel="lightbox[how]" title="Status Quo">
+							<img src="/euu/layout/images/umbrella1.png" width="300px" />
 						</a>
 					</td>
 					<td style="vertical-align: top;">
@@ -36,8 +36,8 @@
 				</tr>
 				<tr>
 					<td style="vertical-align: top;">
-						<a href="https://umbrellaid.org/images/umbrella2.png" rel="lightbox[how]" title="Status with Umbrella">
-							<img src="https://umbrellaid.org/images/umbrella2.png" width="300px" />
+						<a href="/euu/layout/images/umbrella2.png" rel="lightbox[how]" title="Status with Umbrella">
+							<img src="/euu/layout/images/umbrella2.png" width="300px" />
 						</a>
 					</td>
 					<td style="vertical-align: top;">
@@ -108,8 +108,8 @@
 			example:
 			<br />
 
-			<a href="https://umbrellaid.org/images/situation.png" rel="lightbox[whyoneidp]" title="Current Situation">
-				<img src="https://umbrellaid.org/images/situation.png" width="300px" />
+			<a href="/euu/layout/images/situation.png" rel="lightbox[whyoneidp]" title="Current Situation">
+				<img src="/euu/layout/images/situation.png" width="300px" />
 			</a>
 			<br />
 			In this picture you can find the situation of a multi IdP setup. It is reality that a large amount of users have accounts at different
@@ -122,16 +122,16 @@
 			</ul>
 			<br />
 
-			<a href="https://umbrellaid.org/images/situation-federated.png" rel="lightbox[whyoneidp]" title="Situation with Multiple IdP">
-				<img src="https://umbrellaid.org/images/situation-federated.png" width="300px" />
+			<a href="/euu/layout/images/situation-federated.png" rel="lightbox[whyoneidp]" title="Situation with Multiple IdP">
+				<img src="/euu/layout/images/situation-federated.png" width="300px" />
 			</a>
 			<br />
 			This problem could be solved via account cross linking as the picture shows but the complexity (the number of connections between
 			accounts is not linear but tends to be exponential. The advantage here is that the existing accounts could be reused for login.
 			<br />
 
-			<a href="https://umbrellaid.org/images/situation-umbrella.png" rel="lightbox[whyoneidp]" title="Umbrella Situation">
-				<img src="https://umbrellaid.org/images/situation-umbrella.png" width="300px" />
+			<a href="/euu/layout/images/situation-umbrella.png" rel="lightbox[whyoneidp]" title="Umbrella Situation">
+				<img src="/euu/layout/images/situation-umbrella.png" width="300px" />
 			</a>
 			<br />
 			The Umbrella can be seen as a layer which brings together accounts (see picture above). Because every account just has to be connected to

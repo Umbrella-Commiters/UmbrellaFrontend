@@ -5,7 +5,7 @@
 		<p:uid>
 			<t:label for="uid" />
 			<t:textfield t:mixins="ajaxValidator" t:id="uid" value="eAAAccount.uid" />
-			<img src="https://umbrellaid.org/images/info.png" title="Please choose your username" />
+			<img src="/euu/layout/images/info.png" title="Please choose your username" />
 
 		</p:uid>
 
@@ -14,7 +14,7 @@
 			<t:label for="birthdate" />
 			<t:SimpleDateField t:mixins="zoneUpdater" t:clientEvent="blur" t:event="birthdateChanged" t:zone="dateZone" t:id="birthdate"
 				value="eAAAccount.birthdate" />
-			<img src="https://umbrellaid.org/images/info.png" title="Your birthdate will be hashed and not stored as clear text" />
+			<img src="/euu/layout/images/info.png" title="Your birthdate will be hashed and not stored as clear text" />
 			MM/DD/YYYY, DD.MM.YYYY, YYYY-MM-DD
 
 
@@ -23,7 +23,7 @@
 			<label>Verified Birthdate</label>
 			<t:zone t:id="dateZone" t:update="show">
 				<t:textfield value="dateFormatted" disabled="true" class="hiddenText" />
-				<img src="https://umbrellaid.org/images/info.png" title="If date is shown your entry was recognized" />
+				<img src="/euu/layout/images/info.png" title="If date is shown your entry was recognized" />
 			</t:zone>
 			<!-- <t:datefield t:mixins="ajaxValidator" t:id="birthdate" -->
 			<!-- value="eAAAccount.birthdate" /> -->
@@ -32,7 +32,7 @@
 		<p:email>
 			<t:label for="email" />
 			<t:textfield t:id="email" value="eAAAccount.email" />
-			<img src="https://umbrellaid.org/images/info.png" title="Your email will be hashed and not stored as clear text" />
+			<img src="/euu/layout/images/info.png" title="Your email will be hashed and not stored as clear text" />
 		</p:email>
 
 		<p:password>
