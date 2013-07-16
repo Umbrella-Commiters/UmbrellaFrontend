@@ -808,11 +808,13 @@
 					<p>
 						<input type="hidden" name="HiddenWiki" value="true" />
 					</p>
+					<!--
 					<ul class="BreadCrumb">
 						<li>
 							<button name="BreadCrumbButton" type="submit" value="0" class="BreadCrumbButton" disabled="">Help</button>
 						</li>
 					</ul>
+					-->
 					<ul class="BreadCrumbChildren">
 						<li>
 							<button name="Child" type="submit" value="1" class="BreadCrumbButton">
@@ -823,31 +825,26 @@
 								<li>
 									<button name="Child" type="submit" value="5" class="BreadCrumbGrandChildrenButton">
 										Core Team
-										<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 									</button>
 								</li>
 								<li>
 									<button name="Child" type="submit" value="3" class="BreadCrumbGrandChildrenButton">
 										Management Team
-										<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 									</button>
 								</li>
 								<li>
 									<button name="Child" type="submit" value="4" class="BreadCrumbGrandChildrenButton">
 										Technical Team
-										<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 									</button>
 								</li>
 								<li>
 									<button name="Child" type="submit" value="2" class="BreadCrumbGrandChildrenButton">
 										Partners
-										<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 									</button>
 								</li>
 								<li>
 									<button name="Child" type="submit" value="12" class="BreadCrumbGrandChildrenButton">
 										Facilities
-										<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 									</button>
 								</li>
 							</ul>
@@ -894,6 +891,7 @@
 								</li>
 							</ul>
 						</li>
+						<!--
 						<li class="BreadCrumbSeparator">|</li>
 						<li>
 							<button name="Child" type="submit" value="30" class="BreadCrumbButton">
@@ -901,15 +899,15 @@
 								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 							</button>
 							<ul class="BreadCrumbGrandChildren">
-								<!--<li>
+								<li>
 									<button name="Child" type="submit" value="32" class="BreadCrumbGrandChildrenButton">Wiki</button>
 								</li>
 								<li>
 									<button name="Child" type="submit" value="36" class="BreadCrumbGrandChildrenButton">Issue Tracker</button>
-								</li>-->
+								</li>
 							</ul>
 						</li>
-
+				
 						<li class="BreadCrumbSeparator">|</li>
 						<li>
 							<button name="Child" type="submit" value="40" class="BreadCrumbButton">
@@ -920,10 +918,12 @@
 
 							</ul>
 						</li>
+						
+						-->
 						<li class="BreadCrumbSeparator">|</li>
 						<li>
 							<button name="Child" type="submit" value="50" class="BreadCrumbButton">
-								Help
+								Cookbook
 								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 							</button>
 							<ul class="BreadCrumbGrandChildren">
