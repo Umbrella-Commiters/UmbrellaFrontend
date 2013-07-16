@@ -37,7 +37,7 @@
 
 		<p:password>
 			<t:label for="password" />
-			<t:passwordfield t:id="password" t:mixins="exanpe/PasswordStrengthChecker" value="eAAAccount.password" />
+			<t:passwordfield t:id="password" t:mixins="exanpe/PasswordStrengthChecker" t:javascriptChecker="euuChecker" value="eAAAccount.password" />
 		</p:password>
 
 		<p:password1>
@@ -83,7 +83,7 @@
 	<script type="text/javascript">
 	      <!--
 	      Tapestry.onDOMLoaded(function() {
-	        dummyChecker = function(password) {
+	        euuChecker = function(password) {
 	          var strength = "";
 	          if (password.length < 6)
 	          {
