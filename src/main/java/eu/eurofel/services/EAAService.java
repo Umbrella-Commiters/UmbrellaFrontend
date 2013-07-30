@@ -43,6 +43,8 @@ public interface EAAService {
 
 	public boolean addResetPwUUID(String uid, String uuid);
 	
+	public boolean removeResetPwUUID(String uid);
+	
 	public boolean checkForValidResetUUID(String uuid) throws NamingException;
 	
 	public Attributes findAccountByEmail(String email) throws NamingException;

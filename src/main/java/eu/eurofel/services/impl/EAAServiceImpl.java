@@ -36,13 +36,17 @@ public class EAAServiceImpl implements EAAService {
 
 	public EAAServiceImpl() {
 		Hashtable<String, String> env = new Hashtable<String, String>();
-		env.put(Context.INITIAL_CONTEXT_FACTORY, eurofel.getString("eaa.initial_context_factory"));
+		env.put(Context.INITIAL_CONTEXT_FACTORY,
+				eurofel.getString("eaa.initial_context_factory"));
 		env.put(Context.PROVIDER_URL, eurofel.getString("eaa.provider_url"));
-		env.put(Context.SECURITY_AUTHENTICATION, eurofel.getString("eaa.security_authentication"));
-		env.put(Context.SECURITY_PRINCIPAL, eurofel.getString("eaa.security_principal")); // specify
-																							// the
-																							// username
-		env.put(Context.SECURITY_CREDENTIALS, eurofel.getString("eaa.security_credentials"));
+		env.put(Context.SECURITY_AUTHENTICATION,
+				eurofel.getString("eaa.security_authentication"));
+		env.put(Context.SECURITY_PRINCIPAL,
+				eurofel.getString("eaa.security_principal")); // specify
+																// the
+																// username
+		env.put(Context.SECURITY_CREDENTIALS,
+				eurofel.getString("eaa.security_credentials"));
 
 		try {
 			ctx = new InitialDirContext(env);
@@ -62,7 +66,8 @@ public class EAAServiceImpl implements EAAService {
 	public void createAccount(EAAAccount eAAAccount) throws Exception {
 
 		// bind the account to the newpeople ou
-		ctx.bind("uid=" + eAAAccount.getUid() + "," + Constants.NEW_PEOPLE_DN, eAAAccount);
+		ctx.bind("uid=" + eAAAccount.getUid() + "," + Constants.NEW_PEOPLE_DN,
+				eAAAccount);
 
 		// create a notification to inform the user
 		//
@@ -71,9 +76,12 @@ public class EAAServiceImpl implements EAAService {
 		//
 		Notification notification = new Notification();
 		notification.setSubject("Please activate your Umbrella account");
-		String body = "Dear " + eAAAccount.getUid() + ",\n\nThe activation URL is: https://umbrellaid.org/euu/validate?uid=" + eAAAccount.getUid() + "&uuid="
-				+ eAAAccount.getEaahash() ;
-		if(eAAAccount.getTarget() != null && !eAAAccount.getTarget().equals("")){
+		String body = "Dear "
+				+ eAAAccount.getUid()
+				+ ",\n\nThe activation URL is: https://umbrellaid.org/euu/validate?uid="
+				+ eAAAccount.getUid() + "&uuid=" + eAAAccount.getEaahash();
+		if (eAAAccount.getTarget() != null
+				&& !eAAAccount.getTarget().equals("")) {
 			body = body + "&target=" + eAAAccount.getTarget();
 		}
 		notification.setBody(body);
@@ -90,7 +98,9 @@ public class EAAServiceImpl implements EAAService {
 
 	public void activateAccount(EAAAccount eAAAccount) throws NamingException {
 
-		ctx.rename("uid=" + eAAAccount.getUid() + "," + Constants.NEW_PEOPLE_DN, "uid=" + eAAAccount.getUid() + "," + Constants.PEOPLE_DN);
+		ctx.rename(
+				"uid=" + eAAAccount.getUid() + "," + Constants.NEW_PEOPLE_DN,
+				"uid=" + eAAAccount.getUid() + "," + Constants.PEOPLE_DN);
 	}
 
 	/*
@@ -136,7 +146,8 @@ public class EAAServiceImpl implements EAAService {
 		String query = "uid=" + uid;
 		SearchControls ctrl = new SearchControls();
 		ctrl.setSearchScope(SearchControls.SUBTREE_SCOPE);
-		NamingEnumeration<SearchResult> enumeration = ctx.search("", query, ctrl);
+		NamingEnumeration<SearchResult> enumeration = ctx.search("", query,
+				ctrl);
 		if (enumeration.hasMore()) {
 			throw new NamingException("Account exists");
 		} else {
@@ -156,7 +167,8 @@ public class EAAServiceImpl implements EAAService {
 		String query = "mail=" + email;
 		SearchControls ctrl = new SearchControls();
 		ctrl.setSearchScope(SearchControls.SUBTREE_SCOPE);
-		NamingEnumeration<SearchResult> enumeration = ctx.search("", query, ctrl);
+		NamingEnumeration<SearchResult> enumeration = ctx.search("", query,
+				ctrl);
 		while (enumeration.hasMore()) {
 			// loop through the results and find the email
 			EAAAccount acc = new EAAAccount(enumeration.next().getAttributes());
@@ -172,7 +184,8 @@ public class EAAServiceImpl implements EAAService {
 		return disseminationService;
 	}
 
-	public void setDisseminationService(DisseminationService disseminationService) {
+	public void setDisseminationService(
+			DisseminationService disseminationService) {
 		this.disseminationService = disseminationService;
 	}
 
@@ -195,11 +208,13 @@ public class EAAServiceImpl implements EAAService {
 		return attrs;
 	}
 
-	public boolean hasAccountEmail(String hash, String email) throws NamingException {
+	public boolean hasAccountEmail(String hash, String email)
+			throws NamingException {
 		String query = "(&(mail=" + email + ") (EAAHash=" + hash + "))";
 		SearchControls ctrl = new SearchControls();
 		ctrl.setSearchScope(SearchControls.SUBTREE_SCOPE);
-		NamingEnumeration<SearchResult> enumeration = ctx.search("", query, ctrl);
+		NamingEnumeration<SearchResult> enumeration = ctx.search("", query,
+				ctrl);
 		if (enumeration.hasMore()) {
 			return true;
 		} else {
@@ -211,10 +226,13 @@ public class EAAServiceImpl implements EAAService {
 	public boolean validatePassword(String uid, String pwd) {
 
 		Hashtable<String, String> env = new Hashtable<String, String>();
-		env.put(Context.INITIAL_CONTEXT_FACTORY, eurofel.getString("eaa.initial_context_factory"));
+		env.put(Context.INITIAL_CONTEXT_FACTORY,
+				eurofel.getString("eaa.initial_context_factory"));
 		env.put(Context.PROVIDER_URL, eurofel.getString("eaa.provider_url"));
-		env.put(Context.SECURITY_AUTHENTICATION, eurofel.getString("eaa.security_authentication"));
-		env.put(Context.SECURITY_PRINCIPAL, "uid=" + uid + "," + eurofel.getString("eaa.people_root")); // specify
+		env.put(Context.SECURITY_AUTHENTICATION,
+				eurofel.getString("eaa.security_authentication"));
+		env.put(Context.SECURITY_PRINCIPAL,
+				"uid=" + uid + "," + eurofel.getString("eaa.people_root")); // specify
 		// the
 		// username
 		env.put(Context.SECURITY_CREDENTIALS, pwd);
@@ -246,7 +264,9 @@ public class EAAServiceImpl implements EAAService {
 			mods[0] = new ModificationItem(DirContext.REPLACE_ATTRIBUTE, mod0);
 
 			try {
-				ctx.modifyAttributes("uid=" + uid + "," + eurofel.getString("eaa.people_root"), mods);
+				ctx.modifyAttributes(
+						"uid=" + uid + ","
+								+ eurofel.getString("eaa.people_root"), mods);
 				return true;
 			} catch (NamingException e) {
 				e.printStackTrace();
@@ -257,7 +277,8 @@ public class EAAServiceImpl implements EAAService {
 	}
 
 	public Attributes findAccountByEmail(String email) throws NamingException {
-		String query = "(mail=" + EAAHash.getSHA1Hash(email.toLowerCase()) + ")";
+		String query = "(mail=" + EAAHash.getSHA1Hash(email.toLowerCase())
+				+ ")";
 		SearchControls ctrl = new SearchControls();
 		ctrl.setSearchScope(SearchControls.SUBTREE_SCOPE);
 		Attributes attrs;
@@ -269,8 +290,10 @@ public class EAAServiceImpl implements EAAService {
 		return attrs;
 	}
 
-	public Attributes findAccountByEmailAndUid(String email, String uid) throws NamingException {
-		String query = "(&(mail=" + EAAHash.getSHA1Hash(email.toLowerCase()) + ")(uid=" + uid + "))";
+	public Attributes findAccountByEmailAndUid(String email, String uid)
+			throws NamingException {
+		String query = "(&(mail=" + EAAHash.getSHA1Hash(email.toLowerCase())
+				+ ")(uid=" + uid + "))";
 		SearchControls ctrl = new SearchControls();
 		ctrl.setSearchScope(SearchControls.SUBTREE_SCOPE);
 		Attributes attrs;
@@ -288,7 +311,9 @@ public class EAAServiceImpl implements EAAService {
 		Attribute mod0 = new BasicAttribute("userPassword", newpwd);
 		mods[0] = new ModificationItem(DirContext.REPLACE_ATTRIBUTE, mod0);
 		try {
-			ctx.modifyAttributes("uid=" + uid + "," + eurofel.getString("eaa.people_root"), mods);
+			ctx.modifyAttributes(
+					"uid=" + uid + "," + eurofel.getString("eaa.people_root"),
+					mods);
 			return true;
 		} catch (NamingException e) {
 			e.printStackTrace();
@@ -300,11 +325,14 @@ public class EAAServiceImpl implements EAAService {
 
 		ModificationItem[] mods = new ModificationItem[2];
 		Attribute mod0 = new BasicAttribute("EAAResetPwUUID", uuid);
-		Attribute mod1 = new BasicAttribute("EAAResetPwDate", new Long(new Date().getTime()).toString());
+		Attribute mod1 = new BasicAttribute("EAAResetPwDate", new Long(
+				new Date().getTime()).toString());
 		mods[0] = new ModificationItem(DirContext.REPLACE_ATTRIBUTE, mod0);
 		mods[1] = new ModificationItem(DirContext.REPLACE_ATTRIBUTE, mod1);
 		try {
-			ctx.modifyAttributes("uid=" + uid + "," + eurofel.getString("eaa.people_root"), mods);
+			ctx.modifyAttributes(
+					"uid=" + uid + "," + eurofel.getString("eaa.people_root"),
+					mods);
 			return true;
 		} catch (NamingException e) {
 			e.printStackTrace();
@@ -312,8 +340,28 @@ public class EAAServiceImpl implements EAAService {
 		}
 	}
 
-	public Attributes findAccountByResetUUID(String uuid, String uid, String email) throws NamingException {
-		String query = "(&(mail=" + EAAHash.getSHA1Hash(email.toLowerCase()) + ")(uid=" + uid + ")(EAAResetPwUUID=" + uuid + "))";
+	public boolean removeResetPwUUID(String uid) {
+
+		ModificationItem[] mods = new ModificationItem[2];
+		Attribute mod0 = new BasicAttribute("EAAResetPwUUID", "");
+		Attribute mod1 = new BasicAttribute("EAAResetPwDate", "");
+		mods[0] = new ModificationItem(DirContext.REMOVE_ATTRIBUTE, mod0);
+		mods[1] = new ModificationItem(DirContext.REMOVE_ATTRIBUTE, mod1);
+		try {
+			ctx.modifyAttributes(
+					"uid=" + uid + "," + eurofel.getString("eaa.people_root"),
+					mods);
+			return true;
+		} catch (NamingException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	public Attributes findAccountByResetUUID(String uuid, String uid,
+			String email) throws NamingException {
+		String query = "(&(mail=" + EAAHash.getSHA1Hash(email.toLowerCase())
+				+ ")(uid=" + uid + ")(EAAResetPwUUID=" + uuid + "))";
 		System.out.println(query);
 		SearchControls ctrl = new SearchControls();
 		ctrl.setSearchScope(SearchControls.SUBTREE_SCOPE);
@@ -330,12 +378,29 @@ public class EAAServiceImpl implements EAAService {
 		String query = "(&(EAAResetPwUUID=" + uuid + "))";
 		SearchControls ctrl = new SearchControls();
 		ctrl.setSearchScope(SearchControls.SUBTREE_SCOPE);
-		NamingEnumeration<SearchResult> enumeration = ctx.search("", query, ctrl);
-		if (enumeration.hasMore()) {
-			return true;
-		} else {
-			return false;
+		NamingEnumeration<SearchResult> enumeration = ctx.search("", query,
+				ctrl);
+
+		// check for date
+		while (enumeration.hasMore()) {
+			SearchResult result = enumeration.next();
+			if (result.getAttributes() != null) {
+				Attribute attr = result.getAttributes().get("EAAResetPWDate");
+				if (attr != null) {
+
+					long stamp = new Long(attr.get().toString()).longValue();
+					;
+
+					long date = new Date().getTime();
+					if (date - stamp < 1800000 && date - stamp > 0) {
+						return true;
+					} 
+				}
+
+			}
 		}
+		return false;
+
 	}
 
 }

@@ -101,6 +101,8 @@ public class SetNewPassword {
 		if (acc != null && acc.getUid() != null && acc.getEmail() != null && !acc.getUid().equals("") && !acc.getEmail().equals("")) {
 
 			service.changePassword(retriever.getUsername(), retriever.getPassword());
+			// reset values
+			service.removeResetPwUUID(acc.getUid());
 		}
 
 	}
