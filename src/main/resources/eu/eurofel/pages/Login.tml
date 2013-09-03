@@ -3,4 +3,25 @@
 	<!-- Most of the page content, including <head>, <body>, etc. tags, comes 
 		from Layout.tml -->
 <p>You have now logged in to the Umbrella System</p>
+<p>You can now start to connect your Umbrella account with following facilities:</p>
+<p>
+<br/>
+<br/>
+<table border="0">
+<tr>
+<td style="padding-right: 50px;"><a href="https://wwws.esrf.fr/misapps/SMISWebClient/protected/welcome.do" target="_blank"><img src="/euu/layout/images/esrf.png" /></a></td>
+<td style="padding-right: 50px;"><a href="https://auth.ill.eu/login/" target="_blank"><img src="/euu/layout/images/ill.png" /></a></td>
+<td style="padding-right: 50px;"><a href="https://duo.psi.ch/" target="_blank"><img src="/euu/layout/images/psi.png" /></a></td>
+</tr>
+<tr>
+<td><a href="https://wwws.esrf.fr/misapps/SMISWebClient/protected/welcome.do" target="_blank">ESRF</a></td>
+<td><a href="https://auth.ill.eu/login/" target="_blank">ILL</a></td>
+<td><a href="https://duo.psi.ch/" target="_blank">PSI</a></td>
+</tr>
+</table>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
 </html>
