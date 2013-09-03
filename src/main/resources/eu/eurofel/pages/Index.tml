@@ -7,18 +7,16 @@
 		<h2>Welcome to the Umbrella.</h2>
 	</p>
 	<p>
-		The Umbrella is the Pan-European Identity System for Users of the European Photon / Neutron Facilities.
-		<br />
-		First time such kind of IT platform is offered:
+		Umbrella is the pan-European federated identity system for the users of the European large photon / neutron facilities. Such a kind of an IT platform is offered to this community for the first time:
 		<ul>
 			<li>
-				<b>EU wide</b>
+				<b>EU wide unique, persistent ID</b>
 			</li>
 			<li>
 				<b>community overlapping</b>
 			</li>
 			<li>
-				<b>shared between different EU Projects</b>
+				<b>commonly developed within several EU Projects</b>
 			</li>
 		</ul>
 	</p>
@@ -41,8 +39,8 @@
 								<li>data analysis</li>
 								<li>data transfer</li>
 								<li>trans-facility experiments</li>
-								<li>remote data access</li>
-								<li>remote experiment access</li>
+								<li>remote data access (ICAT, under development)</li>
+								<li>remote experiment (Moonshot, under development)</li>
 							</ul>
 						</li>
 					</ul>
@@ -56,10 +54,10 @@
 						<li>Respects confidentiality</li>
 						<li>Is a dedicated photon / neutron user federation</li>
 						<li>Is based upon the local user office structure</li>
-						<li>Users manage own entries, supervision by user offices</li>
+						<li>Users manage their own entries, supervised by user offices</li>
 						<li>Bridges to similar identification systems (Switch, EduGain, Grid)</li>
-						<li>Platform was developed by PSI through EU projects: EuroFEL ESFRI project, PaNData ODI FP7, PaNData Europe, CRISP</li>
-						<li>Start of implementation spring 2013</li>
+						<li>Platform jointly developed as collaborate effort by leading European facilities as part of several EU projects EuroFEL ESFRI project, PaNData ODI FP7, PaNData Europe, CRISP</li>
+						<li>Implementation in progress since summer 2013</li>
 					</ul>
 				</p>
 			</td>

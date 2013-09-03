@@ -851,7 +851,7 @@
 						<li class="BreadCrumbSeparator">|</li>
 						<li>
 							<button name="Child" type="submit" value="22" class="BreadCrumbButton">
-								About the Umbrella
+								About Umbrella
 								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 							</button>
 							<ul class="BreadCrumbGrandChildren">

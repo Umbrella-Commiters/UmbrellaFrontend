@@ -3,11 +3,12 @@
 	<!-- Most of the page content, including <head>, <body>, etc. tags, comes 
 		from Layout.tml -->
 
-	<p>Umbrella is supported by and part of the following EU FP7 projects:</p>
+	<p>Umbrella is/was supported by and part of the following EU FP7 projects:</p>
 	<p>
 		<ul>
 			<li><a href="http://www.pan-data.eu/" target="_blank">PaN-data Open Data Infrastructure</a></li>
 			<li><a href="http://www.crisp-fp7.eu/" target="_blank">CRISP</a></li>
+			<li><a href="http://www.iruvx.eu/e20/" target="_blank">EuroFEL</a></li>
 		</ul>
 	</p>
 	<p>Umbrella development is in close cooperation with:</p>
