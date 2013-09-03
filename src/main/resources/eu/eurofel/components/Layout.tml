@@ -921,12 +921,26 @@
 						-->
 						<li class="BreadCrumbSeparator">|</li>
 						<li>
-							<button name="Child" type="submit" value="50" class="BreadCrumbButton">
+							<button name="Child" type="submit" value="51" class="BreadCrumbButton">
 								Cookbook
 								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
 							</button>
 							<ul class="BreadCrumbGrandChildren">
-
+								<li>
+									<button name="Child" type="submit" value="51" class="BreadCrumbGrandChildrenButton">Cookbook Complete</button>
+								</li>
+								<li>
+									<button name="Child" type="submit" value="52" class="BreadCrumbGrandChildrenButton">Cookbook General</button>
+								</li>
+								<li>
+									<button name="Child" type="submit" value="53" class="BreadCrumbGrandChildrenButton">Cookbook ESRF</button>
+								</li>
+								<li>
+									<button name="Child" type="submit" value="54" class="BreadCrumbGrandChildrenButton">Cookbook ILL</button>
+								</li>
+								<li>
+									<button name="Child" type="submit" value="55" class="BreadCrumbGrandChildrenButton">Cookbook PSI</button>
+								</li>
 							</ul>
 						</li>
 					</ul>
