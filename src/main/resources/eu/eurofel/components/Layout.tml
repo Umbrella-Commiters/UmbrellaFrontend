@@ -943,6 +943,27 @@
 								</li>
 							</ul>
 						</li>
+						
+						
+						<li class="BreadCrumbSeparator">|</li>
+						<li>
+							<button name="Child" type="submit" value="60" class="BreadCrumbButton">
+								Facilities in operation
+								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
+							</button>
+							<ul class="BreadCrumbGrandChildren">
+								<li>
+									<button name="Child" type="submit" value="61" class="BreadCrumbGrandChildrenButton">ESRF SMIS</button>
+								</li>
+								<li>
+									<button name="Child" type="submit" value="62" class="BreadCrumbGrandChildrenButton">ILL AUTH</button>
+								</li>
+								<li>
+									<button name="Child" type="submit" value="63" class="BreadCrumbGrandChildrenButton">PSI DUO</button>
+								</li>
+							</ul>
+						</li>
+						
 					</ul>
 				</form>
 			</div>
