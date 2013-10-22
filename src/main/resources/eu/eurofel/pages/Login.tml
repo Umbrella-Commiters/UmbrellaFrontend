@@ -9,7 +9,7 @@
 <br/>
 <table border="0">
 <tr>
-<td style="padding-right: 50px;"><a href="https://wwws.esrf.fr/misapps/SMISWebClient/protected/welcome.do" target="_blank"><img src="/euu/layout/images/esrf.png" /></a></td>
+<td style="padding-right: 50px;"><a href="https://wwws.esrf.fr/Shibboleth.sso/Login?target=https://wwws.esrf.fr/misapps/SMISWebClient" target="_blank"><img src="/euu/layout/images/esrf.png" /></a></td>
 <td style="padding-right: 50px;"><a href="https://auth.ill.eu/login/" target="_blank"><img src="/euu/layout/images/ill.png" /></a></td>
 <td style="padding-right: 50px;"><a href="https://duo.psi.ch/" target="_blank"><img src="/euu/layout/images/psi.png" /></a></td>
 </tr>
