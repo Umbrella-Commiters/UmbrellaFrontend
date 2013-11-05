@@ -12,6 +12,7 @@ public class UserSessionImpl implements UserSession, Serializable {
 	private String userName;
 	private String uuid;
 	private String target;
+	private FederationBridge federation;
 	
 	public UserSessionImpl() {
 		this.loggedIn = false;
@@ -50,6 +51,15 @@ public class UserSessionImpl implements UserSession, Serializable {
 	public void setTarget(String target) {
 		// TODO Auto-generated method stub
 		this.target = target;
+	}
+
+	public FederationBridge getFederation() {
+		// TODO Auto-generated method stub
+		return federation;
+	}
+
+	public void setFederation(FederationBridge federationBridge) {
+		this.federation = federationBridge;
 	}
 
 }

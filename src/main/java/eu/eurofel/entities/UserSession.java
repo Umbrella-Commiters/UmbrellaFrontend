@@ -18,4 +18,8 @@ public interface UserSession {
 	
 	public abstract void setTarget(String target);
 	
+	public abstract FederationBridge getFederation();
+	
+	public abstract void setFederation(FederationBridge federationBridge);
+	
 }
