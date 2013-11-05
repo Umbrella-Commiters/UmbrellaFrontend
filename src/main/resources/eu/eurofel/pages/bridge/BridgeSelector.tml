@@ -1,0 +1,30 @@
+<html t:type="layout" title="Bridge Selector" t:sidebarTitle="Help!"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	
+	<table>
+		<tr>
+			<td>
+				<h3>Federation Information</h3>
+				<table>
+					<tr>
+						<td>Name:</td>
+						<td>${retriever.federationName}</td>
+					</tr>
+					<tr>
+						<td>User ID:</td>
+						<td>${retriever.federationUID}</td>
+					</tr>
+					<tr>
+						<td>Method:</td>
+						<td>${retriever.federationAuthMethod}</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<h3>Umbrella Information</h3>
+			</td>
+		</tr>
+	</table>
+	
+	
+</html>
