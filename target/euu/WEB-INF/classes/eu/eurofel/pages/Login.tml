@@ -3,4 +3,49 @@
 	<!-- Most of the page content, including <head>, <body>, etc. tags, comes 
 		from Layout.tml -->
 <p>You have now logged in to the Umbrella System</p>
+<p>You can now start to connect your Umbrella account with following facilities:</p>
+<p>
+<br/>
+<br/>
+<table border="0">
+<tr>
+<td style="padding-right: 50px;"><a href="https://wwws.esrf.fr/Shibboleth.sso/Login?target=https://wwws.esrf.fr/misapps/SMISWebClient" target="_blank"><img src="/euu/layout/images/esrf.png" /></a></td>
+<td style="padding-right: 50px;"><a href="https://auth.ill.eu/authsaml2/sso?entity_id=https://umbrellaid.org/idp/shibboleth&amp;next=https://clubng.ill.fr/cvng/signin" target="_blank"><img src="/euu/layout/images/ill.png" /></a></td>
+<td style="padding-right: 50px;"><a href="https://duo.psi.ch/duo/umbrella.php" target="_blank"><img src="/euu/layout/images/psi.png" /></a></td>
+</tr>
+<tr>
+<td><a href="https://wwws.esrf.fr/Shibboleth.sso/Login?target=https://wwws.esrf.fr/misapps/SMISWebClient" target="_blank">ESRF</a></td>
+<td><a href="https://auth.ill.eu/authsaml2/sso?entity_id=https://umbrellaid.org/idp/shibboleth&amp;next=https://clubng.ill.fr/cvng/signin" target="_blank">ILL</a></td>
+<td><a href="https://duo.psi.ch/duo/umbrella.php" target="_blank">PSI</a></td>
+</tr>
+
+<tr>
+<td style="padding-right: 50px;"><a href="https://users3.elettra.trieste.it/shibboleth/vuo_login.cgi" target="_blank"><img src="/euu/layout/images/elettra.png" /></a></td>
+<td colspan="2" style="padding-right: 50px;"><a href="https://users.facilities.rl.ac.uk/Shibboleth.sso/Login" target="_blank"><img src="/euu/layout/images/isis.png" /></a></td>
+</tr>
+<tr>
+<td><a href="https://users3.elettra.trieste.it/shibboleth/vuo_login.cgi" target="_blank">Elettra</a></td>
+<td><a href="https://users.facilities.rl.ac.uk/Shibboleth.sso/Login" target="_blank">ISIS</a></td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td style="padding-right: 50px;"><a href="https://door.desy.de/Shibboleth.sso/Login" target="_blank"><img src="/euu/layout/images/desy.png" /></a></td>
+<td colspan="2" style="padding-right: 50px;">&nbsp;</td>
+</tr>
+<tr>
+<td><a href="https://door.desy.de/Shibboleth.sso/Login" target="_blank">DESY</a></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+
+</table>
+<br/>
+<br/>
+<br/>
+<br/>
+</p>
 </html>
+
+

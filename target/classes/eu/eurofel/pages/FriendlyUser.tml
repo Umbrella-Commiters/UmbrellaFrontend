@@ -1,6 +1,6 @@
 <html t:type="layout" title="What is Umbrella (for IT experts)" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
 	<div align="justify">
-		<img src="https://umbrellaid.org/images/topology_map.png" alt="Topology Map" />
+		<img src="/euu/layout/images/topology_map.png" alt="Topology Map" />
 		<p>Characteristic properties of Umbrella:</p>
 		<ol>
 			<li>Umbrella is not yet another identification system, but it is built on top (= umbrella) of the already existing Web-based User Office (WUO) systems of the participating large scale facilities with the additional functionality to enable a unique user identification.</li> 

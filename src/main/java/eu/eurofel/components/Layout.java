@@ -16,6 +16,7 @@ import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.RequestGlobals;
 
+import eu.eurofel.Messages;
 import eu.eurofel.entities.UserSession;
 
 /**
@@ -122,8 +123,9 @@ public class Layout {
 	public String[] getPageNames() {
 		StringBuffer sb = new StringBuffer();
 		if (userSession != null && userSession.isLoggedIn()) {
-			sb.append("account/update|Update Account,");
-			sb.append("account/changepassword|Change Password");
+            sb.append("account/changepassword|Update Account,");
+			sb.append("account/update|Update Account at User Offices,");
+            sb.append("bridge/mybridges|My Bridges");
 		} else {
 			sb.append("account/create|Create Account,");
 			sb.append("Contact|Contact,");
@@ -167,13 +169,6 @@ public class Layout {
 
 	public Object getLayout() {
 		String serverName = _request.getServerName();
-		if (serverName.endsWith("test.psi.ch")) {
-			return _psilayout;
-		}
-		if (serverName.endsWith("desy.de")) {
-			return _desylayout;
-		}
-		
 		String stripped = (String)_request.getParameter("stripped");
 		if(stripped != null && stripped.equals("true")){
 			return _stripped;
@@ -233,7 +228,7 @@ public class Layout {
 
 	public Object onActionFromLogout() throws MalformedURLException {
 		requestGlobals.getHTTPServletRequest().getSession().invalidate();
-		URL url = new URL("https://umbrellaid.org/idp/Logout");
+		URL url = new URL(Messages.getString( "eaa.url" ) + "idp/Logout");
 		return url;
 	}
 }

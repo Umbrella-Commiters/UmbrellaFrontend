@@ -13,12 +13,13 @@ public class UserSessionImpl implements UserSession, Serializable {
 	private String uuid;
 	private String target;
 	private FederationBridge federation;
-	
+	private String idp;
+
 	public UserSessionImpl() {
 		this.loggedIn = false;
 		this.userName = "";
 	}
-	
+
 	public boolean isLoggedIn() {
 		return loggedIn;
 	}
@@ -44,12 +45,10 @@ public class UserSessionImpl implements UserSession, Serializable {
 	}
 
 	public String getTarget() {
-		// TODO Auto-generated method stub
 		return this.target;
 	}
 
 	public void setTarget(String target) {
-		// TODO Auto-generated method stub
 		this.target = target;
 	}
 
@@ -60,6 +59,16 @@ public class UserSessionImpl implements UserSession, Serializable {
 
 	public void setFederation(FederationBridge federationBridge) {
 		this.federation = federationBridge;
+	}
+
+	@Override
+	public String getIdP() {
+		return idp;
+	}
+
+	@Override
+	public void setIdP(String idp) {
+		this.idp = idp;
 	}
 
 }

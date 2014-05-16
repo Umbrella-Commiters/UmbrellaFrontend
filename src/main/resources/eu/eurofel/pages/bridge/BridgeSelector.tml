@@ -1,6 +1,17 @@
 <html t:type="layout" title="Bridge Selector" t:sidebarTitle="Help!"
 	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
 	
+	<t:if test="existingMatch">
+	<script type="text/javascript">
+        window.onload = function bodyLoaded () {
+          document.getElementById('form').submit();
+        };
+    </script>
+    <form action="https://umbrella.psi.ch/idp/Authn/Bridge/Login" id="form" name="form" method="post">
+    	<input type="submit" value="EduGain Login" tabindex="1" />
+    </form>
+    </t:if>
+	<t:if test="existingMatch" negate="true">
 	<table>
 		<tr>
 			<td>
@@ -12,19 +23,62 @@
 					</tr>
 					<tr>
 						<td>User ID:</td>
-						<td>${retriever.federationUID}</td>
+						<td>${retriever.federationUIDHtml}</td>
 					</tr>
 					<tr>
 						<td>Method:</td>
 						<td>${retriever.federationAuthMethod}</td>
 					</tr>
 				</table>
+				<t:if test="loggedinEduGain" negate="true">
+							<t:form t:id="eduGain">
+							<table border="0">
+								<tr>
+									<td>&nbsp;</td>
+									<td><input type="submit" value="Login to eduGain" /></td>
+								</tr>
+							</table>
+							</t:form>
+       			</t:if>
 			</td>
+			</tr>
+			<tr>
 			<td>
-				<h3>Umbrella Information</h3>
+							<h3>Existing Account</h3><br/>
+							        <t:if test="loggedin">
+							<t:form t:id="connect">
+							<table border="0">
+								<tr>
+									<td>&nbsp;</td>
+									<td><input type="submit" value="Match accounts" /></td>
+								</tr>
+							</table>
+							</t:form>
+       								</t:if>
+        							<t:unless test="loggedin">
+        							<t:if test="loggedinEduGain">
+							<t:form t:id="login">
+							<table border="0">
+								<tr>
+									<td>&nbsp;</td>
+									<td><input type="submit" value="Login to Umbrella" /></td>
+								</tr>
+							</table>
+							</t:form>
+							</t:if>
+        							</t:unless>
+
+
+							<t:if test="loggedin" negate="true">	
+							<hr/>
+							<h3>New Account</h3><br/>
+							<a href="/euu/account/create">Create Umbrella account</a>
+							</t:if>
+            			
+					
 			</td>
 		</tr>
 	</table>
-	
+	</t:if>
 	
 </html>

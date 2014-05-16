@@ -30,6 +30,10 @@
 		<filter-name>download</filter-name>
 		<filter-class>eu.eurofel.filter.CMISDownloadFilter</filter-class>
 	</filter>
+	<filter>
+		<filter-name>changemail</filter-name>
+		<filter-class>eu.eurofel.filter.ChangeEmailFilter</filter-class>
+	</filter>
 	<!-- <filter> <filter-name>app</filter-name> <filter-class>org.apache.tapestry5.TapestryFilter</filter-class> 
 		</filter> -->
 	<filter>
@@ -44,6 +48,11 @@
 		<url-pattern>/validate</url-pattern>
 	</filter-mapping>
 
+	<filter-mapping>
+		<filter-name>changemail</filter-name>
+		<url-pattern>/changemail</url-pattern>
+	</filter-mapping>
+	
 	<filter-mapping>
 		<filter-name>urlmap</filter-name>
 		<url-pattern>/urlmap</url-pattern>

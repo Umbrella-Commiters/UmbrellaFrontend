@@ -11,10 +11,12 @@ import org.apache.tapestry5.annotations.Secure;
 import org.apache.tapestry5.annotations.SessionState;
 import org.apache.tapestry5.corelib.components.BeanEditForm;
 import org.apache.tapestry5.corelib.components.PasswordField;
+import org.apache.tapestry5.corelib.components.TextField;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.Request;
 
 import eu.eurofel.annotation.Private;
+import eu.eurofel.entities.EmailRenewal;
 import eu.eurofel.entities.PasswordRenewal;
 import eu.eurofel.entities.UserSession;
 import eu.eurofel.pages.Index;
@@ -52,6 +54,13 @@ public class ChangePassword {
 
 	@InjectPage
 	private ChangePasswordSuccess success;
+	
+	@Property
+	private EmailRenewal email = new EmailRenewal();
+	
+
+    @InjectComponent(value = "newEmail")
+	private TextField emailField;
 
 	@Property
 	private PasswordRenewal password = new PasswordRenewal();
@@ -59,6 +68,9 @@ public class ChangePassword {
 	@InjectComponent(value = "newPassword1")
 	private PasswordField passwordField;
 
+    @Component
+    private BeanEditForm ChangeEmail;
+    
 	@Component
 	private BeanEditForm ChangePassword;
 
@@ -69,6 +81,8 @@ public class ChangePassword {
 		eaahash = _request.getHeader("EAAHash");
 		eaakey = _request.getHeader("EAAKey");
 		uid = _request.getHeader("uid");
+		
+		email = new EmailRenewal();
 
 	}
 
@@ -81,7 +95,14 @@ public class ChangePassword {
 
 	}
 
-	Object onSuccess() throws Exception {
+    Object onSuccessFromChangeEmail() throws Exception {
+        System.out.println("New Email: " + email.getEmail());
+        
+        service.changeEmail( uid, eaahash, email.getEmail() );
+        return this;
+    }
+
+	Object onSuccessFromChangePassword() throws Exception {
 		// if (userSession != null && userSession.isLoggedIn()
 		// && !userSession.getUserName().equals("")) {
 		if (eaakey != null && eaahash != null) {

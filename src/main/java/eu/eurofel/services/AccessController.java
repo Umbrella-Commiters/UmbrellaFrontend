@@ -68,13 +68,25 @@ public class AccessController implements Dispatcher {
 	 * @throws IOException
 	 */
 	public boolean checkAccess(String pageName, Request request, Response response) throws IOException {
-
+		System.out.println("ENTER checkAccess");
 		if (_request != null && _request.getHeader("EAAHash") != null && !_request.getHeader("EAAHash").equals("")) {
+			System.out.println("EAA Headers present");
+			System.out.println("asm.exists(UserSession.class): " + asm.exists(UserSession.class));
+			
 			if (!asm.exists(UserSession.class)) {
 				asm.set(UserSession.class, new UserSessionImpl());
 				UserSession userSession = asm.get(UserSession.class);
 				userSession.setLoggedIn(true);
 				userSession.setUserName(_request.getHeader("uid"));
+				userSession.setIdP(_request.getHeader("Shib-Identity-Provider"));
+				System.out.println("Creating Session");
+			}
+			else if(asm.get(UserSession.class).getUserName() == null || asm.get(UserSession.class).getUserName().equals("")){
+				UserSession userSession = asm.get(UserSession.class);
+				userSession.setLoggedIn(true);
+				userSession.setUserName(_request.getHeader("uid"));
+				userSession.setIdP(_request.getHeader("Shib-Identity-Provider"));
+				System.out.println("Editing existing Session");
 			}
 		}
 
@@ -96,6 +108,7 @@ public class AccessController implements Dispatcher {
 		 * This page can't be requested by a non authentified user => we
 		 * redirect him on the signon page
 		 */
+		System.out.println("EXIT checkAccess");
 		if (!canAccess) {
 			response.sendRedirect(request.getContextPath() + LOGIN_PAGE);
 			return true; // Make sure to leave the chain

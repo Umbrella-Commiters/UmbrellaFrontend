@@ -22,4 +22,8 @@ public interface UserSession {
 	
 	public abstract void setFederation(FederationBridge federationBridge);
 	
+	public abstract String getIdP();
+	
+	public void setIdP(String idp);
+	
 }

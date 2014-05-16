@@ -2,43 +2,58 @@ package eu.eurofel.entities;
 
 import java.io.Serializable;
 
-public class FederationBridge implements Serializable{
+public class FederationBridge
+    implements Serializable
+{
 
-	/**
+    /**
 	 * 
 	 */
-	private static final long serialVersionUID = -1992828501628990693L;
-	
-	private String federationName;
-	
-	private String federationUID;
-	
-	private String federationAuthMethod;
+    private static final long serialVersionUID = -1992828501628990693L;
 
-	public String getFederationName() {
-		return federationName;
-	}
+    private String federationName;
 
-	public void setFederationName(String federationName) {
-		this.federationName = federationName;
-	}
+    private String federationUID;
 
-	public String getFederationUID() {
-		return federationUID;
-	}
+    private String federationAuthMethod;
 
-	public void setFederationUID(String federationUID) {
-		this.federationUID = federationUID;
-	}
+    public String getFederationName()
+    {
+        return federationName;
+    }
 
-	public String getFederationAuthMethod() {
-		return federationAuthMethod;
-	}
+    public void setFederationName( String federationName )
+    {
+        this.federationName = federationName;
+    }
 
-	public void setFederationAuthMethod(String federationAuthMethod) {
-		this.federationAuthMethod = federationAuthMethod;
-	}
-	
-	
+    public String getFederationUID()
+    {
+        return federationUID;
+    }
+
+    public String getFederationUIDHtml()
+    {
+        if ( federationUID != null )
+        {
+            return federationUID.replaceAll( "\\!", "<br/>" );
+        }
+        return null;
+    }
+
+    public void setFederationUID( String federationUID )
+    {
+        this.federationUID = federationUID;
+    }
+
+    public String getFederationAuthMethod()
+    {
+        return federationAuthMethod;
+    }
+
+    public void setFederationAuthMethod( String federationAuthMethod )
+    {
+        this.federationAuthMethod = federationAuthMethod;
+    }
 
 }

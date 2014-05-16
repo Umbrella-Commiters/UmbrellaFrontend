@@ -1,29 +1,36 @@
 <html t:type="layout" title="Create Account" t:sidebarTitle="Help!" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
 	xmlns:p="tapestry:parameter">
 
-	<t:beaneditform t:id="create" submitlabel="message:submit-label" object="eAAAccount">
+	<t:beaneditform t:id="create" submitlabel="message:submit-label" object="eAAAccount" reorder="uid,password,password1,birthdate,email,verificationCode">
 		<p:uid>
 			<t:label for="uid" />
 			<t:textfield t:mixins="ajaxValidator" t:id="uid" value="eAAAccount.uid" />
-			<img src="https://umbrellaid.org/images/info.png" title="Please choose your username" />
+			<img src="/euu/layout/images/info.png" title="Please choose your username" />
 
 		</p:uid>
 
+		<p:password>
+			<t:label for="password" />
+			<t:passwordfield t:id="password" t:mixins="exanpe/PasswordStrengthChecker" t:javascriptChecker="euuChecker" value="eAAAccount.password" />
+		</p:password>
+
+		<p:password1>
+			<t:label for="password1" />
+			<t:passwordfield t:id="password1" value="eAAAccount.password1" />
+		</p:password1>
+		
 		<p:birthdate>
 
 			<t:label for="birthdate" />
 			<t:SimpleDateField t:mixins="zoneUpdater" t:clientEvent="blur" t:event="birthdateChanged" t:zone="dateZone" t:id="birthdate"
 				value="eAAAccount.birthdate" />
-			<img src="https://umbrellaid.org/images/info.png" title="Your birthdate will be hashed and not stored as clear text" />
-			MM/DD/YYYY, DD.MM.YYYY, YYYY-MM-DD
-
-
-			<br />
+			<img src="/euu/layout/images/info.png" title="Your birthdate will be hashed and not stored as clear text" /><br/>
+			<label>Allowed formats</label><span style="font-size: 10px; font-weight: bold;">MM/DD/YYYY, DD.MM.YYYY, YYYY-MM-DD</span>
 			<br />
 			<label>Verified Birthdate</label>
 			<t:zone t:id="dateZone" t:update="show">
 				<t:textfield value="dateFormatted" disabled="true" class="hiddenText" />
-				<img src="https://umbrellaid.org/images/info.png" title="If date is shown your entry was recognized" />
+				<img src="/euu/layout/images/info.png" title="If date is shown your entry was recognized" />
 			</t:zone>
 			<!-- <t:datefield t:mixins="ajaxValidator" t:id="birthdate" -->
 			<!-- value="eAAAccount.birthdate" /> -->
@@ -32,18 +39,9 @@
 		<p:email>
 			<t:label for="email" />
 			<t:textfield t:id="email" value="eAAAccount.email" />
-			<img src="https://umbrellaid.org/images/info.png" title="Your email will be hashed and not stored as clear text" />
+			<img src="/euu/layout/images/info.png" title="Your email will be hashed and not stored as clear text" />
 		</p:email>
 
-		<p:password>
-			<t:label for="password" />
-			<t:passwordfield t:id="password" t:mixins="exanpe/PasswordStrengthChecker" value="eAAAccount.password" />
-		</p:password>
-
-		<p:password1>
-			<t:label for="password1" />
-			<t:passwordfield t:id="password1" value="eAAAccount.password1" />
-		</p:password1>
 
 		<p:verificationCode>
 
@@ -82,28 +80,72 @@
 	
 	<script type="text/javascript">
 	      <!--
+	      
 	      Tapestry.onDOMLoaded(function() {
-	        dummyChecker = function(password) {
+	        euuChecker = function(password) {
 	          var strength = "";
-	          if (password.length < 6)
+	          if (password.length < 8)
 	          {
 	            strength = Exanpe.PasswordStrengthChecker.Complexity.VERY_WEAK;
 	          }	
-	          if (password.length == 6)
+	          if (password.length >= 8)
 	          {
 	            strength = Exanpe.PasswordStrengthChecker.Complexity.WEAK;
 	          }
-	          if (password.length == 7)
+	          if (password.length >= 8 && checkUpperCase(password) && checkLowerCase(password) && (checkNumeric(password) || checkSpecialChars(password)))
 	          {
 	            strength = Exanpe.PasswordStrengthChecker.Complexity.STRONG;
 	          }
-	          if (password.length > 7)
+	          if (password.length >= 8 && checkUpperCase(password) && checkLowerCase(password) && checkNumeric(password) && checkSpecialChars(password))
 	          {
 	            strength = Exanpe.PasswordStrengthChecker.Complexity.STRONGEST;
 	          }
 	          return strength;
 	        };
 	      });
+	      
+	       function checkLowerCase(chkfile){
+	       		var patt1 = /[a-z]/g;
+				if(chkfile.match(patt1) == null){
+					return false;
+				}
+				else{
+					return true;
+				}
+	       }
+	       
+	       function checkUpperCase(chkfile){
+	       		var patt1 = /[A-Z]/g;
+				if(chkfile.match(patt1) == null){
+					return false;
+				}
+				else{
+					return true;
+				}
+	       }
+	       
+	       
+	       function checkNumeric(chkfile){
+	       		var patt1 = /[0-9]/g;
+				if(chkfile.match(patt1) == null){
+					return false;
+				}
+				else{
+					return true;
+				}
+	       }
+	       	function checkSpecialChars(chkfile)
+	       	{
+	      		var iChars = "~`!#$%^&*+=-[]\\\';,/{}|\":<>?";
+	       		for (var i = 0; i < chkfile.length; i++)
+				{
+  					if (iChars.indexOf(chkfile.charAt(i)) != -1)
+  					{
+     					return true;
+  					}
+				}
+				return false;
+			}
 	      // -->
 	</script>
 	<p:sidebar>

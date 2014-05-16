@@ -54,14 +54,12 @@
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.1</version>
-			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpmime</artifactId>
 			<version>4.1</version>
-			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
@@ -74,7 +72,6 @@
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient-cache</artifactId>
 			<version>4.1</version>
-			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
@@ -316,6 +313,10 @@
 					<artifactId>slf4j-api</artifactId>
 					<groupId>org.slf4j</groupId>
 				</exclusion>
+				<exclusion>
+					<artifactId>geronimo-javamail_1.4_spec</artifactId>
+					<groupId>org.apache.geronimo.specs</groupId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
@@ -324,12 +325,8 @@
 			<version>1.6.1</version>
 		</dependency>
 	</dependencies>
-	<ciManagement>
-		<system>Hudson</system>
-		<url>https://dre.object.ch/hudson/eurofel</url>
-	</ciManagement>
 	<scm>
-		<url>https://dre.object.ch/hg/eurofel</url>
+		<url>https://github.com/Umbrella-Commiters/UmbrellaFrontend</url>
 	</scm>
 	<build>
 		<finalName>euu</finalName>
@@ -408,10 +405,6 @@
 
 	</pluginRepositories>
 
-	<dependencyManagement>
-		<dependencies>
-		</dependencies>
-	</dependencyManagement>
 
 
 	<properties>
