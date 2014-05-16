@@ -1,0 +1,16 @@
+<html t:type="layout" title="Bridge Selector" t:sidebarTitle="Help!"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	<form t:type="form" t:id="deletables">
+		<t:errors/>
+        <table width="730px" t:type="grid" t:source="bridges" t:row="bridge" t:add="delete" t:rowsPerPage="20" t:pagerPosition="top" t:include="bridgeFederationSrc,bridgeFederationUid">
+        	<p:deleteCell>
+                    <input t:id="delete" t:type="checkbox" value="delete"/>
+
+                    <!-- We shadow each output-only with a hidden field to enable redisplay of the list exactly as it was submitted. -->
+                    <t:hidden value="bridge.uid"/>
+            </p:deleteCell>
+        </table>
+        <input t:type="submit" value="Delete" />
+	</form>
+
+</html>
