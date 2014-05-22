@@ -2,7 +2,7 @@ package eu.eurofel.util;
 
 public interface Constants {
 
-	public static String BASE_DN = "dc=eurofel,dc=eu";
+	public static String BASE_DN = "dc=umbrellaid,dc=org";
 	
 	public static String PEOPLE_DN = "ou=people," + Constants.BASE_DN;
 
