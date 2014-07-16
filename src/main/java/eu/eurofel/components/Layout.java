@@ -125,7 +125,6 @@ public class Layout {
 		if (userSession != null && userSession.isLoggedIn()) {
             sb.append("account/changepassword|Update Account,");
 			sb.append("account/update|Update Account at User Offices,");
-            sb.append("bridge/mybridges|My Bridges");
 		} else {
 			sb.append("account/create|Create Account,");
 			sb.append("Contact|Contact,");
