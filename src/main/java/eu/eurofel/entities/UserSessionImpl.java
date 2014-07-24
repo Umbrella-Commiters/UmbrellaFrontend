@@ -61,12 +61,12 @@ public class UserSessionImpl implements UserSession, Serializable {
 		this.federation = federationBridge;
 	}
 
-	@Override
+	
 	public String getIdP() {
 		return idp;
 	}
 
-	@Override
+	
 	public void setIdP(String idp) {
 		this.idp = idp;
 	}

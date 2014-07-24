@@ -168,7 +168,7 @@ public class Layout {
 
 	public Object getLayout() {
 		String serverName = _request.getServerName();
-		String stripped = (String)_request.getParameter("stripped");
+		String stripped = _request.getParameter("stripped");
 		if(stripped != null && stripped.equals("true")){
 			return _stripped;
 		}

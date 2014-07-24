@@ -30,7 +30,8 @@ public class EduGain extends BridgeEndpoint {
 	@InjectPage
 	private BridgeSelector selector;
 
-	public String getFederationName() {
+	@Override
+    public String getFederationName() {
 		return "eduGain";
 	}
 

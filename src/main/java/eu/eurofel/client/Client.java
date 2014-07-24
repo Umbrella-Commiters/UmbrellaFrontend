@@ -1,8 +1,5 @@
 package eu.eurofel.client;
 
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-
 import eu.eurofel.util.EAAHash;
 
 public class Client

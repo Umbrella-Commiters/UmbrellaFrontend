@@ -37,15 +37,11 @@
 				//window.onload = $('#TopNav').load('/includes/topNav.html');
 				$.noConflict();
 				// Code that uses other library's $ can follow here.
-				var url = '/includes/topNav.html'; 
-				var pars = ''; 
-				var target = 'TopNav'; 
-				//var myAjax = new Ajax.Updater(target, url, {method: 'get', parameters: pars});
 			</script>
 
 		</head>
 
-		<body id="wrap" onload="new Ajax.Updater(target, url, {method: 'get', parameters: pars});">
+		<body id="wrap" onload="new Ajax.Updater('TopNav', '/includes/topNav.html', {method: 'get', parameters: ''});">
 
 			<div id="header">
 

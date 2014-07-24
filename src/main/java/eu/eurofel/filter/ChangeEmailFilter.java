@@ -30,13 +30,13 @@ public class ChangeEmailFilter
 
     protected FilterConfig fcon = null;
 
-    @Override
+    
     public void destroy()
     {
         fcon = null;
     }
 
-    @Override
+    
     public void doFilter( ServletRequest req, ServletResponse res, FilterChain fc )
         throws IOException, ServletException
     {
@@ -69,7 +69,7 @@ public class ChangeEmailFilter
                 String eaakey = acc.getEaakey();
 
                 Date date = new Date();
-                Calendar calendar = GregorianCalendar.getInstance();
+                Calendar calendar = Calendar.getInstance();
                 calendar.setTime( date );
 
                 int year = calendar.get( Calendar.YEAR );
@@ -107,7 +107,7 @@ public class ChangeEmailFilter
         }
     }
 
-    @Override
+    
     public void init( FilterConfig fcon )
         throws ServletException
     {

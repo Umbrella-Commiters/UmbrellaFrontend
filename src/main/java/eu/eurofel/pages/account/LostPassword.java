@@ -1,21 +1,17 @@
 package eu.eurofel.pages.account;
 
-import java.net.URL;
 import java.util.UUID;
 
 import javax.naming.NamingException;
 
-import org.apache.commons.lang.RandomStringUtils;
 import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.Link;
 import org.apache.tapestry5.annotations.Component;
-import org.apache.tapestry5.annotations.InjectComponent;
 import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.annotations.Secure;
 import org.apache.tapestry5.annotations.SessionState;
 import org.apache.tapestry5.corelib.components.BeanEditForm;
-import org.apache.tapestry5.corelib.components.TextField;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.RequestGlobals;
 
@@ -176,7 +172,7 @@ public class LostPassword
 
                 Notification notification = new Notification();
                 notification.setSubject( "Umbrella Lost Password" );
-                notification.setBody( "Dear " + acc.getUid() + ",\n\nTo change your password please visit: <https://" + Messages.getString( "eaa.url" ) + "euu/account/setnewpassword?uuid=" + uuid + ">\n\nYour Umbrella Team" );
+                notification.setBody( "Dear " + acc.getUid() + ",\n\nTo change your password please visit: <" + Messages.getString( "eaa.url" ) + "euu/account/setnewpassword?uuid=" + uuid + ">\n\nYour Umbrella Team" );
                 acc.setEAAResetPwUUID( uuid );
                 acc.setEmail( retriever.getEmail() );
                 try

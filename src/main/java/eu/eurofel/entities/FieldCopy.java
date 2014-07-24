@@ -17,27 +17,27 @@ public class FieldCopy implements Field {
         required = field.isRequired();
     }
 
-    @Override
+    
     public String getClientId() {
         return clientId;
     }
 
-    @Override
+    
     public String getControlName() {
         return controlName;
     }
 
-    @Override
+    
     public String getLabel() {
         return label;
     }
 
-    @Override
+    
     public boolean isDisabled() {
         return disabled;
     }
 
-    @Override
+    
     public boolean isRequired() {
         return required;
     }

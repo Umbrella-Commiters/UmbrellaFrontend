@@ -3,10 +3,7 @@ package eu.eurofel.pages.bridge;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;
-import javax.naming.directory.SearchResult;
-
 import org.apache.tapestry5.annotations.Component;
 import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.annotations.Property;

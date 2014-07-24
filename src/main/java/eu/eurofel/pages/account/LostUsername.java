@@ -5,13 +5,11 @@ import javax.naming.NamingException;
 import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.Link;
 import org.apache.tapestry5.annotations.Component;
-import org.apache.tapestry5.annotations.InjectComponent;
 import org.apache.tapestry5.annotations.InjectPage;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.annotations.Secure;
 import org.apache.tapestry5.annotations.SessionState;
 import org.apache.tapestry5.corelib.components.BeanEditForm;
-import org.apache.tapestry5.corelib.components.TextField;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.RequestGlobals;
 

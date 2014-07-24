@@ -99,12 +99,12 @@ public class EAAServiceImpl
      * @see eu.eurofel.services.EAAService#activateAccount(eu.eurofel.entities.EAAAccount )
      */
 
-    @Override
+    
     public boolean changeEmail( String uid, String uuid, String email )
         throws Exception
     {
         Date date = new Date();
-        Calendar calendar = GregorianCalendar.getInstance();
+        Calendar calendar = Calendar.getInstance();
         calendar.setTime( date );
 
         int year = calendar.get( Calendar.YEAR );
@@ -135,7 +135,7 @@ public class EAAServiceImpl
         return false;
     }
 
-    @Override
+    
     public void createBridge( BridgeFederation federationBridge )
         throws Exception
     {
@@ -146,7 +146,7 @@ public class EAAServiceImpl
 
     }
 
-    @Override
+    
     public boolean removeBridge( String uid )
     {
         String dn = uid + "," + Constants.BRIDGE_DN;
@@ -478,7 +478,7 @@ public class EAAServiceImpl
         }
     }
 
-    @Override
+    
     public NamingEnumeration<?> findBridges( String eaahash )
     {
         // (BridgeFederationUmbrellaUID="5919673a-03c8-46bc-8870-1044e47f9072")
@@ -499,7 +499,7 @@ public class EAAServiceImpl
         return attrs;
     }
 
-    @Override
+    
     public NamingEnumeration<?> findBridgesByBridgeUid( String uid )
     {
         // (BridgeFederationUmbrellaUID="5919673a-03c8-46bc-8870-1044e47f9072")
@@ -575,7 +575,7 @@ public class EAAServiceImpl
 
     }
 
-    @Override
+    
     public void fetchLayout()
     {
         try

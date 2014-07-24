@@ -12,14 +12,11 @@ import org.apache.tapestry5.annotations.Secure;
 import org.apache.tapestry5.annotations.SessionState;
 import org.apache.tapestry5.corelib.components.BeanEditForm;
 import org.apache.tapestry5.ioc.annotations.Inject;
-import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.RequestGlobals;
 
 import eu.eurofel.entities.EAAAccount;
 import eu.eurofel.entities.PasswordRetriever;
-import eu.eurofel.entities.ResetPasswordVO;
 import eu.eurofel.entities.UserSession;
-import eu.eurofel.entities.UserSessionImpl;
 import eu.eurofel.services.EAAService;
 
 @Secure
