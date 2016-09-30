@@ -1,9 +1,12 @@
 package eu.eurofel.pages.account;
 
+import java.io.File;
+import java.util.HashMap;
 import java.util.UUID;
 
 import javax.naming.NamingException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.Link;
 import org.apache.tapestry5.annotations.Component;
@@ -170,14 +173,30 @@ public class LostPassword
             if ( service.addResetPwUUID( retriever.getUsername(), uuid ) )
             {
 
-                Notification notification = new Notification();
-                notification.setSubject( "Umbrella Lost Password" );
-                notification.setBody( "Dear " + acc.getUid() + ",\n\nTo change your password please visit: <" + Messages.getString( "eaa.url" ) + "euu/account/setnewpassword?uuid=" + uuid + ">\n\nYour Umbrella Team" );
-                acc.setEAAResetPwUUID( uuid );
-                acc.setEmail( retriever.getEmail() );
+            	
+            	String lostpwlink = Messages.getString( "eaa.url" ) + "euu/account/setnewpassword?uuid=" + uuid;
+            	
+        		Notification notification = new Notification();
+        		notification.setSubject(Messages.getString("subject.lostpassword"));
+
+        		HashMap<String, String> rep = new HashMap<String, String>();
+        		rep.put("acc.getUid()", acc.getUid());
+        		rep.put("lostpwlink", lostpwlink);
+
+        		String body = Messages.replace(
+        				Messages.getString("body.lostpassword"), rep);
+        		notification.setBody(body);
+
+        		File file = new File(Messages.getString("mail.template.path"));
+        		String layout = FileUtils.readFileToString(file);
+        		notification.setLayout(layout);
+
+        		EAAAccount mailAcc = new EAAAccount();
+        		mailAcc.setEmail(retriever.getEmail());
+        		
                 try
                 {
-                    notificationService.notify( notification, acc );
+                    notificationService.notify( notification, mailAcc );
                 }
                 catch ( Exception e )
                 {

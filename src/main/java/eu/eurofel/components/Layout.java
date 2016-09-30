@@ -227,7 +227,7 @@ public class Layout {
 
 	public Object onActionFromLogout() throws MalformedURLException {
 		requestGlobals.getHTTPServletRequest().getSession().invalidate();
-		URL url = new URL(Messages.getString( "eaa.url" ) + "idp/Logout");
+		URL url = new URL(Messages.getString( "eaa.url" ) + "idp/profile/Logout");
 		return url;
 	}
 }

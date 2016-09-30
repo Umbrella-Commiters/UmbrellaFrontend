@@ -1,314 +1,241 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!-- Design by Free CSS Templates http://www.freecsstemplates.org Released for free under a Creative Commons Attribution 2.5 License Title : 
-	Concrete Version : 1.0 Released : 20080825 Description: A Web 2.0 design with fluid width suitable for blogs and small websites. -->
+<!DOCTYPE HTML>
+<!--
+	Strongly Typed by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd" xmlns:p="tapestry:parameter">
+	<head>
+		<title>umbrellaID - The Federation for the Neutron and Photon Community</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="/euu/assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="/euu/assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="/euu/assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="homepage">
+		<div id="page-wrapper">
 
+			<!-- Header -->
+				<div id="header-wrapper">
+					<div id="header" class="container">
 
-	<t:delegate to="layout" />
+						<!-- Logo -->
+							<h1 id="logo"><a href="index.html"><img src="/euu/images/umbrella-logo-head.jpg" alt="umbrellaID" class="resizeimage"/></a></h1>
+							<p>umbrellaID: Confidentiality for a lifetime</p>
+							
+						<!-- Nav -->
+							<nav id="nav">
+							
+							
+							                                                                <ul>
+                                                                        <li>
+                                                                                <a href="https://umbrellaid.org/what.html" class="icon fa-info"><span>About umbrellaID</span></a>
+                                                                                <ul>
+                                                                                        <!-- <li><a href="#">Terms and Conditions</a></li> -->
+                                                                                        <li><a href="https://umbrellaid.org/what.html">What is umbrellaID?</a></li>
+                                                                                        <li><a href="https://umbrellaid.org/how.html">How can I use it?</a></li>
+                                                                                        <li><a href="https://umbrellaid.org/where.html">Where can I use it?</a></li>
+                                                                                </ul>
+                                                                        </li>
+                                                                        <li>
+                                                                                <a class="icon fa-home" href="https://umbrellaid.org/sc.html"><span>About us</span></a>
+                                                                                <ul>
+                                                                                        <li><a href="https://umbrellaid.org/sc.html">Steering Committee</a></li>
+                                                                                        <li><a href="https://umbrellaid.org/tt.html">Technical Team</a></li>
+                                                                                        <li><a href="https://umbrellaid.org/partners.html">Partners</a></li>
+                                                                                        <li><a href="https://umbrellaid.org/legal.html">Legal Notice</a></li>
+                                                                                </ul>
+                                                                        </li>
+                                                                        <li>
+                                                                                <a class="icon fa-industry" href="https://umbrellaid.org/where.html"><span>Services in operation</span></a>
+                                                                                <ul>
+                                                                                        <li><a href="https://useroffice.cells.es/Shibboleth.sso/Login?target=https://useroffice.cells.es/loginuser" target="_blank">ALBA</a></li>
+                                                                                        <li><a href="https://door.desy.de/Shibboleth.sso/Login" target="_blank">DESY</a></li>
+                                                                                        <li><a href="https://users3.elettra.trieste.it/shibboleth/vuo_login.cgi" target="_blank">ELETTRA</a></li>
+                                                                                        <li><a href="https://wwws.esrf.fr/Shibboleth.sso/Login?target=https://wwws.esrf.fr/misapps/SMISWebClient" target="_blank">ESRF</a></li>
+                                                                                        <li><a href="https://auth.ill.eu/authsaml2/sso?entity_id=https://umbrellaid.org/idp/shibboleth&amp;next=https://clubng.ill.fr/cvng/signin" target="_blank">ILL</a></li>
+                                                                                        <li><a href="https://users.facilities.rl.ac.uk/Shibboleth.sso/Login" target="_blank">ISIS</a></li>
+                                                                                        <li><a href="https://duo.maxlab.lu.se/duo/umbrella.php" target="_blank">MAX IV</a></li>
+                                                                                        <li><a href="https://duo.psi.ch/duo/umbrella.php" target="_blank">PSI</a></li>
+                                                                                        <li><a href="http://wayforlight.eu/Shibboleth.sso/Login" target="_blank">Wayforlight</a></li>
+                                                                                </ul>
+                                                                        </li>
+                                                                        <li>
+                                                                                <a class="icon fa-lightbulb-o" href="http://wayforlight.eu/eng/home.aspx" target="_blank"><span>Lightsources</span></a>
+                                                                        </li>
+							
 
-	<t:block id="stripped">
+                                                                        <t:if test="loggedin">
+	                                                                        <li>
+	                                                                        		<a class="icon fa-user" href="#"><span>${username}</span></a>
+	                                                                        		<ul>
+	                                                                        			<li><a href="/euu/account/changepassword">Update Account</a></li>
+	                                                                        			<li><a href="/euu/account/userinformation">User Information</a></li>
+	                                                                        			<!-- <li><a href="/euu/bridge/mybridges">My Bridges</a></li> -->
+	                                                                        			<li><t:actionlink t:id="Logout">Logout</t:actionlink></li>
+	                                                                        		</ul>
+	                                                                        </li>
+	                                                                        <p:else>
+		                                                                        <li>
+		                                                                                <a class="icon fa-sign-in" href="https://umbrellaid.org/euu/login"><span>Login</span></a>
+		                                                                        </li>
+		                                                                    </p:else>
+		                                                                </t:if>
+                                                                </ul>
 
-		<link type="text/css" rel="Stylesheet" href="/euu/layout/css/ef.css" />
-		<link type="text/css" rel="Stylesheet" href="/euu/layout/css/ef_calmonth_small.css" />
-		<link type="text/css" media="print" rel="Stylesheet" href="/euu/layout/css/print.css" />
-		<link type="text/css" rel="Stylesheet" href="/euu/layout/css/ef_topnav.css" />
-		<link type="text/css" rel="Stylesheet" href="/euu/layout/css/ef_misc.css" />
-		<t:body />
-	</t:block>
+							</nav>
 
-	<t:block id="layout">
-		<head>
-			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-			<link rel="shortcut icon" href="/euu/favicon.ico" />
-
-			<title>Umbrella: ${title}</title>
-			<link type="text/css" rel="Stylesheet" href="/euu/layout/css/ef.css" />
-			<link type="text/css" rel="Stylesheet" href="/euu/layout/css/ef_calmonth_small.css" />
-			<link type="text/css" media="print" rel="Stylesheet" href="/euu/layout/css/print.css" />
-			<link type="text/css" rel="Stylesheet" href="/euu/layout/css/ef_topnav.css" />
-			<link type="text/css" rel="Stylesheet" href="/euu/layout/css/ef_misc.css" />
-			<style type="text/css" media="all">.foswikiMakeVisible{display:inline;}.foswikiMakeVisibleInline{display:inline;}.foswikiMakeVisibleBlock{display:block;}.foswikiMakeHidden{display:none;}</style>
-			<script type="text/javascript" src="/euu/layout/js/jquery-1.9.1.js"></script>
-			<script type="text/javascript" src="/euu/layout/js/prototype.js"></script>
-			<script type="text/javascript" src="/euu/layout/js/lightbox.js"></script>
-			<link href="/euu/layout/css/lightbox.css" rel="stylesheet" />
-			<script type="text/javascript">
-				//window.onload = $('#TopNav').load('/includes/topNav.html');
-				$.noConflict();
-				// Code that uses other library's $ can follow here.
-				var url = '/includes/topNav.html'; 
-				var pars = ''; 
-				var target = 'TopNav'; 
-				//var myAjax = new Ajax.Updater(target, url, {method: 'get', parameters: pars});
-			</script>
-
-		</head>
-
-		<body id="wrap" onload="new Ajax.Updater(target, url, {method: 'get', parameters: pars});">
-
-			<div id="header">
-
-				<h1 class="logo">
-					<a href="/euu/">Umbrella</a>
-				</h1>
-
-				<div id="psimetanav">
-					<ul style="padding-left: 350px">
-						<li>
-							<a href="#">Logged in as:</a>
-						</li>
-						<li>
-							<a href="#">${username}</a>
-						</li>
-					</ul>
-					<!-- <ul style="padding-left: 350px"> <li> <a href="/imprint">Imprint</a> </li> <li> <a href="/contact">Contact</a> </li> <li> <a href="/events">Events</a> 
-						</li> </ul> <ul class="pdfprint"> <li> <a href="http://www-test-eurofel.psi.ch/pdf/" title="Download this page as a PDF" class="pdfpage">PDF</a> 
-						</li> <li> <a href="http://www-test-eurofel.psi.ch/print/" title="Print version of this page" class="printpage" rel="nofollow">print</a> </li> 
-						</ul> -->
-				</div>
-				<div>
-					<!-- old logos -->
-				</div>
-				<!-- <div class="partners"> <span class="partnertitle">Partners</span> <ul> <li> <a class="p1" href="http://www.desy.de/"> <span>DESY</span> 
-					</a> </li> <li> <a class="p2" href="http://www.elettra.trieste.it/"> <span>elettra</span> </a> </li> <li> <a class="p3" href="http://www.helmholtz-berlin.de/index_en.html"> 
-					<span>HZB</span> </a> </li> <li> <a class="p4" href="http://www.infn.it/indexen.php"> <span>INFN</span> </a> </li> <li> <a class="p5" href="http://www.ipj.gov.pl/en/main.htm"> 
-					<span>IPJ</span> </a> </li> <li> <a class="p6" href="http://www.maxlab.lu.se/"> <span>MAX-lab</span> </a> </li> <li> <a class="p7" href="http://www.psi.ch/en/"> 
-					<span>PSI</span> </a> </li> <li> <a class="p8" href="http://www.scitech.ac.uk/"> <span>Science &amp; Technology Facilities Council</span> </a> 
-					</li> <li> <a class="p9" href="#"> <span>Soleil Synchrotron</span> </a> </li> </ul> </div> -->
-			</div>
-			<div id="TopNav" class="TopNav">
-				<form name="BreadCrumbForm" action="/euu/urlmap" method="post">
-					<p>
-						<input type="hidden" name="Form" value="BreadCrumbForm" />
-					</p>
-					<p>
-						<input type="hidden" name="HiddenWiki" value="true" />
-					</p>
-					<!--
-					<ul class="BreadCrumb">
-						<li>
-							<button name="BreadCrumbButton" type="submit" value="0" class="BreadCrumbButton" disabled="">Help</button>
-						</li>
-					</ul>
-					-->
-					<ul class="BreadCrumbChildren">
-						<li>
-							<button name="Child" type="submit" value="1" class="BreadCrumbButton">
-								About us
-								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
-							</button>
-							<ul class="BreadCrumbGrandChildren">
-								<li>
-									<button name="Child" type="submit" value="5" class="BreadCrumbGrandChildrenButton">
-										Core Team
-									</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="3" class="BreadCrumbGrandChildrenButton">
-										Management Team
-									</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="4" class="BreadCrumbGrandChildrenButton">
-										Technical Team
-									</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="2" class="BreadCrumbGrandChildrenButton">
-										Partners
-									</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="12" class="BreadCrumbGrandChildrenButton">
-										Facilities
-									</button>
-								</li>
-							</ul>
-						</li>
-						<li class="BreadCrumbSeparator">|</li>
-						<li>
-							<button name="Child" type="submit" value="22" class="BreadCrumbButton">
-								About Umbrella
-								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
-							</button>
-							<ul class="BreadCrumbGrandChildren">
-								<li>
-									<button name="Child" type="submit" value="19" class="BreadCrumbGrandChildrenButton">What is Umbrella (for users)</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="20" class="BreadCrumbGrandChildrenButton">What is Umbrella (for IT experts)</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="21" class="BreadCrumbGrandChildrenButton">What is it good for?</button>
-								</li>
-								
-								
-								<li>
-									<button name="Child" type="submit" value="22" class="BreadCrumbGrandChildrenButton">How can I use it?</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="23" class="BreadCrumbGrandChildrenButton">What has happened up to now?</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="24" class="BreadCrumbGrandChildrenButton">What is the present status?</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="25" class="BreadCrumbGrandChildrenButton">What will be the future? What is the roadmap?</button>
-								</li>
-								
-								<li>
-									<button name="Child" type="submit" value="26" class="BreadCrumbGrandChildrenButton">Documents</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="27" class="BreadCrumbGrandChildrenButton">Presentation</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="28" class="BreadCrumbGrandChildrenButton">Background information</button>
-								</li>
-							</ul>
-						</li>
-						<!--
-						<li class="BreadCrumbSeparator">|</li>
-						<li>
-							<button name="Child" type="submit" value="30" class="BreadCrumbButton">
-								Services
-								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
-							</button>
-							<ul class="BreadCrumbGrandChildren">
-								<li>
-									<button name="Child" type="submit" value="32" class="BreadCrumbGrandChildrenButton">Wiki</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="36" class="BreadCrumbGrandChildrenButton">Issue Tracker</button>
-								</li>
-							</ul>
-						</li>
-				
-						<li class="BreadCrumbSeparator">|</li>
-						<li>
-							<button name="Child" type="submit" value="40" class="BreadCrumbButton">
-								User Offices
-								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
-							</button>
-							<ul class="BreadCrumbGrandChildren">
-
-							</ul>
-						</li>
-						
-						-->
-						<li class="BreadCrumbSeparator">|</li>
-						<li>
-							<button name="Child" type="submit" value="51" class="BreadCrumbButton">
-								Cookbook
-								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
-							</button>
-							<ul class="BreadCrumbGrandChildren">
-								<li>
-									<button name="Child" type="submit" value="51" class="BreadCrumbGrandChildrenButton">Cookbook Complete</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="52" class="BreadCrumbGrandChildrenButton">Cookbook General</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="53" class="BreadCrumbGrandChildrenButton">Cookbook ESRF</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="54" class="BreadCrumbGrandChildrenButton">Cookbook ILL</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="55" class="BreadCrumbGrandChildrenButton">Cookbook PSI</button>
-								</li>
-							</ul>
-						</li>
-						
-						
-						<li class="BreadCrumbSeparator">|</li>
-						<li>
-							<button name="Child" type="submit" value="60" class="BreadCrumbButton">
-								Facilities in operation
-								<span class="BreadCrumbArrow">&nbsp;&#8628;</span>
-							</button>
-							<ul class="BreadCrumbGrandChildren">
-								<li>
-									<button name="Child" type="submit" value="61" class="BreadCrumbGrandChildrenButton">ESRF SMIS</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="62" class="BreadCrumbGrandChildrenButton">ILL AUTH</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="63" class="BreadCrumbGrandChildrenButton">PSI DUO</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="64" class="BreadCrumbGrandChildrenButton">Elettra VUO</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="65" class="BreadCrumbGrandChildrenButton">ISIS AUTH</button>
-								</li>
-								<li>
-									<button name="Child" type="submit" value="66" class="BreadCrumbGrandChildrenButton">DESY DOOR</button>
-								</li>
-							</ul>
-						</li>
-						
-					</ul>
-				</form>
-			</div>
-
-			<div id="content">
-
-				<div class="navigation">
-					<div class="navbox">
-
-						<h1 class="singleline">Actions</h1>
-
-
-						<t:loop source="pageNames" value="pageName" class="prop:classForPageName">
-							<br />
-							<br />
-							<h5 class="singleline"></h5>
-							<t:pagelink page="prop:pageURL">${pageFullName}</t:pagelink>
-						</t:loop>
-						<t:if test="loggedin">
-							<br />
-							<br />
-							<h5 class="singleline"></h5>
-
-							<t:actionlink t:id="Logout">Logout</t:actionlink>
-
-						</t:if>
-						<br />
-						<br />
-						<h5 class="singleline"></h5>
 					</div>
 				</div>
 
-				<div class="maincontent">
+			<!-- Main -->
+				<div id="main-wrapper">
+					<div id="main" class="container">
+						<div class="row">
 
-					<h1>
-						<a name="EuroFEL_Consortium_News"></a>
-						${title}
-					</h1>
+							<!-- Content -->
+							<div id="content" class="8u 12u(mobile)">
 
-					<div class="entry">
+								<!-- Post -->
+									<div class="home">
+
+				<div id="features-wrapper">
+					
+					<section id="features" class="container bg">
 						<t:body />
+					</section>
+				</div>
+
+</div>
+
+										
+							</div>
+						</div>
 					</div>
 				</div>
-				<div>
 
-					<img src="/euu/layout/img/e-infra.logo_eu.gif" height="60" alt="e-infra" />
-					<a href="http://www.pandata.eu" target="_blank">
-						<img src="/euu/layout/img/pandata-odi.png" height="35" alt="PaNdata ODI" />
-					</a>
-					<a href="http://www.crisp-fp7.eu/" target="_blank">
-						<img src="/euu/layout/img/crisp.jpg" height="35" alt="CRISP" />
-					</a>
-					<a href="http://www.iruvx.eu/" target="_blank">
-						<img src="/euu/layout/img/eurofel-logo.gif" height="35" alt="EuroFEL" />
-					</a>
+			<!-- Footer -->
+				<div id="footer-wrapper">
+					<div id="footer" class="container">
+						<header>
+							<h2>Questions or comments? <strong>Get in touch:</strong></h2>
+						</header>
+						<div class="row">
+							<div class="6u 12u(mobile)">
+								<section>
+								<!--
+									<form Action="https://umbrellaid.org/euu/SendEmailServlet" METHOD="POST" name="contact">
+										<div class="row 50%">
+											<div class="6u 12u(mobile)">
+												<input name="name" placeholder="Name" type="text" />
+											</div>
+											<div class="6u 12u(mobile)">
+												<input name="email" placeholder="Email" type="text" />
+											</div>
+										</div>
+										<div class="row 50%">
+											<div class="12u">
+												<textarea name="message" placeholder="Message"></textarea>
+											</div>
+										</div>
+										<div class="row 50%">
+											<div class="12u">
+												<div class="g-recaptcha" data-sitekey="6LdgaCgTAAAAAGBo_c9lV-WG26an6hb8X4z0jVCr"></div><br/>
+												<a href="javascript:document.contact.submit()" class="form-button-submit button icon fa-envelope">Send Message</a>
+											</div>
+										</div>
+									</form>
+									-->
+                                                        <form
+                                                                Action="mailto:contact@umbrellaid.org?Subject=umbrellaid.org contact form"
+                                                                METHOD="POST" ENCTYPE="text/plain" name="contact">
+                                                                <div class="row 50%">
+                                                                        <div class="6u 12u(mobile)">
+                                                                                <input name="name" placeholder="Name" type="text" />
+                                                                        </div>
+                                                                        <div class="6u 12u(mobile)">
+                                                                                <input name="email" placeholder="Email" type="text" />
+                                                                        </div>
+                                                                </div>
+                                                                <div class="row 50%">
+                                                                        <div class="12u">
+                                                                                <textarea name="message" placeholder="Message"></textarea>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="row 50%">
+                                                                        <div class="12u">
+                                                                                <a href="javascript:document.contact.submit()"
+                                                                                        class="form-button-submit button icon fa-envelope">Send
+                                                                                        Message</a>
+                                                                        </div>
+                                                                </div>
+                                                        </form>
+									
+								</section>
+							</div>
+							<div class="6u 12u(mobile)">
+								<section>
+									<p>Do you have any questions or comments?<br/>Just fill out the form and we’ll get back to you as soon as possible.</p>
+									<div class="row">
+										<div class="6u 12u(mobile)">
+											<ul class="icons">
+												<li class="icon fa-home">
+													umbrellaID<br />
+													c/o Björn Abt<br />
+													WHGA/U136<br />
+													5232 Villigen PSI<br />
+													Switzerland
+												</li>
+												<li class="icon fa-envelope">
+													<a href="#">contact@umbrellaid.org</a>
+												</li>
+											</ul>
+										</div>
+										<div class="6u 12u(mobile)">
+											<ul class="icons">
+												<!--
+												<li class="icon fa-twitter">
+													<a href="#">@umbrellaid.org</a>
+												</li>
+												<li class="icon fa-instagram">
+													<a href="#">instagram.com/umbrellaid.org</a>
+												</li>
+												<li class="icon fa-dribbble">
+													<a href="#">dribbble.com/umbrellaid.org</a>
+												</li>
+												<li class="icon fa-facebook">
+													<a href="#">facebook.com/umbrellaid.org</a>
+												</li>
+												-->
+											</ul>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+					<div id="copyright" class="container">
+						<ul class="links">
+							<li>&copy; 2016 umbrellaID.</li>
+							<li><a href="legal.html">Legal Notice</a></li>
+							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</div>
 				</div>
-				<br class="clear" />
-			</div>
-		</body>
-	</t:block>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="/euu/assets/js/jquery.min.js"></script>
+			<script src="/euu/assets/js/jquery.dropotron.min.js"></script>
+			<script>jQuery.noConflict();</script>
+			<script src="/euu/assets/js/skel.min.js"></script>
+			<script src="/euu/assets/js/skel-viewport.min.js"></script>
+			<script src="/euu/assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="/euu/assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="/euu/assets/js/main.js"></script>
+
+	</body>
 </html>

@@ -1,83 +1,118 @@
 <html t:type="layout" title="Create Account" t:sidebarTitle="Help!" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
 	xmlns:p="tapestry:parameter">
-
-	<t:beaneditform t:id="create" submitlabel="message:submit-label" object="eAAAccount" reorder="uid,password,password1,birthdate,email,verificationCode">
-		<p:uid>
-			<t:label for="uid" />
-			<t:textfield t:mixins="ajaxValidator" t:id="uid" value="eAAAccount.uid" />
-			<img src="/euu/layout/images/info.png" title="Please choose your username" />
-
-		</p:uid>
-
-		<p:password>
-			<t:label for="password" />
-			<t:passwordfield t:id="password" t:mixins="exanpe/PasswordStrengthChecker" t:javascriptChecker="euuChecker" value="eAAAccount.password" />
-		</p:password>
-
-		<p:password1>
-			<t:label for="password1" />
-			<t:passwordfield t:id="password1" value="eAAAccount.password1" />
-		</p:password1>
-		
-		<p:birthdate>
-
-			<t:label for="birthdate" />
-			<t:SimpleDateField t:mixins="zoneUpdater" t:clientEvent="blur" t:event="birthdateChanged" t:zone="dateZone" t:id="birthdate"
-				value="eAAAccount.birthdate" />
-			<img src="/euu/layout/images/info.png" title="Your birthdate will be hashed and not stored as clear text" /><br/>
-			<label>Allowed formats</label><span style="font-size: 10px; font-weight: bold;">MM/DD/YYYY, DD.MM.YYYY, YYYY-MM-DD</span>
-			<br />
-			<label>Verified Birthdate</label>
-			<t:zone t:id="dateZone" t:update="show">
-				<t:textfield value="dateFormatted" disabled="true" class="hiddenText" />
-				<img src="/euu/layout/images/info.png" title="If date is shown your entry was recognized" />
-			</t:zone>
-			<!-- <t:datefield t:mixins="ajaxValidator" t:id="birthdate" -->
-			<!-- value="eAAAccount.birthdate" /> -->
-		</p:birthdate>
-
-		<p:email>
-			<t:label for="email" />
-			<t:textfield t:id="email" value="eAAAccount.email" />
-			<img src="/euu/layout/images/info.png" title="Your email will be hashed and not stored as clear text" />
-		</p:email>
-
-
-		<p:verificationCode>
-
-			<label>Verification Image</label>
-			<t:kaptchaimage t:id="kaptcha"/>
-  			<br/>
-  			<label>Verification Code</label>
-  			<t:kaptchafield visible="true" image="kaptcha"/>
-  			
-			<!-- 
-			<img xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd" src="${imageURL}" align="absmiddle" alt="Dynamic Verification Code" />
-			<br />
-			<t:label for="verificationCode" />
-			<t:textfield t:id="verificationCode" value="eAAAccount.verificationCode" />
- 			-->
-		</p:verificationCode>
-
-		<p:eaahash>
-			<t:hidden value="eAAAccount.eaahash" />
-		</p:eaahash>
-		<p:eaakey>
-			<t:hidden value="eAAAccount.eaakey" />
-		</p:eaakey>
-
-		<p:target>
-			<t:hidden value="eAAAccount.target" />
-		</p:target>
-		<p:eaaresetpwuuid>
-			<t:hidden value="eAAAccount.eaaresetpwuuid" />
-		</p:eaaresetpwuuid>
-		<p:eaaresetpwdate>
-			<t:hidden value="eAAAccount.eaaresetpwdate" />
-		</p:eaaresetpwdate>
-		
-	</t:beaneditform>
+	<section class="container 75%">
+		<t:beaneditform t:id="create" submitlabel="message:submit-label" object="eAAAccount" reorder="uid,password,password1,birthdate,email,verificationCode">
+			<p:uid>
+				<t:label for="uid" />
+				<t:textfield t:mixins="ajaxValidator" t:id="uid" value="eAAAccount.uid" style="width: 250px" />
+				<img src="/euu/layout/images/info.png" title="Please choose your username" />
 	
+			</p:uid>
+	
+			<p:password>
+				<t:label for="password" />
+				<t:passwordfield t:id="password" t:mixins="exanpe/PasswordStrengthChecker" t:javascriptChecker="euuChecker" value="eAAAccount.password" style="width: 250px" />
+			</p:password>
+	
+			<p:password1>
+				<t:label for="password1" />
+				<t:passwordfield t:id="password1" value="eAAAccount.password1" style="width: 250px"/>
+			</p:password1>
+			
+			<p:birthdate>
+	
+				<t:label for="birthdate" />
+				<t:SimpleDateField t:mixins="zoneUpdater" t:clientEvent="blur" t:event="birthdateChanged" t:zone="dateZone" t:id="birthdate"
+					value="eAAAccount.birthdate" style="width: 250px" />
+				<img src="/euu/layout/images/info.png" title="Your birthdate will be hashed and not stored as clear text" /><br/>
+				<label>Allowed formats</label><span style="font-size: 10px; font-weight: bold;">MM/DD/YYYY, DD.MM.YYYY, YYYY-MM-DD</span>
+				<br />
+				<label>Verified Birthdate</label>
+				<t:zone t:id="dateZone" t:update="show">
+					<t:textfield value="dateFormatted" disabled="true" class="hiddenText" style="width: 250px" />
+					<img src="/euu/layout/images/info.png" title="If date is shown your entry was recognized" />
+				</t:zone>
+				<!-- <t:datefield t:mixins="ajaxValidator" t:id="birthdate" -->
+				<!-- value="eAAAccount.birthdate" /> -->
+			</p:birthdate>
+	
+			<p:email>
+				<t:label for="email" />
+				<t:textfield t:id="email" value="eAAAccount.email" style="width: 250px"/>
+				<img src="/euu/layout/images/info.png" title="Your email will be hashed and not stored as clear text" />
+			</p:email>
+	
+	
+			<p:verificationCode>
+	
+				<label>Verification Image</label>
+				<t:kaptchaimage t:id="kaptcha"/>
+	  			<br/>
+	  			<label>Verification Code</label>
+	  			<t:kaptchafield visible="true" image="kaptcha" style="width: 250px"/>
+	  			
+			</p:verificationCode>
+	
+			<p:eaahash>
+				<t:hidden value="eAAAccount.eaahash" />
+			</p:eaahash>
+			<p:eaakey>
+				<t:hidden value="eAAAccount.eaakey" />
+			</p:eaakey>
+	
+			<p:target>
+				<t:hidden value="eAAAccount.target" />
+			</p:target>
+			<p:eaaresetpwuuid>
+				<t:hidden value="eAAAccount.eaaresetpwuuid" />
+			</p:eaaresetpwuuid>
+			<p:eaaresetpwdate>
+				<t:hidden value="eAAAccount.eaaresetpwdate" />
+			</p:eaaresetpwdate>
+			
+			
+			<p:givenName>
+				<t:hidden value="eAAAccount.givenName" />
+			</p:givenName>
+			
+			<p:emailAddress>
+				<t:hidden value="eAAAccount.emailAddress" />
+			</p:emailAddress>
+			
+			<p:homePhone>
+				<t:hidden value="eAAAccount.homePhone" />
+			</p:homePhone>
+			
+			<p:homePostalAddress>
+				<t:hidden value="eAAAccount.homePostalAddress" />
+			</p:homePostalAddress>
+			
+			<p:mobile>
+				<t:hidden value="eAAAccount.mobile" />
+			</p:mobile>
+			
+			<p:sn>
+				<t:hidden value="eAAAccount.sn" />
+			</p:sn>
+			
+			<p:postalAddress>
+				<t:hidden value="eAAAccount.postalAddress" />
+			</p:postalAddress>
+			
+			<p:telephoneNumber>
+				<t:hidden value="eAAAccount.telephoneNumber" />
+			</p:telephoneNumber>
+			
+		</t:beaneditform>
+	</section>
+	<section>
+		<h3>Login via your home organisation</h3>
+		<div>
+			<div id="idpSelect"></div>
+			<script src="/idp/assets/js/idpselect_config.js" type="text/javascript" language="javascript"></script>
+			<script src="/idp/assets/js/idpselect.js" type="text/javascript" language="javascript"></script>
+		</div>
+	</section>
 	<script type="text/javascript">
 	      <!--
 	      

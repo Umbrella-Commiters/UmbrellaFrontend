@@ -44,6 +44,32 @@ public class Index {
 		}
 	}
 
+	public boolean getLoggedin() {
+		boolean found = false;
+
+		// log the user out, if a session exists, but no EAAHash is present (the
+		// user has logged out)
+		if (userSession != null && userSession.isLoggedIn() && _request != null && _request.getSession(false) != null
+				&& (_request.getHeader("EAAHash") == null || _request.getHeader("EAAHash").equals(""))) {
+			_request.getSession(false).invalidate();
+			userSession = null;
+		}
+
+		if (userSession != null && userSession.isLoggedIn()) {
+			found = true;
+		}
+
+		return found;
+	}
+
+	public String getUsername() {
+
+		if (userSession != null && userSession.isLoggedIn() && !userSession.getUserName().equals("")) {
+			return userSession.getUserName();
+		}
+		return "";
+	}
+
 	public boolean getHasSession() {
 		if (_request.getSession(true).getAttribute(Index.SHIB) == null) {
 			return false;

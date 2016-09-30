@@ -12,6 +12,16 @@ public class Notification implements Serializable {
 	private String subject;
 	
 	private String body;
+	
+	private String layout;
+
+	public String getLayout() {
+		return layout;
+	}
+
+	public void setLayout(String layout) {
+		this.layout = layout;
+	}
 
 	public String getSubject() {
 		return subject;
@@ -28,4 +38,6 @@ public class Notification implements Serializable {
 	public void setBody(String body) {
 		this.body = body;
 	}
+	
+	
 }

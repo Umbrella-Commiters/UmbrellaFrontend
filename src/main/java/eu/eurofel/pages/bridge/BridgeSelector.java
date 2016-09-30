@@ -166,7 +166,7 @@ public class BridgeSelector
     {
         URL url =
             new URL(
-                     "https://umbrella.psi.ch/Shibboleth.sso/Login?target=https://umbrella.psi.ch/euu/bridge/endpoint/EduGain" );
+                     "https://umbrellaid.org/Shibboleth.sso/Login?target=https://umbrellaid.org/euu/bridge/endpoint/EduGain" );
         return url;
     }
 
@@ -183,7 +183,7 @@ public class BridgeSelector
         // if (!service.validatePassword(loginname, password)) {
         // if(!userSession.getIdP().equals("https://umbrella.psi.ch/idp/shibboleth")){
         URL url =
-            new URL( "https://umbrella.psi.ch/Shibboleth.sso/Login?target=https://umbrella.psi.ch/euu/bridge/selector" );
+            new URL( "https://umbrellaid.org/Shibboleth.sso/Login?target=https://umbrellaid.org/euu/bridge/selector" );
         return url;
         // form.recordError("Wrong credentials.");
         // } else {

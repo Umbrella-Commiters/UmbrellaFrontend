@@ -1,5 +1,8 @@
 package eu.eurofel;
 
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
@@ -19,4 +22,13 @@ public class Messages {
 			return '!' + key + '!';
 		}
 	}
+	
+	public static String replace(String message, HashMap<String, String> map){
+		
+		for(Map.Entry<String, String> entry : map.entrySet()){
+			message = message.replace(entry.getKey(), entry.getValue());
+		}
+		return message;
+	}
+
 }

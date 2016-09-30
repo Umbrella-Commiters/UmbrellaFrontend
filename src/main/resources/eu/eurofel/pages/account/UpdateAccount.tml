@@ -47,17 +47,17 @@
 		
 		<p:email>
 			<t:label for="email" />
-			<t:textfield t:mixins="ajaxValidator" t:id="email" value="address.email" />
+			<t:textfield t:mixins="ajaxValidator" t:id="email" value="address.email" style="width: 250px" />
 		</p:email>
 		
 		<p:nationality>
 			<t:label for="nationality" />
-			<t:textfield t:mixins="autocomplete" t:id="nationality" value="address.nationality" />
+			<t:textfield t:mixins="autocomplete" t:id="nationality" value="address.nationality" style="width: 250px" />
 		</p:nationality>
 
 		<p:affiliation>
 			<t:label for="affiliation" />
-			<t:textarea t:mixins="autocomplete" cols="35" rows="6" t:id="affiliation" value="address.affiliation" />
+			<t:textarea t:mixins="autocomplete" cols="35" rows="6" t:id="affiliation" value="address.affiliation" style="width: 250px" />
 		</p:affiliation>
 		<p:eaahash>
 			<t:hidden value="address.eaahash" />

@@ -1,0 +1,106 @@
+<html t:type="layout" title="Update Personal User Information" t:sidebarTitle="Help!" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+	
+	<t:form class="form-horizontal" t:id="update" validate="account">
+	
+		<t:if test="account">
+		
+		
+				<t:hidden value="account.birthdate" />
+				<t:hidden value="account.uid" />
+				<t:hidden value="account.eaahash" />
+				<t:hidden value="account.eaakey" />
+				<t:hidden value="account.email" />
+				<t:hidden value="account.target" />
+				<t:hidden value="account.eaaresetpwuuid" />
+				<t:hidden value="account.eaaresetpwdate" />	
+				<t:hidden value="account.verificationCode" />	
+				<t:hidden value="account.password" />	
+				<t:hidden value="account.password1" />	
+
+
+            <table class="bg-bright">
+				<tr>
+					<th colspan="2"><h3>If you want you can add more information about yourself. This is not necessary but some services might require this information.</h3></th>
+				</tr>    
+            </table>  
+                
+                
+            <table class="bg-bright">
+				<tr>
+					<th colspan="2"><a href="#" class="icon fa-info"><span><h3>General Information</h3></span></a></th>
+				</tr>     
+                <tr>
+                    <th><t:label for="orcid"/></th>
+                    <td><t:textfield t:id="orcid"  disabled="true" value="account.orcid" style="width: 250px"/></td>
+                </tr> 
+                <tr>
+                    <th>Link Orcid with Umbrella</th>
+                    <td><a href="https://orcid.org/oauth/authorize?client_id=APP-94FZXM6OWPCCQIOA&amp;response_type=code&amp;scope=/authenticate&amp;redirect_uri=https://umbrellaid.org/euu/account/userinformation" style="-webkit-appearance: button; -moz-appearance: button; appearance: button; text-decoration: none; color: initial;">Orcid Login</a></td>
+                </tr>
+                <!--
+                <tr>
+                    <th><t:label for="sn"/></th>
+                    <td><t:textfield t:id="sn" value="account.sn" style="width: 250px"/></td>
+                </tr>
+                <tr>
+                    <th><t:label for="emailAddress"/></th>
+                    <td><t:textfield t:id="emailAddress" value="account.emailAddress" style="width: 250px"/></td>
+                </tr>
+                <tr>
+                    <th><t:label for="mobile"/></th>
+                    <td><t:textfield t:id="mobile" value="account.mobile" style="width: 250px"/></td>
+                </tr>
+                -->
+            </table>                 
+
+			<!--
+            <table class="bg-bright">		
+
+				<tr>
+					<th colspan="2"><a href="#" class="icon fa-industry"><span><h3>Work Information</h3></span></a></th>
+				</tr>  
+				
+                <tr>
+                    <th><t:label for="postalAddress"/></th>
+                    <td><t:textarea t:id="postalAddress" value="account.postalAddress" style="width: 250px"/></td>
+                </tr>
+                <tr>
+                    <th><t:label for="telephoneNumber"/></th>
+                    <td><t:textfield t:id="telephoneNumber" value="account.telephoneNumber" style="width: 250px"/></td>
+                </tr>
+
+            </table>                 
+
+
+            <table class="bg-bright">	
+				<tr>
+					<th colspan="2"><a href="#" class="icon fa-home"><span><h3>Home Information</h3></span></a></th>
+				</tr>  
+
+                <tr>
+                    <th><t:label for="homePostalAddress"/></th>
+                    <td><t:textarea t:id="homePostalAddress" value="account.homePostalAddress" style="width: 250px"/></td>
+                </tr>
+                <tr>
+                    <th><t:label for="homePhone"/></th>
+                    <td><t:textfield t:id="homePhone" value="account.homePhone" style="width: 250px"/></td>
+                </tr>
+
+            </table>   
+            -->
+                
+            <table class="edit">	
+                <tr>
+                    <th>&nbsp;</th>
+                    <td><t:submit value="Save"/></td>
+                </tr>     
+            </table>          
+		
+            </t:if>
+            <t:if test="!account">
+                <div class="alert alert-danger">Account does not exist.</div>
+            </t:if>		
+        </t:form>
+	
+</html>

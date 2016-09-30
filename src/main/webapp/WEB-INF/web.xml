@@ -5,8 +5,7 @@
 <web-app>
 	<display-name>euu Tapestry 5 Application</display-name>
 	<context-param>
-		<!-- The only significant configuration for Tapestry 5, this informs Tapestry 
-			of where to look for pages, components and mixins. -->
+		<!-- The only significant configuration for Tapestry 5, this informs Tapestry of where to look for pages, components and mixins. -->
 		<param-name>tapestry.app-package</param-name>
 		<param-value>eu.eurofel</param-value>
 	</context-param>
@@ -18,6 +17,12 @@
 		<param-name>tapestry.page-pool.hard-limit</param-name>
 		<param-value>150</param-value>
 	</context-param>
+
+
+	<filter>
+		<filter-name>SendEmailServlet</filter-name>
+		<filter-class>eu.eurofel.servlet.SendEmailServlet</filter-class>
+	</filter>
 	<filter>
 		<filter-name>validate</filter-name>
 		<filter-class>eu.eurofel.filter.EmailValidateFilter</filter-class>
@@ -34,15 +39,17 @@
 		<filter-name>changemail</filter-name>
 		<filter-class>eu.eurofel.filter.ChangeEmailFilter</filter-class>
 	</filter>
-	<!-- <filter> <filter-name>app</filter-name> <filter-class>org.apache.tapestry5.TapestryFilter</filter-class> 
-		</filter> -->
+	<!-- <filter> <filter-name>app</filter-name> <filter-class>org.apache.tapestry5.TapestryFilter</filter-class> </filter> -->
 	<filter>
 		<filter-name>app</filter-name>
-		<!-- Special filter that adds in a T5 IoC module derived from the Spring 
-			WebApplicationContext. -->
+		<!-- Special filter that adds in a T5 IoC module derived from the Spring WebApplicationContext. -->
 		<filter-class>org.apache.tapestry5.spring.TapestrySpringFilter</filter-class>
 	</filter>
 
+	<filter-mapping>
+		<filter-name>SendEmailServlet</filter-name>
+		<url-pattern>/SendEmailServlet</url-pattern>
+	</filter-mapping>
 	<filter-mapping>
 		<filter-name>validate</filter-name>
 		<url-pattern>/validate</url-pattern>
@@ -52,7 +59,7 @@
 		<filter-name>changemail</filter-name>
 		<url-pattern>/changemail</url-pattern>
 	</filter-mapping>
-	
+
 	<filter-mapping>
 		<filter-name>urlmap</filter-name>
 		<url-pattern>/urlmap</url-pattern>
@@ -62,7 +69,7 @@
 		<filter-name>download</filter-name>
 		<url-pattern>/download</url-pattern>
 	</filter-mapping>
-	
+
 	<filter-mapping>
 		<filter-name>app</filter-name>
 		<url-pattern>/*</url-pattern>

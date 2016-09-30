@@ -51,15 +51,17 @@ public class ChangePassword {
 	@SuppressWarnings("unused")
 	@InjectPage
 	private Index index;
+	
+	@InjectPage
+	private EmailSent emailSent;
 
 	@InjectPage
 	private ChangePasswordSuccess success;
-	
+
 	@Property
 	private EmailRenewal email = new EmailRenewal();
-	
 
-    @InjectComponent(value = "newEmail")
+	@InjectComponent(value = "newEmail")
 	private TextField emailField;
 
 	@Property
@@ -68,9 +70,9 @@ public class ChangePassword {
 	@InjectComponent(value = "newPassword1")
 	private PasswordField passwordField;
 
-    @Component
-    private BeanEditForm ChangeEmail;
-    
+	@Component
+	private BeanEditForm ChangeEmail;
+
 	@Component
 	private BeanEditForm ChangePassword;
 
@@ -81,35 +83,41 @@ public class ChangePassword {
 		eaahash = _request.getHeader("EAAHash");
 		eaakey = _request.getHeader("EAAKey");
 		uid = _request.getHeader("uid");
-		
+
 		email = new EmailRenewal();
 
 	}
 
 	void onValidateFromChangePassword() throws NamingException {
 		if (!password.getNewPassword1().equals(password.getNewPassword2())) {
-			ChangePassword.recordError(passwordField, "Passwords are not equal.");
+			ChangePassword.recordError(passwordField,
+					"Passwords are not equal.");
 		}
 		// validate username and password
 		// update password
 
 	}
 
-    Object onSuccessFromChangeEmail() throws Exception {
-        System.out.println("New Email: " + email.getEmail());
-        
-        service.changeEmail( uid, eaahash, email.getEmail() );
-        return this;
-    }
+	Object onSuccessFromChangeEmail() throws Exception {
+//		System.out.println("New Email: " + email.getEmail());
+		try {
+			service.changeEmail(uid, eaahash, email.getEmail());
+		} catch (Exception e) {
+			ChangeEmail.recordError(emailField, e.getLocalizedMessage());
+		}
+		return emailSent;
+	}
 
 	Object onSuccessFromChangePassword() throws Exception {
 		// if (userSession != null && userSession.isLoggedIn()
 		// && !userSession.getUserName().equals("")) {
 		if (eaakey != null && eaahash != null) {
-			if (service.changePassword(uid, password.getOldPassword(), password.getNewPassword1())) {
+			if (service.changePassword(uid, password.getOldPassword(),
+					password.getNewPassword1())) {
 				return success;
 			} else {
-				ChangePassword.recordError(passwordField, "Error Changing Password");
+				ChangePassword.recordError(passwordField,
+						"Error Changing Password");
 
 			}
 		}

@@ -5,4 +5,5 @@ PUBLIC "-//iBATIS.com//DTD SQL Map Config 2.0//EN"
 
 <sqlMapConfig>
     <sqlMap resource="./spring/ibatis/Facility.xml" />
+    <sqlMap resource="./spring/ibatis/UserInformation.xml" />
 </sqlMapConfig>

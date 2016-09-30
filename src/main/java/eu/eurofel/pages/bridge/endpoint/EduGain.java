@@ -39,7 +39,7 @@ public class EduGain extends BridgeEndpoint {
 	Object onActivate() throws NamingException, UnsupportedEncodingException {
 
 		// Just extract the info when not logged in via Umbrella
-		if (!_request.getHeader("Shib-Identity-Provider").equals("https://umbrella.psi.ch/idp/shibboleth") && _request.getHeader("Shib-Identity-Provider") != null && !_request.getHeader("Shib-Identity-Provider").equals("")) {
+		if (!_request.getHeader("Shib-Identity-Provider").equals("https://umbrellaid.org/idp/shibboleth") && _request.getHeader("Shib-Identity-Provider") != null && !_request.getHeader("Shib-Identity-Provider").equals("")) {
 			retriever = new FederationBridge();
 			retriever.setFederationName(getFederationName());
 			retriever.setFederationAuthMethod("Username/Password");
@@ -47,7 +47,7 @@ public class EduGain extends BridgeEndpoint {
 			for (String name : _request.getHeaderNames()) {
 				System.out.println(name + ": " + _request.getHeader(name));
 			}
-			retriever.setFederationUID(_request.getHeader("persistent-id"));
+			retriever.setFederationUID(_request.getHeader("eppn"));
 			userSession.setFederation(retriever);
 		}
 		return selector;

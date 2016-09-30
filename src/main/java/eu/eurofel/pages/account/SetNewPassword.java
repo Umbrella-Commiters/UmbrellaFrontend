@@ -61,8 +61,8 @@ public class SetNewPassword {
 	void onActivate() throws NamingException {
 		retriever = new PasswordRetriever();
 		uuid = requestGlobals.getRequest().getParameter("uuid");
-		System.out.println("UUID: " + uuid);
-		System.out.println("UserSessionUUID: " + userSession.getResetUUID());
+//		System.out.println("UUID: " + uuid);
+//		System.out.println("UserSessionUUID: " + userSession.getResetUUID());
 		if (uuid != null) {
 			userSession.setResetUUID(uuid);
 		}
@@ -86,8 +86,8 @@ public class SetNewPassword {
 		// find the matching email and username
 		EAAAccount acc = null;
 		try {
-			System.out.println(uuid);
-			System.out.println(userSession.getResetUUID());
+//			System.out.println(uuid);
+//			System.out.println(userSession.getResetUUID());
 			acc = new EAAAccount(service.findAccountByResetUUID(userSession.getResetUUID(), retriever.getUsername(), retriever.getEmail()));
 		} catch (NamingException e) {
 			e.printStackTrace();

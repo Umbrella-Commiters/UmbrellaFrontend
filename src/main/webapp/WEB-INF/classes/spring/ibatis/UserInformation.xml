@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+"http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap>
+
+	<typeAlias type="eu.eurofel.entities.UserInformation" alias="userInformation" />
+
+	<resultMap class="userInformation" id="result">
+		<result property="eaahash" column="eaahash" />
+		<result property="email" column="email" />
+		<result property="givenName" column="givenName" />
+		<result property="surname" column="surname" />
+		<result property="postalAddress" column="postalAddress" />
+		<result property="homePostalAddress" column="homePostalAddress" />
+		<result property="telephoneNumber" column="telephoneNumber" />
+		<result property="mobile" column="mobile" />
+		<result property="homePhone" column="homePhone" />
+		<result property="orcidIdentifier" column="orcidIdentifier" />
+		<result property="gender" column="gender" />
+		<result property="preferredLanguage" column="preferredLanguage" />
+	</resultMap>
+
+
+	<select id="selectUserInformationById" resultMap="result" parameterClass="string">
+		select * from umbrellaid_aa where eaahash = #value#
+	</select>
+
+
+	<insert id="insertUserInformation" parameterClass="userInformation">
+		insert into umbrellaid_aa (eaahash, email, givenName, surname, postalAddress, homePostalAddress, telephoneNumber, mobile, homePhone, orcidIdentifier, gender, preferredLanguage)
+		values
+		(#eaahash#, #email#, #givenName#, #surname#, #postalAddress#, #homePostalAddress#, #telephoneNumber#, #mobile#, #homePhone#, #orcidIdentifier#, #gender#, #preferredLanguage#)
+	</insert>
+
+	<delete id="deleteUserInformation" parameterClass="string">
+		delete from umbrellaid_aa where eaahash = #value#
+	</delete>
+
+	<update id="updateUserInformation" parameterClass="userInformation">
+		update umbrellaid_aa set
+		email = #email#, givenName = #givenName#, surname = #surname#, postalAddress = #postalAddress#, homePostalAddress = #homePostalAddress#, telephoneNumber = #telephoneNumber#, mobile = #mobile#, homePhone = #homePhone#, orcidIdentifier = #orcidIdentifier#, gender = #gender#, preferredLanguage = #preferredLanguage#
+		where eaahash = #eaahash#
+	</update>
+
+</sqlMap>

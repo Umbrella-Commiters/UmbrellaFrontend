@@ -34,4 +34,12 @@
 		</property>
 	</bean>
 
+	<bean id="userInformationDao" class="eu.eurofel.entities.dao.impl.UserInformationDaoImpl">
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>
+		<property name="sqlMapClient">
+			<ref local="sqlMapClient" />
+		</property>
+	</bean>
 </beans>

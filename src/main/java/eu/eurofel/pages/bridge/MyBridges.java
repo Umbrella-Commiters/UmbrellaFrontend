@@ -71,21 +71,24 @@ public class MyBridges {
 			NamingEnumeration<?> attrs = service.findBridges(_request
 					.getHeader("EAAHash"));
 
-			while (attrs.hasMore()) {
-				BridgeFederation bf = new BridgeFederation();
-				Object tmp = attrs.next();
-				SearchResult sr = (SearchResult) tmp;
-				Attributes at = sr.getAttributes();
-				bf.setBridgeFederationSrc(at.get("BridgeFederationSrc").get()
-						.toString());
-				bf.setBridgeFederationUid(at.get("BridgeFederationUID").get()
-						.toString().replaceAll("\\!", " "));
-				bf.setBridgeUmbrellaUid(at.get("BridgeFederationUmbrellaUID")
-						.get().toString());
-				bf.setBridgeFederationUmbrellaUsername(at
-						.get("BridgeFederationUmbrellaUsername").get()
-						.toString());
-				bridges.add(bf);
+			if (attrs != null) {
+				while (attrs.hasMore()) {
+					BridgeFederation bf = new BridgeFederation();
+					Object tmp = attrs.next();
+					SearchResult sr = (SearchResult) tmp;
+					Attributes at = sr.getAttributes();
+					bf.setBridgeFederationSrc(at.get("BridgeFederationSrc")
+							.get().toString());
+					bf.setBridgeFederationUid(at.get("BridgeFederationUID")
+							.get().toString().replaceAll("\\!", " "));
+					bf.setBridgeUmbrellaUid(at
+							.get("BridgeFederationUmbrellaUID").get()
+							.toString());
+					bf.setBridgeFederationUmbrellaUsername(at
+							.get("BridgeFederationUmbrellaUsername").get()
+							.toString());
+					bridges.add(bf);
+				}
 			}
 
 		}

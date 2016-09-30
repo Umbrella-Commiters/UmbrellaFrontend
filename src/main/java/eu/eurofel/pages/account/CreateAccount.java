@@ -262,7 +262,7 @@ public class CreateAccount {
 		eAAAccount.setEaahash(UUID.randomUUID().toString());
 		eAAAccount.setEaakey(UUID.randomUUID().toString());
 		service.createAccount(eAAAccount);
-		System.out.println("Target: " + eAAAccount.getTarget());
+//		System.out.println("Target: " + eAAAccount.getTarget());
 		eAAAccount = new EAAAccount();
 		return success;
 	}

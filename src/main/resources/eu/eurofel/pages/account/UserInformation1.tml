@@ -1,0 +1,99 @@
+<html t:type="layout" title="Update Personal User Information" t:sidebarTitle="Help!" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+	xmlns:p="tapestry:parameter">
+	
+	<p>If you want you can add more information about yourself. This is not necessary but some services might require this information.</p>
+	<t:beaneditform t:id="update" submitlabel="message:submit-label" object="account" reorder="givenName,sn,emailAddress,mobile,postalAddress,telephoneNumber,homePostalAddress,homePhone">
+	
+		<p:birthdate>
+			<t:hidden value="account.birthdate" />
+		</p:birthdate>
+		
+		<p:uid>
+			<t:hidden value="account.uid" />
+		</p:uid>
+		
+		<p:eaahash>
+				<t:hidden value="account.eaahash" />
+		</p:eaahash>
+
+		<p:eaakey>
+				<t:hidden value="account.eaakey" />
+		</p:eaakey>
+	
+		<p:email>
+				<t:hidden value="account.email" />
+		</p:email>
+		
+		<p:target>
+				<t:hidden value="account.target" />
+		</p:target>
+		
+		<p:eaaresetpwuuid>
+				<t:hidden value="account.eaaresetpwuuid" />
+		</p:eaaresetpwuuid>
+			
+		<p:eaaresetpwdate>
+				<t:hidden value="account.eaaresetpwdate" />	
+		</p:eaaresetpwdate>
+
+		<p:verificationCode>
+				<t:hidden value="account.verificationCode" />	
+		</p:verificationCode>
+		
+		<p:password>
+				<t:hidden value="account.password" />	
+		</p:password>
+		
+		<p:password1>
+				<t:hidden value="account.password1" />	
+		</p:password1>
+
+		<p:givenName>
+				<t:label for="givenName" />
+				<t:textfield t:id="givenName" value="account.givenName" style="width: 250px"/>
+		</p:givenName>
+		
+		<p:sn>
+				<t:label for="sn" />
+				<t:textfield t:id="sn" value="account.sn" style="width: 250px"/>
+		</p:sn>
+		
+		<p:emailAddress>
+				<t:label for="emailAddress" />
+				<t:textfield t:id="emailAddress" value="account.emailAddress" style="width: 250px"/>
+		</p:emailAddress>
+		
+		
+		<p:mobile>
+				<t:label for="mobile" />
+				<t:textfield t:id="mobile" value="account.mobile" style="width: 250px"/>
+		</p:mobile>
+		
+
+		<p:postalAddress>
+				<t:label for="postalAddress" />
+				<t:textarea t:id="postalAddress" value="account.postalAddress" style="width: 250px"/>
+		</p:postalAddress>
+
+		<p:telephoneNumber>
+				<t:label for="telephoneNumber" />
+				<t:textfield t:id="telephoneNumber" value="account.telephoneNumber" style="width: 250px"/>
+		</p:telephoneNumber>
+
+
+		<p:homePostalAddress>
+				<t:label for="homePostalAddress" />
+				<t:textarea t:id="homePostalAddress" value="account.homePostalAddress" style="width: 250px"/>
+		</p:homePostalAddress>
+		
+		
+		<p:homePhone>
+				<t:label for="homePhone" />
+				<t:textfield t:id="homePhone" value="account.homePhone" style="width: 250px"/>
+		</p:homePhone>
+		
+
+	</t:beaneditform>
+	
+	
+</html>

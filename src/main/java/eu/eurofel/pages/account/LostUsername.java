@@ -1,7 +1,11 @@
 package eu.eurofel.pages.account;
 
+import java.io.File;
+import java.util.HashMap;
+
 import javax.naming.NamingException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.tapestry5.ComponentResources;
 import org.apache.tapestry5.Link;
 import org.apache.tapestry5.annotations.Component;
@@ -13,6 +17,7 @@ import org.apache.tapestry5.corelib.components.BeanEditForm;
 import org.apache.tapestry5.ioc.annotations.Inject;
 import org.apache.tapestry5.services.RequestGlobals;
 
+import eu.eurofel.Messages;
 import eu.eurofel.entities.EAAAccount;
 import eu.eurofel.entities.Notification;
 import eu.eurofel.entities.PasswordRetriever;
@@ -108,13 +113,24 @@ public class LostUsername {
 			EAAAccount acc = new EAAAccount(
 					service.findAccountByEmail(retriever.getEmail()));
 
-			Notification notification = new Notification();
-			notification.setSubject("Umbrella Lost Username");
-			notification.setBody("Dear " + acc.getUid()
-					+ ",\n\nYour Username is: " + acc.getUid()
-					+ "\n\nYour Umbrella Team");
-			acc.setEmail(retriever.getEmail());
-			notificationService.notify(notification, acc);
+			
+			
+    		Notification notification = new Notification();
+    		notification.setSubject(Messages.getString("subject.lostusername"));
+
+    		HashMap<String, String> rep = new HashMap<String, String>();
+    		rep.put("acc.getUid()", acc.getUid());
+
+    		String body = Messages.replace(
+    				Messages.getString("body.lostusername"), rep);
+    		notification.setBody(body);
+
+    		File file = new File(Messages.getString("mail.template.path"));
+    		String layout = FileUtils.readFileToString(file);
+    		notification.setLayout(layout);
+    		EAAAccount mailAcc = new EAAAccount();
+    		mailAcc.setEmail(retriever.getEmail());
+    		notificationService.notify(notification, mailAcc);
 
 		} catch (Exception e) {
 			lostusername

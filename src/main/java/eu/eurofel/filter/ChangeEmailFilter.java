@@ -45,9 +45,9 @@ public class ChangeEmailFilter
         String email = req.getParameter( "email" );
         String checksum = req.getParameter( "checksum" );
         boolean found = false;
-        System.out.println( "Filter UUID:" + uuid );
-        System.out.println( "Filter EMAIL:" + email );
-        System.out.println( "Filter CHECK:" + checksum );
+//        System.out.println( "Filter UUID:" + uuid );
+//        System.out.println( "Filter EMAIL:" + email );
+//        System.out.println( "Filter CHECK:" + checksum );
         // cast the ServletRequest to a HttpServletRequest
 
         HttpServletResponse srvResp = (HttpServletResponse) res;
@@ -55,17 +55,17 @@ public class ChangeEmailFilter
         if ( uuid != null && email != null && checksum != null )
         {
 
-            System.out.println( "Load resource..." );
+//            System.out.println( "Load resource..." );
             Resource resource = new UrlResource( "file://" + Messages.getString( "application.context.path" ) );
-            System.out.println( "Load beanfactory..." );
+//            System.out.println( "Load beanfactory..." );
             BeanFactory factory = new XmlBeanFactory( resource );
-            System.out.println( "Load service..." );
+//            System.out.println( "Load service..." );
             EAAService service = (EAAService) factory.getBean( "eAAService" );
-            System.out.println( "found Eaaservice" );
+//            System.out.println( "found Eaaservice" );
             try
             {
                 EAAAccount acc = new EAAAccount( service.findAccountByHash( uuid ) );
-                System.out.println( "found EaaAccount" );
+//                System.out.println( "found EaaAccount" );
                 String eaakey = acc.getEaakey();
 
                 Date date = new Date();
@@ -81,7 +81,7 @@ public class ChangeEmailFilter
                 // reconstruct checksum
                 String checksum1 = EAAHash.getSHA1Hash( email + eaakey + year + month + day + hour1 );
                 String checksum2 = EAAHash.getSHA1Hash( email + eaakey + year + month + day + hour2 );
-                System.out.println( "Filter CHECK1:" + checksum1 );
+//                System.out.println( "Filter CHECK1:" + checksum1 );
 
                 // do a check if the UUID is right and if yes, activate the
                 // account
@@ -90,7 +90,7 @@ public class ChangeEmailFilter
                     service.changeEmail( acc.getUid(), email );
                     found = true;
 
-                    srvResp.sendRedirect( "/euu/account/activated" );
+                    srvResp.sendRedirect( "/euu/account/emailchanged" );
 
                 }
 

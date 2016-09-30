@@ -6,6 +6,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 
 import eu.eurofel.entities.dao.FacilityDao;
+import eu.eurofel.entities.dao.UserInformationDao;
 import eu.eurofel.services.DaoService;
 
 public class DaoServiceImpl implements DaoService {
@@ -21,6 +22,10 @@ public class DaoServiceImpl implements DaoService {
 
 	public FacilityDao getFacilityDao() {
 		return (FacilityDao) beanFactory.getBean("facilityDao");
+	}
+
+	public UserInformationDao getUserInformationDao() {
+		return (UserInformationDao) beanFactory.getBean("userInformationDao");
 	}
 
 }

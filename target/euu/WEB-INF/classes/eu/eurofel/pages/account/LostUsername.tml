@@ -4,19 +4,28 @@
 	<t:beaneditform t:id="lostusername" submitlabel="message:submit-label" object="retriever">
 		<p:email>
 			<t:label for="email" />
-			<t:textfield t:id="email" value="retriever.email" />
+			<t:textfield t:id="email" value="retriever.email" style="width: 250px" />
 		</p:email>
 		<p:username>
 			<t:hidden value="retriever.username" />
 		</p:username>
 
+
+
+		<p:password>
+			<t:hidden value="retriever.password" />
+		</p:password>
+		<p:password1>
+			<t:hidden value="retriever.password1" />
+		</p:password1>
+		
 		<p:verificationCode>
 
 			<label>Verification Image</label>
 			<t:kaptchaimage t:id="kaptcha"/>
   			<br/>
   			<label>Verification Code</label>
-  			<t:kaptchafield visible="true" image="kaptcha"/>
+  			<t:kaptchafield visible="true" image="kaptcha" style="width: 250px"/>
   			
 <!-- 
 			<label>Verification Image</label>
