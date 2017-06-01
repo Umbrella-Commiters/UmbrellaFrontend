@@ -32,13 +32,13 @@
 				</tr>     
                 <tr>
                     <th><t:label for="orcid"/></th>
-                    <td><t:textfield t:id="orcid"  disabled="true" value="account.orcid" style="width: 250px"/></td>
+                    <td><t:textfield t:id="orcid"  disabled="false" value="account.orcid" style="width: 250px"/></td>
                 </tr> 
+                <!--
                 <tr>
                     <th>Link Orcid with Umbrella</th>
                     <td><a href="https://orcid.org/oauth/authorize?client_id=APP-94FZXM6OWPCCQIOA&amp;response_type=code&amp;scope=/authenticate&amp;redirect_uri=https://umbrellaid.org/euu/account/userinformation" style="-webkit-appearance: button; -moz-appearance: button; appearance: button; text-decoration: none; color: initial;">Orcid Login</a></td>
                 </tr>
-                <!--
                 <tr>
                     <th><t:label for="sn"/></th>
                     <td><t:textfield t:id="sn" value="account.sn" style="width: 250px"/></td>

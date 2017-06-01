@@ -19,6 +19,7 @@
 				<t:passwordfield t:id="password1" value="eAAAccount.password1" style="width: 250px"/>
 			</p:password1>
 			
+			<!--
 			<p:birthdate>
 	
 				<t:label for="birthdate" />
@@ -32,10 +33,9 @@
 					<t:textfield value="dateFormatted" disabled="true" class="hiddenText" style="width: 250px" />
 					<img src="/euu/layout/images/info.png" title="If date is shown your entry was recognized" />
 				</t:zone>
-				<!-- <t:datefield t:mixins="ajaxValidator" t:id="birthdate" -->
-				<!-- value="eAAAccount.birthdate" /> -->
 			</p:birthdate>
-	
+			-->
+				
 			<p:email>
 				<t:label for="email" />
 				<t:textfield t:id="email" value="eAAAccount.email" style="width: 250px"/>
@@ -71,6 +71,10 @@
 			</p:eaaresetpwdate>
 			
 			
+			<p:birthdate>
+				<t:hidden value="eAAAccount.birthdate" />
+			</p:birthdate>
+			
 			<p:givenName>
 				<t:hidden value="eAAAccount.givenName" />
 			</p:givenName>
@@ -103,6 +107,9 @@
 				<t:hidden value="eAAAccount.telephoneNumber" />
 			</p:telephoneNumber>
 			
+			<p:orcid>
+				<t:hidden value="eAAAccount.orcid" />
+			</p:orcid>
 		</t:beaneditform>
 	</section>
 	<section>

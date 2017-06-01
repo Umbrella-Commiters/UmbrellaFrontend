@@ -69,15 +69,15 @@ public class CreateAccount {
 
 	@Component
 	private BeanEditForm create;
-
-	@InjectComponent
-	private Zone dateZone;
+//
+//	@InjectComponent
+//	private Zone dateZone;
 
 	@InjectComponent(value = "uid")
 	private TextField uidField;
 
-	@InjectComponent(value = "birthdate")
-	private SimpleDateField dateField;
+//	@InjectComponent(value = "birthdate")
+//	private SimpleDateField dateField;
 
 	// @InjectComponent(value = "verificationCode")
 	// private TextField verificationField;
@@ -110,7 +110,7 @@ public class CreateAccount {
 		// retrieve GET / POST parameters for upgrade account
 		String username = _request.getParameter("username");
 		String mail = _request.getParameter("mail");
-		String bdate = _request.getParameter("bdate");
+//		String bdate = _request.getParameter("bdate");
 		target = _request.getParameter("target");
 		userSession.setTarget(target);
 
@@ -125,10 +125,10 @@ public class CreateAccount {
 		if (mail != null && !mail.equals("")) {
 			eAAAccount.setEmail(mail);
 		}
-		Date dt = getDate(bdate);
-		if (dt != null) {
-			eAAAccount.setBirthdate(dt);
-		}
+//		Date dt = getDate(bdate);
+//		if (dt != null) {
+//			eAAAccount.setBirthdate(dt);
+//		}
 	}
 
 	public Link getImageURL() {
@@ -136,17 +136,17 @@ public class CreateAccount {
 		return resources.createEventLink("image");
 	}
 
-	JSONObject onAjaxValidateFromBirthdate() {
-		String birthdate = _request.getParameter("param");
-
-		Date dt = getDate(birthdate);
-
-		if (dt == null) {
-			return new JSONObject().put("error", "DateFormat mismatch!: " + birthdate);
-		}
-
-		return new JSONObject();
-	}
+//	JSONObject onAjaxValidateFromBirthdate() {
+//		String birthdate = _request.getParameter("param");
+//
+//		Date dt = getDate(birthdate);
+//
+//		if (dt == null) {
+//			return new JSONObject().put("error", "DateFormat mismatch!: " + birthdate);
+//		}
+//
+//		return new JSONObject();
+//	}
 
 	JSONObject onAjaxValidateFromUid() {
 
@@ -215,9 +215,11 @@ public class CreateAccount {
 		if (!eAAAccount.getPassword().equals(eAAAccount.getPassword1())) {
 			create.recordError(passwordField, "Passwords are not equal.");
 		}
+		/*
 		if (eAAAccount.getBirthdate() == null) {
 			create.recordError(dateField, "Please specify a valid birthdate!");
 		}
+		*/
 		String uid = eAAAccount.getUid();
 		try {
 			service.isAccountAvailable(uid);
@@ -261,6 +263,7 @@ public class CreateAccount {
 	Object onSuccess() throws Exception {
 		eAAAccount.setEaahash(UUID.randomUUID().toString());
 		eAAAccount.setEaakey(UUID.randomUUID().toString());
+		eAAAccount.setBirthdate(new Date());
 		service.createAccount(eAAAccount);
 //		System.out.println("Target: " + eAAAccount.getTarget());
 		eAAAccount = new EAAAccount();
@@ -281,26 +284,26 @@ public class CreateAccount {
 		return formats;
 	}
 
-	Object onBirthdateChanged() {
-		String date = _request.getParameter("param");
-		Date dt = null;
-		if (date == null) {
-			date = "";
-		} else {
-			dt = getDate(date);
-			if (dt != null) {
-				eAAAccount.setBirthdate(dt);
-			}
-		}
-		return _request.isXHR() ? dateZone.getBody() : null;
-	}
+//	Object onBirthdateChanged() {
+//		String date = _request.getParameter("param");
+//		Date dt = null;
+//		if (date == null) {
+//			date = "";
+//		} else {
+//			dt = getDate(date);
+//			if (dt != null) {
+//				eAAAccount.setBirthdate(dt);
+//			}
+//		}
+//		return _request.isXHR() ? dateZone.getBody() : null;
+//	}
 
-	public String getDateFormatted() {
-		if (eAAAccount != null && eAAAccount.getBirthdate() != null) {
-			return DateFormat.getDateInstance(DateFormat.LONG).format(eAAAccount.getBirthdate());
-		}
-		return "";
-	}
+//	public String getDateFormatted() {
+//		if (eAAAccount != null && eAAAccount.getBirthdate() != null) {
+//			return DateFormat.getDateInstance(DateFormat.LONG).format(eAAAccount.getBirthdate());
+//		}
+//		return "";
+//	}
 
 	public Date getDate(String date) {
 		Date dt = null;

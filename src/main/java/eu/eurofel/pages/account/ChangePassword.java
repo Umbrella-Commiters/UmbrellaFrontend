@@ -102,10 +102,11 @@ public class ChangePassword {
 //		System.out.println("New Email: " + email.getEmail());
 		try {
 			service.changeEmail(uid, eaahash, email.getEmail());
+			return emailSent;
 		} catch (Exception e) {
 			ChangeEmail.recordError(emailField, e.getLocalizedMessage());
+			return this;
 		}
-		return emailSent;
 	}
 
 	Object onSuccessFromChangePassword() throws Exception {
